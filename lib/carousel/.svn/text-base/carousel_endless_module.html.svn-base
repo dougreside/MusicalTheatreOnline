@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+<title>Carousel Component Example - Scrolling Module</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	
+	<script type="text/javascript" src="http://yui.yahooapis.com/combo?2.6.0/build/utilities/utilities.js&2.6.0/build/container/container_core-min.js"></script> 
+	<script type="text/javascript" src="scripts/carousel.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?2.6.0/build/reset-fonts-grids/reset-fonts-grids.css&2.6.0/build/base/base-min.css">
+	<link href="css/carousel.css" rel="stylesheet" type="text/css">
+	<link href="css/yui.css" rel="stylesheet" type="text/css">
+<!-- 
+	Inlined styles for my overrides to the carousel for this demo.
+	Normally I would put this in a separate CSS file.
+-->
+<style type="text/css">
+.carousel-component { 
+	padding:2px;
+	-moz-border-radius:0px;
+	background-color: white;
+	clear:both;
+	border: 1px solid #8FB6EB;
+	
+}
+
+.carousel-component ul.carousel-list{
+	text-align:left;
+	background-color:white;
+	padding:1px; /* for some reason, this is needed for IE6 & 7 */	
+}
+
+.carousel-component .carousel-list li { 
+	text-align:left;
+	margin:0px 8px 5px 8px;
+	line-height:12px;
+	display:block;
+	width:270px;
+}
+
+.carousel-component .carousel-list li a { 
+	outline:none;
+	-moz-outline:none; 
+}
+
+#popular {
+	margin-left:10px;
+	color:#618cbe;
+}
+									
+#up-arrow { 
+	cursor:pointer; 
+}
+
+#down-arrow { 
+	cursor:pointer; 
+}
+</style>
+
+<script type="text/javascript">
+
+var newsArticleList = [
+			{ title:"Lonely elephants baffled by post-Katrina life", url:"http://yahoo.com"},
+			{ title:"Scientists study gorilla habitat", url:"http://yahoo.com"},
+			{ title:"Some birds stay aloft up to 10 years", url:"http://yahoo.com"},
+			{ title:"Inflation soaring high", url:"http://yahoo.com"},
+			{ title:"Fed wants banks to come into compliance", url:"http://yahoo.com"},
+			{ title:"Life after death - is there proof?", url:"http://yahoo.com"},
+			{ title:"Michael Jackson makes money from cows!", url:"http://yahoo.com"},
+			{ title:"Mars rover still roving", url:"http://yahoo.com"},
+			{ title:"South Park episode back on track", url:"http://yahoo.com"},
+			{ title:"Lonely elephants - post-Katrina life", url:"http://yahoo.com"},
+			{ title:"Scientists study gorilla habitat", url:"http://yahoo.com"},
+			{ title:"Some birds stay aloft up to 10 years", url:"http://yahoo.com"},
+			{ title:"Inflation soaring high", url:"http://yahoo.com"},
+			{ title:"Fed wants banks to come into compliance", url:"http://yahoo.com"},
+			{ title:"Life after death - is there proof?", url:"http://yahoo.com"},
+			{ title:"Michael Jackson makes money from cows!", url:"http://yahoo.com"},
+			{ title:"Mars rover still roving", url:"http://yahoo.com"},
+			{ title:"Life after death - is there proof?", url:"http://yahoo.com"},
+			{ title:"Michael Jackson makes money from cows!", url:"http://yahoo.com"},
+			{ title:"Mars rover still roving", url:"http://yahoo.com"},
+			{ title:"South Park episode back on track", url:"http://yahoo.com"},
+			{ title:"Lonely elephants - post-Katrina life", url:"http://yahoo.com"},
+			{ title:"Scientists study gorilla habitat", url:"http://yahoo.com"},
+			{ title:"Some birds stay aloft up to 10 years", url:"http://yahoo.com"},
+			{ title:"Fed wants banks to come into compliance", url:"http://yahoo.com"},
+			{ title:"Inflation soaring high", url:"http://yahoo.com"},
+			{ title:"South Park episode back on track", url:"http://yahoo.com"}
+			];
+			
+var lastRan = -1;
+
+/**
+ * Custom inital load handler. Called when the carousel loads the initial
+ * set of data items. Specified to the carousel as the configuration
+ * parameter: loadInitHandler
+ **/
+var loadInitialItems = function(type, args) {
+
+	var start = args[0];
+	var last = args[1]; 
+
+	load(this, start, last);	
+};
+
+/**
+ * Custom load next handler. Called when the carousel loads the next
+ * set of data items. Specified to the carousel as the configuration
+ * parameter: loadNextHandler
+ **/
+var loadNextItems = function(type, args) {	
+	var start = args[0];
+	var last = args[1]; 
+	var alreadyCached = args[2];
+	
+	if(!alreadyCached) {
+		load(this, start, last);
+	}
+}
+
+/**
+ * Custom load previous handler. Called when the carousel loads the previous
+ * set of data items. Specified to the carousel as the configuration
+ * parameter: loadPrevHandler
+ **/
+var loadPrevItems = function(type, args) {
+	var start = args[0];
+	var last = args[1]; 
+	var alreadyCached = args[2];
+	
+	if(!alreadyCached) {
+		load(this, start, last);
+	}
+}     
+
+var load = function(carousel, start, last) {
+	for(var i=start;i<=last;i++) {
+		carousel.addItem(i, fmtItem(newsArticleList[i-1],i));
+	}
+}
+
+var getRandom = function(max, last) {
+	var randomIndex;
+	do {
+		randomIndex = Math.floor(Math.random()*max);
+	} while(randomIndex == last);
+	
+	return randomIndex;
+}
+
+/**
+ * Custom button state handler for enabling/disabling button state. 
+ * Called when the carousel has determined that the previous button
+ * state should be changed.
+ * Specified to the carousel as the configuration
+ * parameter: prevButtonStateHandler
+ **/
+var handlePrevButtonState = function(type, args) {
+
+	var enabling = args[0];
+	var upImage = args[1];
+
+	if(enabling) {
+		upImage.src = "images/small-up-enabled.gif";
+	} else {
+		upImage.src = "images/small-up-disabled.gif";
+	}
+	
+}
+
+/**
+ * Custom button state handler for enabling/disabling button state. 
+ * Called when the carousel has determined that the next button
+ * state should be changed.
+ * Specified to the carousel as the configuration
+ * parameter: nextButtonStateHandler
+ **/
+var handleNextButtonState = function(type, args) {
+
+	var enabling = args[0];
+	var upImage = args[1];
+
+	if(enabling) {
+		upImage.src = "images/small-down-enabled.gif";
+	} else {
+		upImage.src = "images/small-down-disabled.gif";
+	}
+	
+}
+
+/**
+ * You must create the carousel after the page is loaded since it is
+ * dependent on an HTML element (in this case 'dhtml-carousel'.) See the
+ * HTML code below.
+ **/
+var carousel; // for ease of debugging; globals generally not a good idea
+var pageLoad = function() 
+{
+	carousel = new YAHOO.extension.Carousel("dhtml-carousel", 
+		{
+			numVisible:        6,
+			animationSpeed:    0.25,
+			scrollInc:         5,
+			size:              26,
+			wrap:              true,
+			orientation:       "vertical",
+			loadInitHandler:   loadInitialItems,
+			prevElement:     "up-arrow",
+			nextElement:     "down-arrow",
+			loadNextHandler:   loadNextItems,
+			loadPrevHandler:   loadPrevItems,
+			prevButtonStateHandler:   handlePrevButtonState,
+			nextButtonStateHandler:   handleNextButtonState
+		}
+	);
+}
+
+YAHOO.util.Event.addListener(window, 'load', pageLoad);
+
+/**
+ * Since carousel.addItem uses an HTML string to create the interface
+ * for each carousel item, this method formats the HTML for an LI.
+ **/
+var fmtItem = function(newsItem, i) {
+
+  	var innerHTML = 
+  		'<span>' + i + '. ' + '<\/span><a href="' + 
+  		newsItem.url + 
+  		'">' + 
+  		newsItem.title + 
+  		'<\/a>';
+  
+	return innerHTML;
+	
+}
+
+</script>
+</head>
+
+<body>
+
+<div id="doc" class="yui-t7">
+   <div id="hd">
+		<h1>Scrolling Module - Vertical Carousel</h1>
+   </div>
+<div id="bd">
+<p>Just shows that the carousel can look just like a scrollable list of items.
+Here we imagine a news module with scrollable content. This example has the data
+on the client side, however, the content could be loaded via Ajax.</p>
+
+<!-- Carousel Structure -->
+
+<table style="padding:0px;margin:0px;"><tr>
+<td  style="width:250px;"><div id="popular" class="module-head">Popular Items</div></td>
+<td><img id="up-arrow" class="left-button-image" alt="scroll up" 
+						src="images/small-up-enabled.gif"/></td>
+</tr></table>
+
+
+
+<div id="dhtml-carousel" class="carousel-component">
+	<div class="carousel-clip-region">
+		<ul class="carousel-list">
+			<!-- Filled in via the loadInitHandler, loadNextHandler, and loadPrevHandler
+			<li id="item-1">
+			<a href="#">
+				<img src="http://static.flickr.com/74/162582364_7fc3e2d60d_s.jpg"/>
+			</a>Number One</li>
+			-->
+		</ul>
+	</div>
+</div>
+
+<table style="padding:0px;margin:0px;"><tr>
+<td style="width:250px;"></td>
+<td>	<img id="down-arrow" class="right-button-image"  alt="scroll down" 
+					src="images/small-down-enabled.gif"/>
+</td>
+</tr></table>
+
+
+<div style="padding-top:20px;clear:both">View the <a href="source.php?url=carousel_endless_module.html">source</a>&nbsp;or&nbsp;<a href="index.html">documentation</a></div>
+
+</div>
+</div> 
+
+</body>
+</html>

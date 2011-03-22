@@ -1,0 +1,45 @@
+<div class="audioPlayer">
+    <div class="audioPlayerContents">
+        
+        <div class="nowPlaying">
+            <div class="currentSong">
+                <p>
+                    Select a song...
+                </p>
+            </div>
+        </div>
+        
+        <div class="audioPlayerControls">
+            <ul>
+                <li class="button audioBackButton col1">
+                  Back
+                </li>
+                <li class="button audioRewindButton col2 top">
+                    Rewind
+                </li>
+                <li class="button audioPlayButton col3 top">
+                    Play
+                </li>
+                <li class="button audioStopButton col4 top">
+                    Stop
+                </li>
+                <li class="button audioFForwardButton col5 top">
+                    Fast Forward
+                </li>
+                <li class="button audioForwardButton col6 top">
+                    Forward
+                </li>
+             
+            </ul>
+        </div>
+        
+        <div class="audioPlayList">
+            <div class="audioItems">
+               
+            </div>
+        </div>
+           
+    </div>
+
+</div>
+<!--End audioPlayer -->

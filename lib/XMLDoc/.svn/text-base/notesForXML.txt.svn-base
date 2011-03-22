@@ -1,0 +1,41 @@
+XML tools
+---------
+
+- get text offset for node: getTextOffset(&$node) in getOffsets4Node.php
+
+- trim off text not in offset (Between 2 nodes): trimTree($n1, $n2) in getOffsets4Node.php
+
+- get lowest common parent for two nodes: lca($node1, $node2) in getOffsets4Node.php
+
+- get all text nodes for node: getTextNodes.php (also gets length of the text)
+
+- Given offset, return associated TEXT node ==> build a hash from the compiled file info,
+												suck in the hash and run a bin search
+												to return xml:id of node based on offset
+
+scripts:
+--------
+loadText.php: Given _GET[] parms: 1)file, 2)offset, 3)length, get text at that offset for that length
+
+getTextNodes.php: Given a file, get all text nodes + their length
+
+importXML.php =~ getXMLSection.php (essentially, equivalent):
+   processXML($element, $counter) takes an dom el (e.g., DOMdoc->documentElement),
+   recursively walks down all its kids
+
+getOFfset4Node.php -- several functions -- 
+	getTagOffset(&$node) - returns tag offset for given node
+	getTextOffset(&$node) - returns text offset for given node
+	innerhtml()
+	outerhtml()
+	wrapNode()
+	lca() lowest common ancestor
+	
+	
+compileXML.php: -- several functions --
+	
+
+
+
+
+ 

@@ -1,0 +1,367 @@
+<!doctype html public "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Carousel Component 1.0 - Release Notes</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?2.6.0/build/reset-fonts-grids/reset-fonts-grids.css&2.6.0/build/base/base-min.css">
+<link href="css/yui.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="doc" class="yui-t7">
+   <div id="hd">
+      <h1>Updates - Carousel Component</h1>
+   </div>
+
+	<div id="bd">
+
+		<h2>Latest - Version 1.0 - 10/21/2008</h2>
+		<ul>
+			<li>Upgraded demos to use YUI 2.6.0.</li>
+			<li>Retested on all browsers.</li>
+		</ul>
+		<h3><a name="download">Downloading</a></h3>
+		<p>You can download the necessary files here:</p>
+		<ul>
+			<li><a href="scripts/carousel.js">carousel.js (55K)</a></li>
+			<li><a href="scripts/carousel_min.js">Minified version of carousel.js (24K)</a></li>
+			<li><a href="scripts/carousel_min.js.gz">Minified and gzipped version of carousel.js (4.5K)</a></li>
+			<li><a href="css/carousel.css">carousel.css</a></li>
+			<li><a href="carousel-1.0.zip">carousel-1.0.zip</a> - Examples, Component, Y!UI Library</li>
+		</ul>
+
+		<h2>Version 0.6.3 - 08/18/08</h2>
+		<ul>
+			<li>Upgraded demos to use YUI 2.5.2.</li>
+			<li>Removed extraneous includes for YUI library from demos.</li>
+			<li>Retested on all browsers.</li>
+		</ul>
+		<h3><a name="download">Downloading</a></h3>
+
+		<h2>Version 0.6.2 - 02/23/08</h2>
+		<ul>
+			<li>Upgraded demos to use YUI 2.5.0</li>
+			<li>Fixed bug around calling scrollTo while the carousel is already scrolling. Or trying to reverse the scrolling in a different direction while the first animation is already in progress. Simplistic method. Just blocks and ignores any request to scroll if animation is already in progress.</li>
+			<li>New property: disableSelection. Suggestion by Jenny Mok.
+			Specifies whether to turn off browser text selection within the carousel. Default is true.
+			If true, nothing inside the browser may be text selected. This prevents the ugly effect ofthe user accidentally clicking and starting a text selection for the elements in the carousel.
+			If false, selection is allowed. You might want to turn this on if you want the items within
+			a carousel to be selectable by the browser.
+			</li>
+		</ul>
+	
+		<h2>Version 0.6.1 - 07/08/07</h2>
+		<ul>
+			<li>Bug Fix. loadNextHandler and loadPrevHandler got the wrong start, end values passed in certain cases. Now does the correct thing.</li>
+			<li>Two new parameters: <em>scrollBeforeAmount</em> and <em>scrollAfterAmount</em>. These replace the <em>firstItem</em> parameter introduced in 0.6.0 but now removed. These support centering around a selected item (as in the <a href="carousel_spotlight.html">spotlight example</a>.) See the discussion in the <a href="index.html#properties">properties documentation</a>.</li>
+			<li>Added new method: <em>getFirstVisible</em> to be symmetrical with the <em>getLastVisible</em> method. Exactly
+				the same as calling carousel.getProperty("firstVisible")</li>
+			<li>More refinement on prebuilds skipping around (spotlight and tabset examples</li>
+		</ul>
+
+		<h2>Version 0.6.0 - 07/01/07</h2>
+		<ul>
+			<li>AutoPlay now stops on previous event interaction (as it did with next)</li>
+			<li>Prebuilds work better when skipping around (spotlight and tabset examples)</li>
+			<li>Carousel now supports direct property setting. Instead of carousel.cfg.setProperty(prop, value) or carousel.cfg.getProperty(prop) you can now call carousel.setProperty(prop, value) or carousel.getProperty(prop).</li>
+			<li>Fixed the autoplay example, had incorrect explanation of how to manage auto play (incorrectly illustrated changing properties)</li>
+			<li>Fixed property management to correctly handle setting properties with the silent mode turned on. You can now set the size property (with silent=true) when inside a load handler.</li>
+			<li><strike>New parameter: firstItem. Lets you set what the lower bounds of the carousel will be. Items are still loaded from 1 to n. But setting the firstItem to less than 1 will allow you to scroll past the first position. See the spotlight example for a good use of this parameter</strike> <strong>This has been replaced in 0.6.1 by 2 new parameters: <em>scrollBeforeAmount</em> and <em>scrollAfterAmount</em>.</strong></li>
+			<li>New parameter: loadOnStart. Whether to call the loadInitHandler when the carousel is created. Default is true. If set to false, the carousel is created but no items loaded. Call carousel.load() to get the carousel loaded manually.</li>
+			<li>Fixed several issues around reconfiguring properties and how it is handled in scrolling next &amp; previous.			</li>
+			<li>New convenience method: getLastVisible(). Returns the last item visible.</li>
+			<li>New convenience method: getFirstItemRevealed(). If carousel is revealing before &amp; after items (revealAmount > 0), then returns the index of the item that is revealed before the firstVisible item. Will return -1 if no items are revealed or if the firstVisible is equal to 1 (nothing to reveal).</li>
+			<li>New convenience method: getLastItemRevealed(). If carousel is revealing before &amp; after items (revealAmount > 0), then returns the index of the item that is revealed after the last visible item. Will return -1 if no items are revealed or if the last visible item is equal to <em>size</em> (nothing to reveal).</li>
+			<li>Fourth parameter to args array passed to loadInitHandler, loadNextHandler and loadPrevHandler no longer passes a boolean for whether reveal is turned on. This is trivial to determine and with the addition of the methods getFirstItemRevealed() and getLastItemRevealed() it is no longer needed.</li>
+		</ul>
+
+
+
+	<h2>Version 0.5.6 - 06/08/07</h2>
+	<p>Resolved the IE vertical scroll issue where in certain cases the scrolling gets off by a few pixels at a time. This was due to an IE CSS bug that will add extra space below an LI. The fix was to set the LI style to contain the following.</p>
+	<pre>
+	float:left;
+	clear:left;  
+	</pre>
+
+			 	  <h2>Version 0.5.5 - 06/05/07</h2>
+			<img src="images/carousel_snap_reveal.png" alt="Snapshot of Carousel Reveal Feature"><br/>
+				<p>Added new feature to allow the carousel to show a little bit of the before &amp; after items in the list. For example, let's say that we are showing four items, 2-5. Specifying <em>revealAmount:20</em> would show 2-5 and 20 pixels of item #1 and 20 pixels of item #6. This seems to bear out well in testing as a way to clue users that more content exists.</p>
+			 	  <ul>
+					<li>revealAmount property</li>
+					<li>Added demo: <a href="carousel_reveal_next_prev.html">Reveal Next &amp; Previous Items</a></li>
+					<li>Added demo: <a href="carousel_vert_reveal_next_prev.html">Reveal Next &amp; Previous Items/Vertical</a></li>
+					<li>Did further cleanup &amp; refinements to the size calculations. Now horizontal and vertical calculations are consistent with each other.</li>
+					<li>Added demo: <a href="carousel_html_static_multiple.html">Two Static Carousels</a> - Illustrating encapsulating a base carousel and showing multiple carousels on same page.</li>
+					</ul>
+		<p>Caveats</p>
+		<ul>
+			<li>Endless scrolling is not working in Opera.</li>
+			<li>While vertical revealed example works across all browsers, it is odd that in IE6 and IE7 that you can construct an example with just an img and it will be off by a few pixels during scrolling. For some reason vertical LIs with images add some buffer margin that I can seem to find the source of nor fetch the value of it to account for it. The <a href="carousel_vert_reveal_next_prev.html">vertical scrolling</a> demo does however work across all browsers.</li> 
+			</ul>
+			 	  <h2>Version 0.5.1 - 06/03/07</h2>
+				<img src="images/carousel_snap_spotlight.png" alt="Snapshot of Carousel Spotlight Example"><br/>
+				<p>Created a spotlight/preview example which caused me to add an additional parameter to the addItem
+					method. The fourth optional parameter is a style class to associate with the LI item. (four arguments passed in the args array)</p>
+			 	  <ul>
+					<li>Added demo: <a href="carousel_spotlight.html">Spotlight &amp; Preview</a></li>
+					<li>addItem(): optional third parameter, itemClass</li>
+					</ul>
+
+
+	 	  <h2>Version 0.5.0 - 06/01/07</h2>
+		<p>In this release I have rewritten parts of the size calculation algorithms. Thanks to Claude Jones, Yahoo!;
+			Ave Wrigley, itn.co.uk; Michael Dowling for all pointing out various issues with that section of the code.
+			The focus has been on making sure that vertical carousels behave correctly. 
+			Here were the issues I worked through.</p>
+	 	  <ul>
+<li>When using 'auto' for margins, the size calculation would fail in IE getting a value of NaN. 
+Now the calculateSize() method will default back to zero for margins on IE that are set to 'auto'.
+</li>
+<li>calculateSize() invoked offsetHeight on the LI element. In certain unusual cases in IE6 this would
+cause IE to crash. It appears that it had to do with auto values being explicitly set. But I was 
+never able to fully determine the exact cause. The work around was to try the style.height 
+first, then default back to the offsetHeight. </li>
+<li>On FF, if no style.height was specified, FF would often have a fractional height calculated for the LI
+(e.g., "93.2px"). Since I was using offsetHeight (which would return 93), scrolling vertically
+would get off by some fractional value (which by the way was extremely annoying ;-). Now
+calculateSize() will get the style.height and use parseFloat to pull out a fractional value if it
+exists. This will be the case on FF if the style.height is not explicitly set and if it happens
+to fall on a fractional boundary.</li>
+<li>calculateSize() was not taking into account the padding &amp; margin for the UL that holds the LI items.
+	The method now correctly adds these values when calculating the clip height for vertical carousels.</li>
+<li>When loading dynamic content, it was tricky to get the carousel to handle the height correctly.
+Even with a recalculate it was inconsistent in behavior. The simplest solution is to specify a 
+height directly in the CSS which coupled with the overflow:hidden being set for vertical carousels
+causes the carousel to calculate height &amp; scroll amounts correctly.</li>
+<li>Cleaned up the carousel.css to more accurately comment/reflect how each style contributes to 
+the carousel display. One change is for vertical LIs, the overflow:hidden is set (so that 
+vertical height will be respected [clipped to height, so that all heights can be the same]).
+</li>
+<li>Cleaned up CSS in example code to more accurately reflect these changes.
+</li>
+<li>Deprecated the method getCarouselItem(). It is now called getItem(). The getCarouselItem() will be maintained for several releases to maintain backward compatibility.</li>
+</ul>
+<p>
+From a developer's perspective here are the things to keep in mind with this new release:
+</p>
+<ul>
+<li>For vertical carousels, explicitly set the style.width and the style.height in the CSS. 
+Setting the style.height will avoid the fractional issue (which the code
+can now handle); will cause IE to not crash since offsetHeight will not be used; will guarantee
+that a height will be set even for a dynamically loaded carousel.
+</li>
+
+<li>For horizontal carousels, explicitly set the style.width. Setting the style.height is optional.
+</li>
+
+<li>Vertical carousel height will now clip to the height set. In carousel.css the overflow:hidden has 
+been turned on by default.</li>
+<li>Change calls to getCarouselItem() to getItem() to be consistent with the new name. getCarouselItem() will however continue to work for the forseeable future for backward compatibility</li>
+</ul>	
+
+<p>Other changes:</p>
+<ul>
+<li>Added links to view the source for getTrips.php on the demo pages that use this php
+	to fetch trips from the Trip Planner API. This is just for instructional purposes since
+	many have asked to see this code. </li>	
+<li>Upgraded all examples to use the latest akamai versions of the latest YUI library</li>
+<li>Cleaned up examples to pass HTML validation -- with the exception of the HTML for the carousel &lt;ul&gt;&lt;/ul&gt; being empty on all dynamic examples.</li>
+<li>Cleaned up documentation, updated to reflect changes and changed over to yui.css to be similar to YUI docs.</li>
+<li>Cleaned up the Scrolling Modules example to work correctly across all browsers.</li>
+</ul>		
+		
+ 	  <h2>Version 0.4.0 - 01/28/07</h2>
+	<p>The biggest changes in this release are the full support of runtime configuration 
+	of the carousel component, the addition of support for show, hide and recalculating size and
+	updated documentation.</p>
+ 	  <ul>
+		  <li>Support added for runtime configuration of carousel. You can now call carousel.setProperty() to
+			configure the various properties of the carousel. See the documentation on the <a href="index.html#properties">list of properties</a> for which properties can
+			be set after the carousel is created.</li>
+			<li>nextElementID and prevElementID are now deprecated. Use nextElement and prevElement instead.
+				The name change was made to more accurately reflect that both IDs or the element
+				objects could be passed. In addition, the documentation was updated to show that one or more
+				ids or objects could be passed as the nextElement or prevElement (allowing multiple elements to 
+				control next/previous operation). prevElementID and nextElementID will be maintained as part of the
+				ongoing API for backward compatibility (they map to prevElement and nextElement properties).</li>
+	     <li>Added show() method. Sets display to block (making carousel visible) and recalculating size of carousel based on current configuration and contents. This allows you toggle the visibility of the carousel and still have it calculate its size correctly (before the calculations could occur while the carousel was hidden making all the calculations incorrect). Thanks to Bram Whillock for the idea for this addition.</li>
+	     <li>Added hide() method. Sets display to none (making carousel hidden).</li>
+	     <li>Added calculateSize() method. Recalculates the size of the carousel based on current configuration and contents.</li>
+			<li>addItem() now accepts either a string of HTML or an actual element object. Thanks to Guy Katz for the idea &amp; sample code.</li>
+			<li>Documentation updated for FAQ</li>
+	  </ul>
+
+ 	  <h2>Version 0.3.6 - 12/13/06</h2>
+ 	  <ul>
+		     <li>Bug Fix: AutoPlay. Multiple registrations of autoplay back to back did not work as designed. Only one autoplay should be in operation at once. Fixed startAutoPlay to correctly set its autoPlayTimer to new value.</li>
+	  </ul>
+
+		<h2>Version 0.3.5 - 12/09/06</h2>
+   	  <ul>
+		     <li>carousel.addItem() now returns the item it added.</li>
+		     <li>Updated autoplay example to illustrate adding rollovers, see <a 
+							href="carousel_dhtml_load_autoplay.html">carousel_dhtml_load.html</a></li>
+   	  </ul>
+ 
+  	  <h2>Version 0.3.4 - 11/28/06</h2>
+   	  <ul>
+		     <li>Upgraded &amp; tested against YUI library version 0.12.0.</li>
+		     <li>Each thumbnail now links to a larger photo image (always possible, 
+					just illustrating this technique) in <a 
+							href="carousel_dhtml_load.html">carousel_dhtml_load.html</a></li>
+   	  </ul>
+
+  	  <h2>Version 0.3.3 - 10/30/06</h2>
+   	  <ul>
+   	  <li>Fixed bug found is several of the demos that should have loaded the [0] element to [n-1] but instead loaded the [1] element to [n].</li>
+   	  <ul>
+   	  <li><a href="carousel_dhtml_load_bounded_asynch.html">carousel_dhtml_load_bounded_asynch.html</a></li>
+   	  <li><a href="carousel_dhtml_load_bounded_wrap_offset.html">carousel_dhtml_load_bounded_wrap_offset.html</a></li>
+   	  <li><a href="carousel_dhtml_load_bounded_wrap.html">carousel_dhtml_load_bounded_wrap.html</a></li>
+   	  <li><a href="carousel_dhtml_load_bounded.html">carousel_dhtml_load_bounded_wrap.html</a></li>
+   	  <li><a href="carousel_endless_module.html">carousel_dhtml_endless_module.html</a></li>
+   	  <li><a href="carousel_slides.html">carousel_dhtml_slides.html</a></li>
+   	  </ul>
+   	  </ul>
+ 
+  	  <h2>Version 0.3.2 - 10/20/06</h2>
+   	  <ul>
+   	  <li>carousel.js fully commented</li>
+   	  <li>Minified &amp; Gzipped versions of Carousel now available</li>
+   	  </ul>
+
+   	  <h2>Version 0.3.1 - 9/22/06</h2>
+   	  <ul>
+   	  <li>Exposed firstVisible as a property. This allows the initial position of the carousel to be set. Others had tried to invoke moveTo during the loadInitHandler, however this did not work (thanks Daniel Sims for pointing this out.)</li>
+   	  <li>New example: <a href="carousel_dhtml_load_bounded_wrap_offset.html">Carousel Offset</a> illustrates this.</li>
+   	  <li>Carousel now uses the minified versions of the Y!UI library.</li>
+   	  </ul>
+
+   	  <h2>Version 0.3.0 - 8/15/06</h2>
+   	  <ul>
+   	  <li>Fixed bug (thanks Steve Yates for pointing this out!) in module tabsets. Now on a moveTo or scrollTo, in-between elements are pre-built as placeholders correctly. There was a bug in the way this was done before. This keeps items in the correct order.</li>
+   	  <li>reload() now also resets the carousel.size back to the original size set at creation time.</li>
+   	  </ul>
+ 
+   	  <h2>Version 0.2.9 - 8/14/06</h2>
+   	  <ul>
+   	  <li>reload() now takes an optional numVisible parameter. Also, the carousel.js was updated to recalcuate its size on reload. This allows carousels to resize when loading new content (if desired). (Thanks to Chris Maxwell for the idea.)</li>
+   	  <li>Added new demo that illustrates resize (from 4 to 6) during reload. See <a href="carousel_ajax_search_vert.html">Ajax Vertical Search</a> example.</li>
+   	  </ul>
+	
+   	  <h2>Version 0.2.8 - 8/11/06</h2>
+   	  <ul>
+   	  <li>clear() method. Clears all items from the list and resets the carousel back to initial state just prior to initial load.</li>
+   	  <li>reload() method. Clears all items from the list and calls the initLoadHandler to load a new set of items.</li>
+   	  <li>Illustrated in the <a href="carousel_manage_items.html">Manage Carousel Items example</a></li>
+   	  <li>Additional example created: <a href="carousel_ajax_search.html">Ajax Search</a></li>
+   	  <li>Thanks for the idea from Tony Hirst.</li>
+   	  <li>Fixed bug with view source for IE & Safari.</li>
+  	  </ul>
+
+   	  <h2>Version 0.2.7 - 8/10/06</h2>
+   	  <ul>
+   	  <li>Oops! Quick fix to 0.2.6. Had a fatal bug that broke lots of examples. Too much in a hurry. This version fixes that.</li>
+  	  </ul>
+
+   	  <h2>Version 0.2.6 - 8/9/06</h2>
+   	  <ul>
+   	  <li>animationCompleteHandler added to provide a way to be notified when the animation for a next/previous
+   	  navigation is finished.</li>
+   	  <li>Added to the Carousel Slides example: demonstration of showing which slide you are currently on and
+   	  adding a message when animation completes.</li>
+   	  <li>Thanks for the idea from David Ehlers.</li>
+  	  </ul>
+	
+   	  <h2>Version 0.2.5 - 8/2/06</h2>
+   	  <ul>
+   	  <li>Support for loading out of order (for asynchronous loading). Thanks to Yuval Karjevski.</li>
+   	  <li>Ability to insert items anywhere in the list. insertBeforeItem() and insertAfterItem(). Thanks to Dan Hobbs for the reference implementation this version is built from.</li>
+   	  <li>Cleaned up API, internal methods now start with _ (underscore)</li>
+   	  <li>Added comments to all demos.</li>
+   	  <li>Added a View Source link to all demos to make the source viewable (in a simpler manner.)</li>
+   	  <li>Cleaned up some JSLint issues in the various demos.</li>
+   	  <li>Re-organized the demo links and rewrote the overview section for the component.</li>
+   	  <li>Added more information on various demo pages to explain how to implement the demo.</li>
+  	  </ul>
+
+   	  <h2>Version 0.2.4 - 7/21/06</h2>
+   	  <ul>
+   	  <li>Added a little more logic to startAutoPlay() to not kick off another timer
+   	  if the timer is already active.</li>
+   	  <li><em>startAutoPlay(interval)</em> - Added an optional interval to set for autoplay.</li>
+  	  </ul>
+
+   	  <h2>Version 0.2.3 - 7/19/06</h2>
+   	  <ul>
+   	  <li><em>autoPlay</em> - configuration parameter added to set the amount of time before automatically scrolling in the next set of content.</li>
+   	  <li><em>startAutoPlay()</em> - starts autoplay manually.</li>
+   	  <li><em>stopAutoPlay()</em> - stops autoplay manually.</li>
+   	  <li><em>wrap()</em> - turns on wrapping for bounded carousels.</li>
+   	  </ul>
+
+   	  <h2>Version 0.2.2 - 7/15/06</h2>
+   	  <ul>
+   	  <li>Tested against the latest YDN 0.11.0 Version of the Y!UI Library. No changes required.</li>
+   	  <li>Y!UI Library packaged with zip.</li>
+   	  </ul>
+
+   	  <h2>Version 0.2.1 - 7/06/06</h2>
+   	  <ul>
+   	  <li><em>scrollTo(itemNum)</em> - Provides a way to directly 
+   	  set the item to scrollTo.</li>
+   	  <li><em>moveTo(itemNum)</em> - Provides a way to directly set the item to move to.
+   	  Ignores animation speed and just performs a single move operation.
+   	  <li>Added examples showing carousel as a news module scroller and
+   	  as a way to implement tabsets.</li>
+   	  </ul>
+
+
+   	  <h2>Version 0.2.0 - 7/06/06</h2>
+   	  <ul>
+   	  <li><em>orientation</em> - The Carousel can now support up/down scrolling of vertical content
+   	  as well as left/right scrolling of horizontal content.</li>
+   	  <li><em>nextElementID</em> and <em>prevElementID</em> - Previously, the next and 
+   	  previous elements were identified by using a specific class, carousel-prev and 
+   	  carousel-next. This technique has been deprecated. However, if the nextElementID
+   	  and the prevElementID are not specified, then the Carousel will attempt to find
+   	  elements with these classnames within the html structure of the component. This
+   	  change was made to allow the prev/next controls to be more fully externalized 
+   	  from the component.</li>
+   	  <li>Expected Markup - The expected markup has been simplified and relaxed. 
+   	  The prev/next elements do not have to be part of the carousel markup.</li>
+   	  <li>Removed <em>thumbnailWidth</em> and <em>thumbnailHeight</em> have 
+   	  been removed. The carousel is now more intelligent about pulling padding, margins,
+   	  and size from the components themselves (based on style sheet settings). </li>
+   	  <li>carousel.css simplified. Only the required classes are included in the 
+   	  carousel.css. Other classes that may be of interest are listed in the file 
+   	  comments.</li>
+   	  </ul>
+
+   	  <h2>Version 0.1.3 - 6/28/06</h2>
+   	  <ul>
+   	  <li><em>animationMethod</em> - New attribute to specify the animation method (e.g., YAHOO.util.Easing.easeOut, YAHOO.util.Easing.easeBoth.</li>
+   	  <li>Changed carousel.css to have all styles scoped to .carousel-component (and corresponding js code to support this).</li>
+   	  <li><em>scrollNext()</em> - Convenience method that causes content to be scrolled left (next).</li>
+   	  <li><em>scrollPrev()</em> - Convenience method that causes content to be scrolled right (prev).</li>
+   	  <li>Setting <em>animationSpeed</em> to 0 turns off all animation.</li>
+   	  <li>Added third argument to calls to loadNextHandler and loadPrevHandler. The <em>alreadyCached</em> is passed as <em>arg[2]</em>. It indicates whether the load request is for items that are already cached.</li>
+   	  <li>Adjusted examples to illustrate the above.</li>
+   	  </ul>
+
+   <br/>
+   	  <h2>Version 0.1.2 - 6/27/06</h2>
+   	  <ul>
+   	  <li>Fixed bug when scrolling content causing duplicate elements to be created in certain conditions</li>
+   	  <li>Fixed bug that caused new scroll parameters to be ignored.</li>
+   	  <li>Added 'size' attribute. See documentation (and <a href="carousel_dhtml_load_bounded.html">example</a>) below.</li>
+   	  <li>Added 'nextButtonStateHandler' attribute. See documentation (and <a href="carousel_dhtml_load_bounded.html">example</a>) below.</li>
+   	  <li>Added demo for bounded size</li>
+   	  <li>Added demo for static content</li>
+   	  </ul>
+	</div>
+	
+</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+.tabheader {margin-top:-25px;margin-left:10px;float: left;width:900px;}
+.tabheader img {padding-left:3px;vertical-align:middle;}
+.tabheader ul {float:left;list-style-type:none;margin:0px;padding:0px;width:900px;}
+.tabheader ul li {float:left;margin-right:3px;margin-left:3 px; background:url('../images/inactive-tab-start.gif'); }
+.tabheader ul li a {float:left;text-decoration:none;padding-left:10px;padding-right:5px;line-height:25px;text-align: center;	font-family: "Lucida Grande", Verdana, Arial, sans-serif;	font-size: 85%;	text-decoration: none;	color: #333; background:url('../images/inactive-tab-end.gif') no-repeat;background-position: 100% 0%; font-weight:bold;}
+
+/*hover state */
+.tabheader ul li:hover, .tabheader ul li:hover.overflow {background:url('../images/hover-tab-start.gif') no-repeat; }
+.tabheader ul li a:hover, .tabheader ul li.overflow a:hover {background:url('../images/hover-tab-end.gif') no-repeat;background-position: 100% 0%; color: #5e1332;}
+
+/*active class */
+.tabheader ul li.active   {background:url('../images/active-tab-start.gif'); padding-left:0px;}
+.tabheader ul li.active a  {background:url('../images/active-tab-end.gif') no-repeat;background-position: 100% 0%;font-weight:bold; color: #333;}
+
+/*overflow class */
+.tabheader ul li.overflow {background:url('../images/overflow-tab-start.gif');}
+.tabheader ul li.overflow a {background:url('../images/overflow-tab-end.gif') no-repeat;background-position: 100% 0%; color: #333;padding-right:8px;}
+
+#moreLeft{
+	display: none;
+}
+#moreRight{
+	display: none;
+}

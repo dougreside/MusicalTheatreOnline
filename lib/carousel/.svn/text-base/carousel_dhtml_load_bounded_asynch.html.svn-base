@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+<title>Carousel Component Example - DHTML Load (Bounded &amp; Non-Sequential)</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+	<script type="text/javascript" src="http://yui.yahooapis.com/combo?2.6.0/build/utilities/utilities.js&2.6.0/build/container/container_core-min.js"></script> 
+	<script type="text/javascript" src="scripts/carousel.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?2.6.0/build/reset-fonts-grids/reset-fonts-grids.css&2.6.0/build/base/base-min.css">
+	<link href="css/carousel.css" rel="stylesheet" type="text/css">
+	<link href="css/yui.css" rel="stylesheet" type="text/css">	
+<!-- 
+	Inlined styles for my overrides to the carousel for this demo.
+	Normally I would put this in a separate CSS file.
+-->
+<style type="text/css">
+.carousel-component {
+	padding:8px;
+}
+.carousel-component .carousel-list li { 
+	margin:4px;
+	width:79px; /* img width is 75 px from flickr + a.border-left (1) + a.border-right(1) + 
+	               img.border-left (1) + img.border-right (1)*/
+	/*	margin-left: auto;*/ /* for testing IE auto issue */
+}
+
+.carousel-component .carousel-list li a { 
+	display:block;
+	border:1px solid #e2edfa;
+	outline:none;
+	-moz-outline:none; 
+}
+
+.carousel-component .carousel-list li a:hover { 
+	border: 1px solid #87bf4e; 
+}
+
+.carousel-component .carousel-list li img { 
+	border:1px solid #999;
+	display:block; 
+}
+
+.carousel-component .carousel-list li strong { 
+	display:block; 
+}
+									
+
+#prev-arrow { 
+	position:absolute;
+	top:40px;
+	z-index:3;
+	cursor:pointer; 
+	left:5px; 
+}
+
+#next-arrow { 
+	position:absolute;
+	top:40px;
+	z-index:3;
+	cursor:pointer; 
+	right:5px; 
+}
+</style>
+<script type="text/javascript">
+
+/**
+ * Image src URLs
+ **/
+var imageList = [
+				 "images/thumb_1.jpg",
+				 "images/thumb_2.jpg",
+				 "images/thumb_3.jpg",
+				 "images/thumb_4.jpg",
+				 "images/thumb_5.jpg",
+				 "images/thumb_6.jpg",
+				 "images/thumb_7.jpg",
+				 "images/thumb_8.jpg",
+				 "images/thumb_9.jpg",
+				 "images/thumb_10.jpg",
+				 "images/thumb_11.jpg",
+				 "images/thumb_12.jpg",
+				 "images/thumb_13.jpg",
+				 "images/thumb_14.jpg",
+				 "images/thumb_15.jpg",
+				 "images/thumb_16.jpg",
+				 "images/thumb_17.jpg",
+				 "images/thumb_18.jpg"
+				 ];
+
+/**
+ * Since carousel.addItem uses an HTML string to create the interface
+ * for each carousel item, this method formats the HTML for an LI.
+ **/
+var fmtItem = function(imgUrl, url, title) {
+  	var innerHTML = 
+  		'<a href="' + 
+  		url + 
+  		'"><img src="' + 
+  		imgUrl +
+		'" width="' +
+		75 +
+		'" height="' +
+		75+
+		'"/>' + 
+  		title + 
+  		'<\/a>';
+  
+	return innerHTML;
+};
+
+/**
+ * Custom inital load handler. Called when the carousel loads the initial
+ * set of data items. Specified to the carousel as the configuration
+ * parameter: loadInitHandler
+ **/
+var loadInitialItems = function(type, args) {
+
+	var start = args[0];
+	var last = args[1]; 
+
+	load(this, start, last);	
+};
+
+/**
+ * Custom load next handler. Called when the carousel loads the next
+ * set of data items. Specified to the carousel as the configuration
+ * parameter: loadNextHandler
+ **/
+var loadNextItems = function(type, args) {	
+
+	var start = args[0];
+	var last = args[1]; 
+	var alreadyCached = args[2];
+	
+	if(!alreadyCached) {
+		load(this, start, last);
+	}
+};
+
+/**
+ * Custom load previous handler. Called when the carousel loads the previous
+ * set of data items. Specified to the carousel as the configuration
+ * parameter: loadPrevHandler
+ **/
+var loadPrevItems = function(type, args) {
+	var start = args[0];
+	var last = args[1]; 
+	var alreadyCached = args[2];
+	
+	if(!alreadyCached) {
+		load(this, start, last);
+	}
+};
+
+/**
+ * To simulate out of synch loading, we load these items backwards.
+ * This exercises the ability to load items out of sequence.
+ */
+var load = function(carousel, start, last) {
+
+	for(var i=last; i>=start; i--) {
+		carousel.addItem(i, fmtItem(imageList[i-1], "#", "Number "+i));
+	}
+};
+
+/**
+ * Custom button state handler for enabling/disabling button state. 
+ * Called when the carousel has determined that the previous button
+ * state should be changed.
+ * Specified to the carousel as the configuration
+ * parameter: prevButtonStateHandler
+ **/
+ var handlePrevButtonState = function(type, args) {
+
+	var enabling = args[0];
+	var leftImage = args[1];
+	if(enabling) {
+		leftImage.src = "images/left-enabled.gif";		
+	} else {
+		leftImage.src = "images/left-disabled.gif";	
+	}
+};
+
+/**
+ * Custom button state handler for enabling/disabling button state. 
+ * Called when the carousel has determined that the next button
+ * state should be changed.
+ * Specified to the carousel as the configuration
+ * parameter: nextButtonStateHandler
+ **/
+var handleNextButtonState = function(type, args) {
+	var enabling = args[0];
+	var rightImage = args[1];
+	if(enabling) {
+		rightImage.src = "images/right-enabled.gif";	
+	} else {
+		rightImage.src = "images/right-disabled.gif";
+	}
+};
+
+/**
+ * You must create the carousel after the page is loaded since it is
+ * dependent on an HTML element (in this case 'dhtml-carousel'.) See the
+ * HTML code below.
+ **/
+var carousel; // for ease of debugging; globals generally not a good idea
+
+var pageLoad = function() 
+{
+	carousel = new YAHOO.extension.Carousel("dhtml-carousel", 
+		{
+			numVisible:        4,
+			animationSpeed:    0.8,
+			animationMethod:   YAHOO.util.Easing.easeBoth,
+			scrollInc:         3,
+			navMargin:         40,
+			size:              17,
+			loadInitHandler:   loadInitialItems,
+			prevElement:     "prev-arrow",
+			nextElement:     "next-arrow",
+			loadNextHandler:   loadNextItems,
+			loadPrevHandler:   loadPrevItems,
+			prevButtonStateHandler:   handlePrevButtonState,
+			nextButtonStateHandler:   handleNextButtonState
+		}
+	);
+};
+
+YAHOO.util.Event.addListener(window, 'load', pageLoad);
+
+
+</script>
+</head>
+
+<body>
+
+<div id="doc" class="yui-t7">
+   <div id="hd">
+		<h1>DHTML Load (Bounded &amp; Asychronous) - Carousel</h1>
+   </div>
+<div id="bd">
+<p>An array of images is viewed sequentially, but loaded in a different order. The Carousel's size parameter is set to 17. This demonstrates that by setting a bounded size, the carousel handles the situation of items being loaded in a non-sequential manner.</p>
+
+<!-- Carousel Structure -->
+<div id="dhtml-carousel" class="carousel-component">
+	<div><img id="prev-arrow" class="left-button-image" src="images/left-enabled.gif" alt="Previous Button"/></div>
+	<div><img id="next-arrow" class="right-button-image" src="images/right-enabled.gif" alt="Next Button"/></div>
+	<div class="carousel-clip-region">
+		<ul class="carousel-list">
+			<!-- Filled in via the loadInitHandler, loadNextHandler, and loadPrevHandler
+			<li id="item-1">
+			<a href="#">
+				<img src="http://static.flickr.com/74/162582364_7fc3e2d60d_s.jpg"/>
+			</a>Number One</li>
+			-->
+		</ul>
+	</div>
+</div>
+
+<div style="padding-top:20px;clear:both">View the <a href="source.php?url=carousel_dhtml_load_bounded_asynch.html">source</a>&nbsp;or&nbsp;<a href="index.html">documentation</a></div>
+
+</div>
+</div> 
+
+</body>
+</html>

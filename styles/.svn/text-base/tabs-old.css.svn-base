@@ -1,0 +1,17 @@
+
+
+/*css that applies to all tabs */
+
+.tabs ul {float:left;list-style-type:none;margin:0px;padding:0px;width:1000px;background:#e2f6fd;}
+.tabs ul li {float:left;margin-right:5px;}
+.tabs ul li a {float:left;;text-decoration:none;padding-left:10px;padding-right:10px;line-height:25px;text-align: center;	font-family: "Lucida Grande", Verdana, Arial, sans-serif;	font-size: 85%;	text-decoration: none;	color: #333;}
+
+/*inactive tabs */
+
+.tabs ul li {background:url('images/inactive-tab-start.gif')}
+.tabs ul li a {background:url('images/inactive-tab-end.gif') no-repeat;background-position: 100% 0%;}
+
+/*active tabs--replace the above css */
+.tabs  ul li {background:url('images/active-tab-start.gif')}
+.tabs ul li a {background:url('images/active-tab-end.gif') no-repeat;background-position: 100% 0%;}
+

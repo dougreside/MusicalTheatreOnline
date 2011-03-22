@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/mto/!svn/ver/177/lib/OpenLayers/build
+END
+full.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/mto/!svn/ver/177/lib/OpenLayers/build/full.cfg
+END
+license.txt
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/mto/!svn/ver/177/lib/OpenLayers/build/license.txt
+END
+library.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/mto/!svn/ver/177/lib/OpenLayers/build/library.cfg
+END
+build.py
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/mto/!svn/ver/177/lib/OpenLayers/build/build.py
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/mto/!svn/ver/177/lib/OpenLayers/build/README.txt
+END
+lite.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/mto/!svn/ver/177/lib/OpenLayers/build/lite.cfg
+END
+buildUncompressed.py
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/mto/!svn/ver/177/lib/OpenLayers/build/buildUncompressed.py
+END

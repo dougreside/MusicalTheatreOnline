@@ -1,0 +1,14 @@
+
+/*css that applies to all tabs */
+
+.tabs {margin-left:10px;}
+.tabs ul {float:left;list-style-type:none;margin:0px;padding:0px;width:990px;background:#e2f6fd;}
+.tabs ul li {float:left;margin-right:5px;margin-left:5 px; background:url('images/inactive-tab-start.gif')}
+.tabs ul li a {float:left;;text-decoration:none;padding-left:10px;padding-right:10px;line-height:25px;text-align: center;	font-family: "Lucida Grande", Verdana, Arial, sans-serif;	font-size: 85%;	text-decoration: none;	color: #333; background:url('images/inactive-tab-end.gif') no-repeat;background-position: 100% 0%;}
+.tabs ul li:hover {background:url('images/hover-tab-start.gif') no-repeat}
+.tabs ul li a:hover {background:url('images/hover-tab-end.gif') no-repeat;background-position: 100% 0%;}
+
+/*active class */
+.tabs ul li.active   {background:url('images/active-tab-start.gif') no-repeat}
+.tabs ul li.active a  {background:url('images/active-tab-end.gif') no-repeat;background-position: 100% 0%;}
+

@@ -1,0 +1,198 @@
+<div class="browseBox">
+    <div class="browse">
+        <div class="hd">
+        	<div class="hdContents">
+                <div class="hdBox">
+                	<h3>Window Title</h3><span class="controls"><a href="#"><img src="images/close-icon.png" alt="close" /></a></span>
+                </div>
+             </div>
+    	</div>
+        
+        <div class="bd">
+            <div class="bdContents">
+                
+                <div class="searchArea">
+                <h3>Browse by Title, Person, Organization, Theatre, Medium or Season</h3>
+                 <form class="search" >
+                <input type="text" class="searchbox" value="Enter search limiter..." onblur="if(this.value=='')this.value='Enter search limiter...'" onfocus="if(this.value=='Enter search limiter...')this.value=''" name="s"/><input class="submitbutton" type="image" src="images/searchbutton-2.jpg" />    
+                </form>
+                </div>
+                
+                <div class="bdBox">
+                
+                <div id="tableContainer" class="tableContainer">
+				  <table border="0" cellpadding="0" cellspacing="0" width="100%" class="scrollTable">
+                    			<thead class="fixedHeader">
+                                        <tr>
+                                            <th><a href="#">Open</a></th>
+                                            <th><a href="#">Title</a></th>
+                                            <th><a href="#">Person</a></th>
+                                            <th><a href="#">Organization</a></th>
+                                            <th><a href="#">Theatre</a></th>
+                                            <th><a href="#">Medium</a></th>
+                                            <th><a href="#">Season</a></th>
+                                        </tr>
+                                   </thead>
+                                   
+                                   <tbody class="scrollContent">
+                                      <tr class="alt">
+                                          <td><input type="checkbox"></td>
+                                          <td>Glory Days</td>
+                                          <td>Sample Person</td>
+                                          <td>Library of Congress</td>
+                                          <td>Arlington</td>
+                                          <td>Script</td>
+                                          <td>Fall 2007</td>
+                                      </tr>
+                                      <tr>
+                                          <td><input type="checkbox"></td>
+                                          <td>Glory Days</td>
+                                          <td>Sample Person</td>
+                                          <td>Library of Congress</td>
+                                          <td>Arlington</td>
+                                          <td>Script</td>
+                                          <td>Fall 2007</td>
+                                      </tr>
+                                      <tr class="alt">
+                                           <td><input type="checkbox"></td>
+                                          <td>Glory Days</td>
+                                          <td>Sample Person</td>
+                                          <td>Library of Congress</td>
+                                          <td>Arlington</td>
+                                          <td>Script</td>
+                                          <td>Fall 2007</td>
+                                      </tr>
+                                      <tr>
+                                           <td><input type="checkbox"></td>
+                                          <td>Glory Days</td>
+                                          <td>Sample Person</td>
+                                          <td>Library of Congress</td>
+                                          <td>Arlington</td>
+                                          <td>Script</td>
+                                          <td>Fall 2007</td>
+                                      </tr>
+                                      <tr class="alt">
+                                           <td><input type="checkbox"></td>
+                                          <td>Glory Days</td>
+                                          <td>Sample Person</td>
+                                          <td>Library of Congress</td>
+                                          <td>Arlington</td>
+                                          <td>Script</td>
+                                          <td>Fall 2007</td>
+                                      </tr>
+                                      <tr>
+                                           <td><input type="checkbox"></td>
+                                          <td>Glory Days</td>
+                                          <td>Sample Person</td>
+                                          <td>Library of Congress</td>
+                                          <td>Arlington</td>
+                                          <td>Script</td>
+                                          <td>Fall 2007</td>
+                                      </tr>
+                                      <tr class="alt">
+                                           <td><input type="checkbox"></td>
+                                          <td>Glory Days</td>
+                                          <td>Sample Person</td>
+                                          <td>Library of Congress</td>
+                                          <td>Arlington</td>
+                                          <td>Script</td>
+                                          <td>Fall 2007</td>
+                                      </tr>
+                                      <tr>
+                                          <td><input type="checkbox"></td>
+                                          <td>Glory Days</td>
+                                          <td>Sample Person</td>
+                                          <td>Library of Congress</td>
+                                          <td>Arlington</td>
+                                          <td>Script</td>
+                                          <td>Fall 2007</td>
+                                      </tr>
+                                            <tr class="alt">
+                                            <td><input type="checkbox"></td>
+                                            <td>Glory Days</td>
+                                            <td>Sample Person</td>
+                                            <td>Library of Congress</td>
+                                            <td>Arlington</td>
+                                            <td>Script</td>
+                                            <td>Fall 2007</td>
+                                      </tr>
+                                      <tr>
+                                           <td><input type="checkbox"></td>
+                                          <td>Glory Days</td>
+                                          <td>Sample Person</td>
+                                          <td>Library of Congress</td>
+                                          <td>Arlington</td>
+                                          <td>Script</td>
+                                          <td>Fall 2007</td>
+                                      </tr>
+                                      <tr class="alt">
+                                           <td><input type="checkbox"></td>
+                                          <td>Glory Days</td>
+                                          <td>Sample Person</td>
+                                          <td>Library of Congress</td>
+                                          <td>Arlington</td>
+                                          <td>Script</td>
+                                          <td>Fall 2007</td>
+                                      </tr>
+                                      <tr>
+                                           <td><input type="checkbox"></td>
+                                          <td>Glory Days</td>
+                                          <td>Sample Person</td>
+                                          <td>Library of Congress</td>
+                                          <td>Arlington</td>
+                                          <td>Script</td>
+                                          <td>Fall 2007</td>
+                                      </tr>
+                                      <tr class="alt">
+                                           <td><input type="checkbox"></td>
+                                          <td>Glory Days</td>
+                                          <td>Sample Person</td>
+                                          <td>Library of Congress</td>
+                                          <td>Arlington</td>
+                                          <td>Script</td>
+                                          <td>Fall 2007</td>
+                                      </tr>
+                                      <tr>
+                                           <td><input type="checkbox"></td>
+                                          <td>Glory Days</td>
+                                          <td>Sample Person</td>
+                                          <td>Library of Congress</td>
+                                          <td>Arlington</td>
+                                          <td>Script</td>
+                                          <td>Fall 2007</td>
+                                      </tr>
+                                      <tr class="alt">
+                                           <td><input type="checkbox"></td>
+                                          <td>Glory Days</td>
+                                          <td>Sample Person</td>
+                                          <td>Library of Congress</td>
+                                          <td>Arlington</td>
+                                          <td>Script</td>
+                                          <td>Fall 2007</td>
+                                      </tr>
+                                      <tr>
+                                          <td><input type="checkbox"></td>
+                                          <td>Glory Days</td>
+                                          <td>Sample Person</td>
+                                          <td>Library of Congress</td>
+                                          <td>Arlington</td>
+                                          <td>Script</td>
+                                          <td>Fall 2007</td>
+                                      </tr>
+                                   </tbody>
+                                  </table>
+						</div>                         
+                
+                </div>
+                
+                
+            </div>
+        </div>
+        
+        <div class="ft">
+            <div class="ftContents">
+            	<span class="corner"><a href="#" class="openFiles"><img src="images/btn_browseOpen.jpg" alt="Open selected files" /></a></span>
+            </div>
+        </div>
+    </div>
+</div>

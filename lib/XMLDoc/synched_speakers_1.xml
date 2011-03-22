@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="file:/Users/dougreside/Desktop/tei_drama.rng" type="xml"?>
+<?xml-stylesheet type="text/xsl" href="http://localhost:8888/EBP/lib/XMLDoc/drama2.xsl"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+
+<teiHeader>
+<fileDesc> 
+<titleStmt> 
+<title>GLORY DAYS</title> 
+<title>a new musical by nick blaemire 
+&amp; james gardiner</title>
+</titleStmt> 
+<editionStmt> 
+<edition> 
+Signature Theatre Draft
+</edition>
+</editionStmt>  
+
+<publicationStmt><date> 01/12/08</date>
+
+<distributor>
+
+Please address inquiries to:<lb/>
+William Craver<lb/>
+Paradigm New York<lb/>
+360 Park Avenue South, 16th Floor<lb/>
+New York, New York 10010<lb/>
+wcraver@paradigmagency.com<lb/>
+(212) 897-6400<lb/></distributor> 
+   
+
+</publicationStmt>
+<sourceDesc><ab></ab></sourceDesc></fileDesc> 
+
+</teiHeader><text>
+<front>
+<titlePart>GLORY DAYS</titlePart>
+<titlePart>A New Musical</titlePart>
+<docAuthor>Music and Lyrics by Nick Blaemire</docAuthor> 
+<docAuthor>Book by James Gardiner</docAuthor>
+</front>
+<body xml:id="GD01120">
+
+<div>
+<table cols="2">
+	<row>
+		<cell>
+			<ptr target="#GD01116997"/>
+		</cell>
+		<cell>
+			<ptr target="#GD01117016"/>
+		</cell>	
+	</row>
+	<row>
+		<cell>
+			<ptr target="#GD01117000"/>
+		</cell>
+		<cell>
+			<ptr target="#GD01117019"/>
+		</cell>	
+	</row>
+		<row>
+		<cell>
+			<ptr target="#GD01116997"/>
+		</cell>
+		<cell>
+			<ptr target="#GD01117016"/>
+		</cell>	
+	</row>
+	<row>
+		<cell>
+			<ptr target="#GD01117002"/>
+		</cell>
+		<cell>
+			<ptr target="#GD01117021"/>
+		</cell>	
+	</row>
+	<row>
+		<cell>
+			<ptr target="#GD01117004"/>
+		</cell>
+		<cell>
+		</cell>	
+	</row>
+		<row>
+		<cell>
+			<ptr target="#GD01117006"/>
+		</cell>
+		<cell>
+		</cell>	
+	</row>
+</table>
+<table cols="3">
+	<row>
+		<cell>
+			<ptr target="GD01117008"/>
+		</cell>
+		<cell>
+			<ptr target="GD01117024"/>
+		</cell>
+		<cell>
+		</cell>	
+	</row>
+	<row>
+		<cell>
+			<ptr target="GD01117014"/>
+		</cell>
+		<cell>
+			<ptr target="GD01117027"/>
+		</cell>
+		<cell></cell>	
+	</row>	
+	<row>
+		<cell>
+		</cell>
+		<cell>
+		</cell>
+		<cell>
+			<ptr target="GD01117053"/>
+		</cell>	
+	</row>		
+</table>
+	
+<sp who="Will" rend="table" xml:id="GD01116996">
+	<speaker xml:id="GD01116997">WILL</speaker><lb xml:id="GD01116998"/>
+    <lg xml:id="GD01116999">
+    	<l synch="#GD01117019" xml:id="GD01117000">YES IT IS</l><lb xml:id="GD01117001"/>
+        <l synch="#GD01117021" xml:id="GD01117002">PEOPLE CHANGE</l><lb xml:id="GD01117003"/>
+        <l xml:id="GD01117004">AND PEOPLE LIE</l><lb  xml:id="GD01117005"/>
+        <l xml:id="GD01117006">PEOPLE TRY TO SAVE A FRIENDSHIP</l><lb xml:id="GD01117007"/>
+        <l synch="#GD01117024" xml:id="GD01117008">IS IT SO HARD</l><lb xml:id="GD01117009"/>
+        <l synch="#GD01117027" xml:id="GD01117014">TO SEE WHY</l></lg></sp><lb xml:id="GD01117015"/>
+
+
+<sp who="Skip Andy" rend="table" xml:id="GD01117016">
+	<speaker xml:id="GD01117017">SKIP and ANDY</speaker>
+    <lg xml:id="GD01117018">
+    	<l synch="#GD01117000" xml:id="GD01117019">IT'S NOT THAT EASY</l><lb xml:id="GD01117020"/>
+        <l synch="#GD01117002" xml:id="GD01117021">JUST TO FORGET ABOUT THIS</l></lg>
+</sp><lb xml:id="GD01117022"/>
+
+
+<sp who="Andy" rend="table" xml:id="GD01117023"><speaker xml:id="GD01117024">ANDY</speaker><lb xml:id="GD01117025"/>
+    <p synch="#GD01117014" xml:id="GD01117027">Me?</p><lb xml:id="GD01117028"/>
+    <p synch="#GD01117043" xml:id="GD01117030">Why not him?</p><lb xml:id="GD01117031"/>
+    <p synch="#GD01117049" xml:id="GD01117033">Why? You saw exactly what happened.</p><lb xml:id="GD01117034"/>
+    <p synch="#GD01117067" xml:id="GD01117035">Yeah and you're an arrogant prick.</p><lb xml:id="GD01117036"/>
+    <p synch="#GD01117069" xml:id="GD01117037">Get off my back man!</p></sp><lb xml:id="GD01117038"/>
+
+<!--And so on...I haven't done any editing after this point -->
+
+
+<sp who="Will Jack" synch="#GD01117023 GD01117053" xml:id="GD01117039"><speaker synch="#GD01117057" xml:id="GD01117040">WILL and JACK</speaker><lb xml:id="GD01117041"/>
+    <lg synch="#" xml:id="GD01117042"><l synch="#GD01117030" xml:id="GD01117043">WE HAVE TO TRY</l></lg></sp><lb xml:id="GD01117044"/>
+
+
+<sp who="Will" synch="#GD01117023 GD01117053" xml:id="GD01117045"><speaker synch="#GD01117061" xml:id="GD01117046">WILL</speaker><lb xml:id="GD01117047"/>
+    <lg synch="#" xml:id="GD01117048"><l synch="#GD01117033" xml:id="GD01117049">AND JUST FORGET ABOUT IT </l><lb xml:id="GD01117050"/>
+        <l synch="#GD01117065" xml:id="GD01117051">COME ON GUYS</l></lg></sp><lb xml:id="GD01117052"/>
+
+
+
+<sp who="Skip" synch="#GD01117023 GD01117039 GD01117045" xml:id="GD01117053"><speaker synch="#" xml:id="GD01117054">SKIP</speaker><lb xml:id="GD01117055"/>
+    <p synch="#GD01117040" xml:id="GD01117057">Yeah you, who else?</p><lb xml:id="GD01117058"/>
+    <lb xml:id="GD01117059"/>
+    <p synch="#GD01117046" xml:id="GD01117061">Cause you're the problem here, Andy!</p><lb xml:id="GD01117062"/>
+    <lb xml:id="GD01117063"/>
+    <p synch="#GD01117051" xml:id="GD01117065">You're a fucking brat.</p><lb xml:id="GD01117066"/>
+    <p synch="#GD01117035" xml:id="GD01117067">Is this the kind of shit you learned in your</p><lb xml:id="GD01117068"/>
+    <p synch="#GD01117037" xml:id="GD01117069">little fraternity? No!</p></sp><lb xml:id="GD01117070"/>
+<lb xml:id="GD01117071"/>
+
+
+<sp who="Will" synch="#GD01117092 GD01117084" xml:id="GD01117072"><speaker synch="#" xml:id="GD01117073">WILL</speaker><lb xml:id="GD01117074"/>
+    <lg synch="#GD01117095 GD01117087" xml:id="GD01117075"><l synch="#GD01117088" xml:id="GD01117076">FORGET ABOUT IT</l><lb xml:id="GD01117077"/>
+        <l synch="#GD01117096 GD01117090" xml:id="GD01117078">FORGET ABOUT IT</l><lb xml:id="GD01117079"/>
+        <l synch="#GD01117098" xml:id="GD01117080">FORGET ABOUT IT</l><lb xml:id="GD01117081"/>
+        <l synch="#GD01117100" xml:id="GD01117082">FORGET ABOUT IT</l></lg></sp><lb xml:id="GD01117083"/>
+
+<sp who="Skip" synch="#GD01117072 GD01117092" xml:id="GD01117084"><speaker synch="#" xml:id="GD01117085">SKIP</speaker><lb xml:id="GD01117086"/>
+    <lg synch="#GD01117095 GD01117075" xml:id="GD01117087"><l synch="#GD01117076" xml:id="GD01117088">I'M NOT GOING </l><lb xml:id="GD01117089"/>
+        <l synch="#GD01117078 GD01117096" xml:id="GD01117090">TO EVER...</l></lg></sp><lb xml:id="GD01117091"/>
+
+
+<sp who="Jack" synch="#GD01117072 GD01117084" xml:id="GD01117092"><speaker synch="#" xml:id="GD01117093">JACK</speaker><lb xml:id="GD01117094"/>
+    <lg synch="#GD01117075 GD01117087" xml:id="GD01117095"><l synch="#GD01117078 GD01117090" xml:id="GD01117096">FORGET ABOUT IT	</l><lb xml:id="GD01117097"/>
+        <l synch="#GD01117080" xml:id="GD01117098">FORGET ABOUT IT</l><lb xml:id="GD01117099"/>
+        <l synch="#GD01117082" xml:id="GD01117100">PLEASE JUST...</l></lg></sp><lb xml:id="GD01117101"/>
+<lb xml:id="GD01117102"/>
+
+
+</div>
+</body>
+</text>
+</TEI>

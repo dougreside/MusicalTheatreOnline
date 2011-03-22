@@ -1,0 +1,148 @@
+
+.audioPlayer {
+	width:747px;
+	height:490px;
+}
+
+.audioPlayer .audioPlayerContents {	
+	position:relative;
+	padding:10px 0px 10px 0px;
+	#padding-bottom:15px;
+}
+.audioPlayer .audioPlayerContents .nowPlaying {
+	padding-bottom:8px;
+	background:url('images/bkgd-musicalNotes.jpg') no-repeat 0px 0px;
+	height:30px;
+}
+
+.audioPlayer .audioPlayerContents .nowPlaying .currentSong {
+	background:url('images/bkgd_sampleSong.png') no-repeat;
+	margin-left:35px;
+	margin-top:5px;
+	height:30px;
+}
+.audioPlayer .audioPlayerContents .nowPlaying .currentSong p {
+	color:#4c4c4c;
+	padding:5px 8px 10px 8px;
+	font-style:italic;
+	font-size:12px;
+	max-width:380px;
+}
+.audioPlayer .audioPlayerContents .audioPlayerControls {
+	margin:5px 0 10px 0;	
+}
+.audioPlayer .audioPlayerContents .audioPlayerControls ul {
+	height:25px;
+	line-height:25px;
+	margin-top:-10px;
+	#margin-top:-5px;
+	padding:0 0 10px 38px;
+	width:700px;
+}
+
+.audioPlayer .audioPlayerContents .audioPlayerControls li {
+	cursor:pointer;	
+	text-indent:-9999px;
+	padding:0px;
+	height:40px;
+}
+
+li.button.audioBackButton {	background:url(images/btn-back.png) no-repeat; }
+li.button.audioBackButton:hover {	background:url(images/btn-backHover.png) no-repeat; }
+
+li.button.audioRewindButton {	background:url(images/btn-rewind.png) no-repeat;	}
+li.button.audioRewindButton:hover {	background:url(images/btn-rewindHover.png) no-repeat; }
+
+li.button.audioPlayButton {background:url(images/btn-play.png) no-repeat;}
+li.button.audioPlayButton:hover {	background:url(images/btn-playHover.png) no-repeat; }
+
+li.button.audioPauseButton {background:url(images/btn-pause.png) no-repeat;}
+li.button.audioPauseButton:hover {background:url(images/btn-pauseHover.png) no-repeat;}
+
+li.button.audioStopButton {	background:url(images/btn-stop.png) no-repeat;}
+li.button.audioStopButton:hover {	background:url(images/btn-stopHover.png) no-repeat;}
+
+li.button.audioFForwardButton { background:url(images/btn-fforward.png) no-repeat;}
+li.button.audioFForwardButton:hover { background:url(images/btn-fforwardHover.png) no-repeat;}
+
+li.button.audioForwardButton {	background:url(images/btn-forward.png) no-repeat;}
+li.button.audioForwardButton:hover {	background:url(images/btn-forwardHover.png) no-repeat;}
+
+li.button.audioVolumeButton {background:url(images/btn-volume.png) no-repeat;}
+
+.audioPlayerControls .col2 {margin-left:35px;}
+.audioPlayerControls .col3 {margin-left:70px;}
+.audioPlayerControls .col4 {margin-left:105px;}
+.audioPlayerControls .col5 {margin-left:140px;}
+.audioPlayerControls .col6 {margin-left:175px;}
+.audioPlayerControls .col7 {margin-left:210px;}
+
+.audioPlayer ul li.top {margin-top:-40px;}
+
+
+.audioPlayer .audioPlayList {
+	height:370px;
+	overflow:auto;
+	background-color:#fff;
+	border:1px solid #aeaeae;
+	clear:both;
+}
+
+.audioPlayer .audioPlayList .audioItems {
+	font-size:9.45px;
+	padding:0px;
+}
+
+.audioPlayer .audioPlayList thead {
+	background-color:#dcdcdc;
+}
+
+.audioPlayer .audioPlayList th {
+	font-weight:bold;
+}
+.audioPlayer .audioPlayList tr {
+	height:25px;
+	border-bottom:1px solid #aeaeae;
+}
+.audioPlayer .audioPlayList th, .audioPlayer .audioPlayList td {
+	padding-right:5px;
+	padding-left:5px;
+}
+.audioPlayer .audioPlayList tr.yui-dt-even {
+	background-color:#ffffff;
+}
+.audioPlayer .audioPlayList tr.yui-dt-even:active, .audioPlayer .audioPlayList tr.yui-dt-even:hover, .audioPlayer .audioPlayList tr.yui-dt-even:hover a {
+	background-color:#81a1d1;
+	color:#fff;
+	_color:4A4A4A;
+	cursor:pointer;
+}
+.audioPlayer .audioPlayList tr.yui-dt-odd {
+	background-color:#e2f6fd;
+}
+.audioPlayer .audioPlayList tr.yui-dt-odd:active, .audioPlayer .audioPlayList tr.yui-dt-odd:hover, .audioPlayer .audioPlayList tr.yui-dt-odd:hover a {
+	background-color:#81a1d1;
+	color:#fff;
+	_color:4A4A4A;
+	cursor:pointer;
+}
+.audioPlayer .audioPlayList tr#MTO_currently_playing_row, .audioPlayer .audioPlayList tr#MTO_currently_playing_row a {
+	background-color:#3EA7A0;
+	color:#fff;
+	_color:4A4A4A;
+}
+.audioPlayer p.btnOpenRelated {
+	padding:10px 10px 10px 100px;
+}
+.audioPlayer p.btnOpenRelated a  {
+	padding:0px;
+	line-height:0px;
+	display:block;
+	width:74px;
+	height:21px;
+}
+.audioPlayer .curSong{
+	background-color:#81a1d1;
+	color:#fff;
+	_color:4A4A4A;
+}

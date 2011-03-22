@@ -1,0 +1,35 @@
+<div class="importBox">
+    <div class="import">
+        <div class="hd">
+        	<div class="hdContents">
+                <div class="hdBox">
+                	<h3>Import annotations file</h3><span class="controls"><a href="#"><img id="importBoxClose" src="images/close-icon.png" alt="close" /></a></span>
+                </div>
+             </div>
+    	</div>
+        
+        <div class="bd">
+            <div class="bdContents">
+               
+               <div class="importArea">
+                   <form method="POST" enctype="multipart/form-data" action="http://mith.info/mto/lib/ImportBox/importAnnos.php" name="importForm" class="importForm">
+						   <label for="annoFile">Select a file to import:</label><br />
+                          <input type="file" name="uploadedfile" id="uploadedfile" class="importFile" color="#3ea7a0" />
+                          
+						  
+                     </form>
+                     
+
+            
+              </div>  
+            
+            </div>
+        </div>
+        
+        <div class="ft">
+            <div class="ftContents">
+            	<span class="corner"><a href="#" onclick="submitImportForm()" class="uploadFile"><img src="./lib/ImportBox/images/uploadFile.jpg" alt="Upload selected file" /></a></span>
+            </div>
+        </div>
+    </div>
+</div>

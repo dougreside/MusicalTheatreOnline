@@ -1,0 +1,48 @@
+TO DO:
+Elisabeth: ------------------------------------
+(DONE) Determine what to use for an annotation reference (other than asterisk)
+(DONE) Fix overflow on notes box once Doug adds a div around it
+(DONE) Style the OrderedImageViewer
+(DONE) Check cross-browser compatibility (ongoing)
+(DONE) Edit video to show import, saving of misc files, changes to image viewer
+
+Doug: ------------------------------------
+FUNCTIONALITY:
+(DONE) Create functionality to save MISC files to the user's desktop
+(DONE) (Look at the table generator for YUI and change the selection option to a URI)
+
+COMPARE
+(DONE) Fix the compare function so that if you compare the same script there's a friendly error message
+
+Tabs:
+(DONE) Remove the text size switcher on video tab, audio player tab
+(DONE) When you close a tab, the tab behind it doesn't become active. 
+(DONE) Change the overflow tabs to read ">" for the right, and "<" for the left, rather than "..." on both
+(DONE) When you close overflow tabs, the right-hand side overflow indicator doesn't disappear
+(DONE) Limit the length of the tab text to "12/27/07 rehearsal" and add elipses (ideal max width 800px; possible width is 900px;)
+(DONE) Add elipses to tab title bar when it gets too long (max width is 500px)
+(DONE) No tabs show up at the top of interface.php in IE6
+Make it impossible to close the last tab (must always have one open)
+
+Annotate:
+(DONE) You can't use the annotate tool multiple times in a row; it only works once or twice
+(DONE) When you select an asterisk the first time, it lets you open and edit an annotation, but it won't work a second time
+(DONE) The notes box isn't scrolling properly—could you put another div around the Notes? So it would be:
+	<div class="sbNote sideboxContents">
+	    <div class="notes"></div>
+	    <div class="noteControl"></div>
+	</div>
+(DONE) IE 8, 7, 6 — import annotations doesn't work (link is wrong—points to local host)
+(IGNORE?) IE 7, 6 - notes panel doesn't allow you to edit, delete, or display a note when you click on it
+(DONE) IE 8, 7, 6 - Close button on annotations panel doesn't work
+Firefox - when Firefox gets slow, multiple tabs show up as active, and the text tabs freeze up (can't move between tabs)
+
+Video:
+(DONE) When you first open a video tab, there is a gray border on the right-hand side of the tab—it looks like it's supposed to look. The div order in the main content area is mainContent > textBlock > textWrapper.
+(DONE) When you move away from the video tab and come back, however, these divs change, and the gray border is too far to the left. The div order is now mainContent > textBlock. I'm not sure where the textWrapper div is getting stripped out
+
+Image:
+(N/A) Add a sub-menu to the images section, to choose between production photos and photos of production texts
+
+Audio:
+(DONE) IE8 — when you go to the audio tab, it says, "no records found"

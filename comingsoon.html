@@ -1,0 +1,467 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Music Theatre Online</title>
+
+<link rel="shortcut icon" href="images/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/fonts/fonts-min.css" />
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/menu/assets/skins/sam/menu.css" />
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/button/assets/skins/sam/button.css" />
+
+<link rel="stylesheet" href="styles/mto.css" type="text/css" media="screen" />
+
+<script src="scripts/cufon.js" type="text/javascript"></script>
+<script src="scripts/Museo_300_300.font.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="http://yui.yahooapis.com/2.7.0/build/utilities/utilities.js"></script>
+<script type="text/javascript" src="scripts/carousel.js"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/2.7.0/build/yahoo-dom-event/yahoo-dom-event.js"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/2.7.0/build/container/container_core-min.js"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/2.7.0/build/menu/menu-min.js"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/2.7.0/build/element/element-min.js"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/2.7.0/build/button/button-min.js"></script>
+
+
+
+<script type="text/javascript">
+
+/**
+ * Image src URLs
+ **/
+var imageList = [
+				 "images/GloryDaysLogo.jpg",
+				 "images/BlackCrookLogo.jpg",
+				 "images/Sally.gif",
+				 "images/Dorothy.gif"
+				
+				 ];
+var urlList = [
+				 "./archive",
+				 "./comingsoon.html",
+				 "./comingsoon.html",
+				 "./comingsoon.html",
+				 
+				 ];
+var nameList = [
+				 "Glory Days",
+				 "The Black Crook",
+				 "Sally",
+				 "Dorothy"
+				 ];
+var lastRan = -1;
+
+/**
+ * Since carousel.addItem uses an HTML string to create the interface
+ * for each carousel item, this method formats the HTML for an LI.
+ **/
+
+var fmtItem = function(imgUrl, url, title) {
+
+  	var innerHTML = 
+  		'<a href="' + 
+  		url + 
+  		'"><img src="' + 
+  		imgUrl +
+		'" width="200px" height="190px"/>' +title+'<\/a>';
+  
+	return innerHTML;
+	
+};
+
+/**
+ * Custom inital load handler. Called when the carousel loads the initial
+ * set of data items. Specified to the carousel as the configuration
+ * parameter: loadInitHandler
+ **/
+var loadInitialItems = function(type, args) {
+	var start = args[0];
+	var last = args[1]; 
+
+	load(this, start, last);	
+};
+
+/**
+ * Custom load next handler. Called when the carousel loads the next
+ * set of data items. Specified to the carousel as the configuration
+ * parameter: loadNextHandler
+ **/
+var loadNextItems = function(type, args) {	
+	var start = args[0];
+	var last = args[1]; 
+	var alreadyCached = args[2];
+	
+	if(!alreadyCached) {
+		load(this, start, last);
+	}
+}
+
+/**
+ * Custom load previous handler. Called when the carousel loads the previous
+ * set of data items. Specified to the carousel as the configuration
+ * parameter: loadPrevHandler
+ **/
+var loadPrevItems = function(type, args) {
+	var start = args[0];
+	var last = args[1]; 
+	var alreadyCached = args[2];
+	
+	if(!alreadyCached) {
+		load(this, start, last);
+	}
+}     
+
+var load = function(carousel, start, last) {
+	for(var i=start;i<=last;i++) {
+	
+		carousel.addItem(i, fmtItem(imageList[i-1],urlList[i-1],nameList[i-1]));
+	}
+}
+
+var getRandom = function(max, last) {
+	var randomIndex;
+	do {
+		randomIndex = Math.floor(Math.random()*max);
+	} while(randomIndex == last);
+	
+	return randomIndex;
+};
+
+/**
+ * Custom button state handler for enabling/disabling button state. 
+ * Called when the carousel has determined that the previous button
+ * state should be changed.
+ * Specified to the carousel as the configuration
+ * parameter: prevButtonStateHandler
+ **/
+var handlePrevButtonState = function(type, args) {
+
+	var enabling = args[0];
+	var leftImage = args[1];
+	if(enabling) {
+		leftImage.src = "images/left-scrollbutton.jpg";	
+	} else {
+		leftImage.src = "images/left-scrollbutton.jpg";
+	}
+	
+};
+
+/**
+ * You must create the carousel after the page is loaded since it is
+ * dependent on an HTML element (in this case 'dhtml-carousel'.) See the
+ * HTML code below.
+ **/
+
+var carousel; // for ease of debugging; globals generally not a good idea
+
+
+
+
+
+YAHOO.util.Event.onDOMReady(function () {
+	carousel = new YAHOO.extension.Carousel("dhtml-carousel", 
+		{
+			numVisible:        3,
+			animationSpeed:    0.25,
+			scrollInc:         3,
+			navMargin:         40,
+			size: 4,
+			wrap: true,
+			prevElement:       "prev-arrow",
+			nextElement:       "next-arrow",
+			loadInitHandler:   loadInitialItems,
+			loadNextHandler:   loadNextItems,
+			loadPrevHandler:   loadPrevItems,
+			prevButtonStateHandler:   handlePrevButtonState
+		}
+	);
+
+
+
+		var Button = YAHOO.widget.Button;
+	
+
+		//	"render" event handler for a Button's Menu - responsible for setting
+		//	 the default value for the Button's "selectedMenuItem" attribute.
+
+		var onMenuRender = function (type, args, button) {
+
+			button.set("selectedMenuItem", this.getItem(0));
+
+		};
+
+
+		//	"selectedMenuItemChange" event handler for a Button that will set 
+		//	the Button's "label" attribute to the value of the "text" 
+		//	configuration property of the MenuItem that was clicked.
+
+		var onSelectedMenuItemChange = function (event) {
+
+			var oMenuItem = event.newValue;
+
+			this.set("label", (
+						oMenuItem.cfg.getProperty("text") ));
+
+		};
+
+
+		//	"submit" event handler for a Button's parent form - repsonsible for 
+		//	rendering a Menu that was to be lazy loaded, but never clicked on, 
+		//	and therefore never rendered.
+
+		var onFormSubmit = function (event, button) {
+
+			var oMenuItem = button.get("selectedMenuItem"),
+				UA = YAHOO.env.ua,
+				oEvent,
+				oMenu;
+			
+			if (!oMenuItem) {
+
+				//	Pause submission of the form until the Button's Menu 
+				//	is rendered
+				YAHOO.util.Event.preventDefault(event);
+
+				oMenu = button.getMenu();
+
+				oMenu.addItems(oMenu.itemData);
+
+				oMenu.subscribe("render", function () {
+
+					var bSubmitForm;
+
+					if (UA.ie) {
+						bSubmitForm = this.fireEvent("onsubmit");
+					}
+					else {  // Gecko, Opera, and Safari
+			
+						oEvent = document.createEvent("HTMLEvents");
+						oEvent.initEvent("submit", true, true);
+						bSubmitForm = this.dispatchEvent(oEvent);
+			
+					}
+
+					//	In IE and Safari, dispatching a "submit" event to a form 
+					//	WILL cause the form's "submit" event to fire, but WILL  
+					//	NOT submit the form.  Therefore, we need to call the 
+					//	"submit" method as well.
+				  
+					if ((UA.ie || UA.webkit) && bSubmitForm) {
+						this.submit();
+					}
+
+				}, this, true);
+
+				oMenu.render(oMenu.cfg.getProperty("container"));
+
+			}
+		
+		};
+
+
+		var oMenuButton1 = new Button({ 
+							id: "menubutton-1", 
+							name: "menubutton-1",
+							label: "All",
+							type: "menu",  
+							menu: "select-1", 
+							container: "select-1-container"
+		});
+
+		//	Register a "selectedMenuItemChange" event handler that will sync the 
+		//	Button's "label" attribute to the MenuItem that was clicked.
+
+		oMenuButton1.on("selectedMenuItemChange", onSelectedMenuItemChange);
+		
+
+
+
+
+	});
+</script>
+
+<script type="text/javascript">
+  Cufon.replace('h1', {color: '-linear-gradient(#fff, #bbeafb)'})('h2')('#nav a')('.first-child')('.yuimenuitemlabel')('.search-area p', {hover: 'true' });
+</script>
+
+<style type="text/css">
+body {
+	margin:0;
+	padding:0;
+}
+	/*	Style the <fieldset> since the Reset CSS removes the default style. */
+    #button-example-form fieldset {
+
+        border: 2px groove #ccc;
+        margin: .5em;
+        padding: .5em;
+
+    }
+
+
+	
+	.yui-menu-button em.yui-button-label {
+
+		font-style: normal;
+		display: block;
+		text-align: left;
+		white-space: nowrap;
+
+		/*  Restrict the width of the label to 5em. */
+		width: 5em;
+
+		/* Hide the overflow if the text label exceeds 5em in width. */
+		overflow: hidden;
+
+		/* 
+			IE, Safari and Opera support the ability to add ellipsis when the text 
+			label exceeds 10em in width.
+		*/
+		text-overflow: ellipsis;
+		-o-text-overflow: ellipsis;
+
+	}
+
+
+/* Overrides */
+
+.bd{
+width: 194px;
+color: #3EA7A0;
+
+}
+.first-of-type{
+width: 100px;
+
+}
+
+.yuimenuitem{
+
+left: 0px;
+display: block;
+
+}
+
+a.yuimenuitemlabel{
+left: 15px;
+padding: 0px;
+margin: 0px;
+display: block;
+position: relative;
+background-color: white;
+color: #3ea7a0;
+width: 150px;
+
+}
+a.yuimenuitemlabel:hover{
+
+padding: 0px;
+margin: 0px;
+display: block;
+position: relative;
+background-color: cyan;
+color: #3ea7a0;
+}
+.yui-skin-sam .yui-button .first-child {
+border-color:#808080;
+border-style:solid;
+border-width:0px;
+margin:0 -1px;
+}
+.yui-button{
+	 background:  url("./images/dropdown.jpg");
+	
+	 	 border-style: hidden;
+     border-width: 0px;
+     color: #3ea7a0;
+	 font-size:16px;
+     padding:12px 0px 0px 7px;
+	 height:25px;
+	color: #3EA7A0;
+	 width:200px;
+
+	 background-repeat:no-repeat;
+	 margin-right:5px;
+	 vertical-align:top;
+}
+
+.yui-menu-button{
+
+
+ background:url("./images/dropdown.jpg");
+	 border-style: hidden;
+     border-width: 0px;
+    
+	 font-size:16px;
+     padding:12px 0px 0px 7px;
+	 
+ color: #3ea7a0;
+	 width:194px;
+
+	 background-repeat:no-repeat;
+	 margin-right:5px;
+	 vertical-align:top;
+
+}
+
+#menubutton-1-button{
+ color: #3ea7a0;
+ }
+
+</style>
+
+
+
+
+
+</head>
+
+
+
+<body>
+
+<div class="container">
+
+<div class="header">
+    <a href="index.html" id="logo_page"></a>
+    <div id="title" class="page"></div>
+    <ul id="nav">
+        <li class="home">
+            <a href="index.html">Home</a>
+        </li>
+        <li  class="about">
+            <a href="about.html">About</a>
+        </li>
+        <li class="contact">
+            <a href="contact.html">Contact</a>
+        </li>
+    </ul>
+</div>
+
+<div class="content_page">
+	
+    
+    	<div class="page_title">
+			<h2>Coming soon</h2>
+		</div>
+		
+		<div class="page_body">
+		<p>This project will be coming soon. Stay tuned for more information.</p>
+	
+		</div>
+    	<div class="content_page_btm"></div>
+
+</div>
+
+<div class="footer">
+	<p class="copyright">&copy; 2009 <a href="http://mith.info" target="_blank">Maryland Institute for Technology in the Humanities</a></p>
+	<p class="contact"><a href="contact.html">Contact Us</a></p>
+</div>
+
+
+</div>
+
+
+<script type="text/javascript">Cufon.now();</script>
+</body>
+</html>

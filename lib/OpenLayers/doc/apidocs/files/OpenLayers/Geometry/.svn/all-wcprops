@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/mto/!svn/ver/177/lib/OpenLayers/doc/apidocs/files/OpenLayers/Geometry
+END
+MultiPolygon-js.html
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/mto/!svn/ver/177/lib/OpenLayers/doc/apidocs/files/OpenLayers/Geometry/MultiPolygon-js.html
+END
+Curve-js.html
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/mto/!svn/ver/177/lib/OpenLayers/doc/apidocs/files/OpenLayers/Geometry/Curve-js.html
+END
+MultiPoint-js.html
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/mto/!svn/ver/177/lib/OpenLayers/doc/apidocs/files/OpenLayers/Geometry/MultiPoint-js.html
+END
+Rectangle-js.html
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/mto/!svn/ver/177/lib/OpenLayers/doc/apidocs/files/OpenLayers/Geometry/Rectangle-js.html
+END
+Polygon-js.html
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/mto/!svn/ver/177/lib/OpenLayers/doc/apidocs/files/OpenLayers/Geometry/Polygon-js.html
+END
+MultiLineString-js.html
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/mto/!svn/ver/177/lib/OpenLayers/doc/apidocs/files/OpenLayers/Geometry/MultiLineString-js.html
+END
+Point-js.html
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/mto/!svn/ver/177/lib/OpenLayers/doc/apidocs/files/OpenLayers/Geometry/Point-js.html
+END
+LinearRing-js.html
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/mto/!svn/ver/177/lib/OpenLayers/doc/apidocs/files/OpenLayers/Geometry/LinearRing-js.html
+END
+Collection-js.html
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/mto/!svn/ver/177/lib/OpenLayers/doc/apidocs/files/OpenLayers/Geometry/Collection-js.html
+END
+LineString-js.html
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/mto/!svn/ver/177/lib/OpenLayers/doc/apidocs/files/OpenLayers/Geometry/LineString-js.html
+END

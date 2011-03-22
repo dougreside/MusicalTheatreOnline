@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Simple Editor — Basic Buttons</title>
+
+<style type="text/css">
+/*margin and padding on body element
+  can introduce errors in determining
+  element position and are not recommended;
+  we turn them off as a foundation for YUI
+  CSS treatments. */
+body {
+	margin:0;
+	padding:0;
+}
+#editor{
+	position: absolute;
+}
+</style>
+
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.7.0/build/fonts/fonts-min.css" />
+
+<script type="text/javascript" src="http://yui.yahooapis.com/2.7.0/build/yahoo-dom-event/yahoo-dom-event.js"></script>
+
+<script type="text/javascript" src="http://yui.yahooapis.com/2.7.0/build/element/element-min.js"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/2.7.0/build/container/container_core-min.js"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/2.7.0/build/editor/editor-min.js"></script>
+
+<!--there is no custom header content for this example-->
+
+</head>
+<body>
+
+<h1>Simple Editor — Basic Buttons</h1>
+
+<div class="exampleIntro">
+	<p>This example demonstrates how to use the SimpleEditor Control with Basic Buttons.</p>
+			
+</div>
+
+<!--BEGIN SOURCE CODE FOR EXAMPLE =============================== -->
+<div class=" yui-skin-sam">
+<form method="post" action="#" id="form1">
+	<textarea id="editor">
+</textarea></div>
+</form>
+</div>
+
+<script>
+
+(function() {
+ 
+ tb = {
+            titlebar: 'Annotate',
+            collapse: true,
+            buttons: [
+                { group: 'textstyle', label: 'Font Style',
+                    buttons: [
+                        { type: 'push', label: 'Bold', value: 'bold' },
+                        { type: 'push', label: 'Italic', value: 'italic' },
+                        { type: 'push', label: 'Underline', value: 'underline' },
+                        { type: 'separator' },
+						{ type: 'separator' },
+                        { type: 'select', label: 'Arial', value: 'fontname', disabled: true,
+                            menu: [
+                                { text: 'Arial', checked: true },
+                                { text: 'Arial Black' },
+                                { text: 'Comic Sans MS' },
+                                { text: 'Courier New' },
+                                { text: 'Lucida Console' },
+                                { text: 'Tahoma' },
+                                { text: 'Times New Roman' },
+                                { text: 'Trebuchet MS' },
+                                { text: 'Verdana' }
+                            ]
+                        },
+						{ type: 'separator' },
+                        { type: 'spin', label: '13', value: 'fontsize', range: [ 9, 75 ], disabled: true },
+                        { type: 'separator' },
+						{ type: 'separator' },
+                        { type: 'color', label: 'Font Color', value: 'forecolor', disabled: true },
+                        { type: 'color', label: 'Background Color', value: 'backcolor', disabled: true }
+                    ]
+                }
+            ]
+        }
+
+    var myConfig = {
+        height: '300px',
+        width: '600px',
+        dompath: true,
+        focusAtStart: true,
+		drag: true,
+		toolbar: tb
+	
+    };
+
+ 
+    var myEditor = new YAHOO.widget.Editor('editor', myConfig);
+  	
+	myEditor.addListener("afterRender",function(e,obj){
+			
+         	alert(obj.toolbar.titlebar());
+        }, myEditor);
+	myEditor.render();
+	  
+})();
+</script>
+
+</html>

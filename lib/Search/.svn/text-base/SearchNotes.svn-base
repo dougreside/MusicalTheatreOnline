@@ -1,0 +1,63 @@
+
+Files:
+
+1) buildIndex.php
+	- builds an index, path is "./indexData"
+		- current index values are taken primarily from manifest.xml 
+		(using test file called "manifest_IndexTest.xml" in order to test other
+		 shows and/or media types without interfering with UI processing that
+		 expects "Glory Days" stuff right now)
+		 
+2) getIndexFields.php
+	- 1 utility function, plus the test output for 2 dufferent calls to it
+		- getIndexFields(<path to Lucene index>, <string for "all" or only "indexed">)
+		
+	- This function might be used in an AJAX call,
+	  to return a pull-down of various searchable fields
+	  Calling the "indexed" fields only would probably be most usable/informative
+	  (There is only one unindexed field a/o July 31st -- the filename field value.)
+	  
+	  The filename field can be returned for use by the UI or follow-on functions
+	  for processing, but isn't really a tokenized, searchable field.
+
+
+3) searchMetaData.php
+	- performs the search, parsing through the $_GET[] params associative array
+	
+	- Currently, the search uses the Lucene query bulding API, specifying the
+	  query as a boolean search object, and adding a subquery to this object 
+	  for each set of search terms
+	  (see http://framework.zend.com/manual/en/zend.search.lucene.query-language.html
+	   and http://framework.zend.com/manual/en/zend.search.lucene.query-api.html)
+	  
+	  $query = new Zend_Search_Lucene_Search_Query_Boolean();
+	  
+	  $titleSubQuery = Zend_Search_Lucene_Search_QueryParser::parse('title:\"'.$titleStr.'\"');
+	  $query->addSubquery($titleSubQuery, true /* required */); // "true" == boolean AND or '+'
+	  
+	  $mediaSubQuery = Zend_Search_Lucene_Search_QueryParser::parse('media:\"'.$mediaType.'\"');
+	  $query->addSubquery($mediaSubQuery, null /* optional */); // "null" == boolean OR
+	  
+	  // if "FALSE" is used as 2nd argument to $query->addSubQuery(), the subQuery
+	  // forms a logical NOT
+	  
+	  // add the queryStr - i.e., text to search for in any field, in any indexed part of the document
+	  $userQuery = Zend_Search_Lucene_Search_QueryParser::parse($queryStr);
+	  $query->addSubquery($userQuery, true /* required */);
+	  
+	  - **** The searchterms could also be sent from the UI as a comma-delimited string
+	    that is parsed with proper syntax (e.g., "+", "-" or "OR," "AND," and then
+	    sent to the index via $index->find($query)
+	    
+	   
+	   ** Fuzzy search is possible, but hasn't been implemented (yet - a/o Aug 3)
+	   e.g., mus~ 
+	   (would match music, muse, musing, muscle, mussel, mustache, etc)
+	   
+	   ** PROXimity search is possible, but hasn't been implemented (yet - a/o Aug 3)
+	   e.g., "story friends"~5 
+	   (would match "story of four best friends" or other sequences in which
+	   "story" and "friends" are within 5 words of each other
+	   
+
+	

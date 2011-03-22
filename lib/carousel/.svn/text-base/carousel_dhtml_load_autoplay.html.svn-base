@@ -1,0 +1,335 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+<title>Carousel Component Example - Auto Play</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+	<script type="text/javascript" src="http://yui.yahooapis.com/combo?2.6.0/build/utilities/utilities.js&2.6.0/build/container/container_core-min.js"></script> 
+	<script type="text/javascript" src="scripts/carousel.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?2.6.0/build/reset-fonts-grids/reset-fonts-grids.css&2.6.0/build/base/base-min.css">
+	<link href="css/carousel.css" rel="stylesheet" type="text/css">
+	<link href="css/yui.css" rel="stylesheet" type="text/css">
+<!-- 
+	Inlined styles for my overrides to the carousel for this demo.
+	Normally I would put this in a separate CSS file.
+-->
+<style type="text/css">
+.carousel-component {
+	padding:8px;
+}
+.carousel-component .carousel-list li { 
+	margin:4px;
+	width:79px; /* img width is 75 px from flickr + a.border-left (1) + a.border-right(1) + 
+	               img.border-left (1) + img.border-right (1)*/
+	/*	margin-left: auto;*/ /* for testing IE auto issue */
+}
+
+.carousel-component .carousel-list li a { 
+	display:block;
+	border:1px solid #e2edfa;
+	outline:none;
+	-moz-outline:none; 
+}
+
+.carousel-component .carousel-list li a:hover { 
+	border: 1px solid #87bf4e; 
+}
+
+.carousel-component .carousel-list li img { 
+	border:1px solid #999;
+	display:block; 
+}
+
+.carousel-component .carousel-list li strong { 
+	display:block; 
+}
+									
+
+#prev-arrow { 
+	position:absolute;
+	top:40px;
+	z-index:3;
+	cursor:pointer; 
+	left:5px; 
+}
+
+#next-arrow { 
+	position:absolute;
+	top:40px;
+	z-index:3;
+	cursor:pointer; 
+	right:5px; 
+}
+</style>
+
+<script type="text/javascript">
+
+/**
+ * Image src URLs
+ */
+var imageList = [
+				 "images/thumb_1.jpg",
+				 "images/thumb_2.jpg",
+				 "images/thumb_3.jpg",
+				 "images/thumb_4.jpg",
+				 "images/thumb_5.jpg",
+				 "images/thumb_6.jpg",
+				 "images/thumb_7.jpg",
+				 "images/thumb_8.jpg",
+				 "images/thumb_9.jpg",
+				 "images/thumb_10.jpg",
+				 "images/thumb_11.jpg",
+				 "images/thumb_12.jpg",
+				 "images/thumb_13.jpg",
+				 "images/thumb_14.jpg",
+				 "images/thumb_15.jpg",
+				 "images/thumb_16.jpg",
+				 "images/thumb_17.jpg",
+				 "images/thumb_18.jpg"
+				 ];
+
+var lastRan = -1;
+
+var fmtItem = function(imgUrl, url, title, index) {
+
+  	var innerHTML = 
+  		'<a id="dhtml-carousel-a-'+index+'" href="' + 
+  		url + 
+  		'"><img id="dhtml-carousel-img-' + index + '" src="' + 
+  		imgUrl +
+		'" width="' +
+		75 +
+		'" height="' +
+		75+
+		'"/>' + 
+  		title + 
+  		'<\/a>';
+  
+	return innerHTML;
+};
+
+
+/**
+ * Custom inital load handler. Called when the carousel loads the initial
+ * set of data items. Specified to the carousel as the configuration
+ * parameter: loadInitHandler
+ **/
+var loadInitialItems = function(type, args) {
+
+	var start = args[0];
+	var last = args[1]; 
+
+	load(this, start, last);	
+};
+
+/**
+ * Custom load next handler. Called when the carousel loads the next
+ * set of data items. Specified to the carousel as the configuration
+ * parameter: loadNextHandler
+ **/
+ var loadNextItems = function(type, args) {	
+
+	var start = args[0];
+	var last = args[1]; 
+	var alreadyCached = args[2];
+	
+	if(!alreadyCached) {
+		load(this, start, last);
+	}
+};
+
+/**
+ * Custom load previous handler. Called when the carousel loads the previous
+ * set of data items. Specified to the carousel as the configuration
+ * parameter: loadPrevHandler
+ **/
+var loadPrevItems = function(type, args) {
+	var start = args[0];
+	var last = args[1]; 
+	var alreadyCached = args[2];
+	
+	if(!alreadyCached) {
+		load(this, start, last);
+	}
+};
+
+var load = function(carousel, start, last) {
+	for(var i=start;i<=last;i++) {
+		var liItem = carousel.addItem(i, fmtItem(imageList[i], "#", "Number " + i, i));
+/*
+		// If you want to add handlers for mouse over, mouse out or other events,
+		// here is the pattern
+		YAHOO.util.Event.addListener(liItem, "mouseover", function(e) {
+		//console.log("mouseover>>"+this.id);
+		});
+		YAHOO.util.Event.addListener(liItem, "mouseout", function(e) {
+			//console.log("mouseout<<"+this.id);
+		});
+*/
+	}
+}
+
+/**
+ * Custom button state handler for enabling/disabling button state. 
+ * Called when the carousel has determined that the previous button
+ * state should be changed.
+ * Specified to the carousel as the configuration
+ * parameter: prevButtonStateHandler
+ **/
+var handlePrevButtonState = function(type, args) {
+
+	var enabling = args[0];
+	var leftImage = args[1];
+	if(enabling) {
+		leftImage.src = "images/left-enabled.gif";	
+	} else {
+		leftImage.src = "images/left-disabled.gif";
+	}
+	
+};
+
+var carousel; // for ease of debugging; globals generally not a good idea
+
+/**
+ * You must create the carousel after the page is loaded since it is
+ * dependent on an HTML element (in this case 'dhtml-carousel'.) See the
+ * HTML code below.
+ */
+var pageLoad = function() 
+{
+	carousel = new YAHOO.extension.Carousel("dhtml-carousel", 
+		{
+			numVisible:        4,
+			animationSpeed:   0.7,
+			scrollInc:         3,
+			navMargin:         40,
+			prevElement:     "prev-arrow",
+			nextElement:     "next-arrow",
+			loadInitHandler:   loadInitialItems,
+			loadNextHandler:   loadNextItems,
+			loadPrevHandler:   loadPrevItems,
+			prevButtonStateHandler:   handlePrevButtonState,
+			autoPlay: 3000,
+			size:11,
+			wrap:true
+		}
+	);
+	
+
+};
+// YAHOO.extension.Carousel.prototype.startAutoPlay = function(interval) {
+// 		if(this._isValidObj(interval)) {
+// 			this.autoPlay = interval;
+// 		}
+// 		if(this.autoPlayTimer !== null) {
+// 			return this.autoPlayTimer;
+// 		}
+// 		var oThis = this;  
+// 		var autoScroll = function() { oThis.scrollPrev(); };
+// 		this.autoPlayTimer = setTimeout( autoScroll, this.autoPlay );
+// 		return this.autoPlayTimer;
+// };
+// 
+// YAHOO.extension.Carousel.prototype.scrollPrev= function() {
+// 	this._scrollPrev(null, this);
+// 	this.autoPlayTimer = null;
+// 	if(this.autoPlay !== 0) {
+// 		this.autoPlayTimer = this.startAutoPlay();
+// 	}
+// };
+// 
+// YAHOO.extension.Carousel.prototype._scrollPrev = function(e, carousel) {
+// 	if(carousel.scrollPrevAnim.isAnimated()) {
+// 		return false;
+// 	}
+// 	var currStart = carousel.firstVisible;
+// 	if(carousel.wrap && currStart == 1) {
+// 		carousel.scrollTo(carousel.size - carousel.numVisible + 1);
+// 	} else if(e !== null) { // event fired this so disable autoplay
+// 		carousel.stopAutoPlay();
+// 		carousel._scrollPrevInc(carousel, carousel.scrollInc, (carousel.getProperty("animationSpeed") !== 0));
+// 	} else {
+// 		carousel._scrollPrevInc(carousel, carousel.scrollInc, (carousel.getProperty("animationSpeed") !== 0));
+// 	}
+// };
+
+
+/**
+ * Illustrates stop autoplay
+ */
+var stopAutoPlay = function(e) {
+	YAHOO.util.Dom.get("status").innerHTML = "Auto Play Stopped!";
+	carousel.stopAutoPlay();
+};
+
+/**
+ * Illustrates start autoplay
+ */
+var startAutoPlay = function(e) {
+	YAHOO.util.Dom.get("status").innerHTML = "Auto Play Started!";
+	carousel.startAutoPlay(2000);
+};
+
+YAHOO.util.Event.addListener(window, 'load', pageLoad);
+YAHOO.util.Event.addListener("stop-button", 'click', stopAutoPlay);
+YAHOO.util.Event.addListener("start-button", 'click', startAutoPlay);
+
+</script>
+</head>
+
+<body>
+
+<div id="doc" class="yui-t7">
+   <div id="hd">
+		<h1>Auto Play (with wrapping) - Carousel</h1>
+   </div>
+<div id="bd">
+<p><em>autoPlay</em> parameter is set in this example to 5000 milliseconds (5 seconds). The carousel performs a scrollNext() call every 5 seconds. If the user clicks to navigate the arrows the autoPlay is disabled. You can also programmatically stop auto play by calling <em>stopAutoPlay</em> and restart it by calling <em>startAutoPlay</em>. Also illustrates wrapping at 11 items. Here are the parameters needed to configure the carousel:</p>
+<pre>
+	autoPlay: 5000,
+	size:11,
+	wrap:true
+</pre>
+<p>The <em>Stop Auto Play</em> and <em>Start Auto Play</em> buttons stop and start the autoplay feature. Hitting the <em>Start Auto Play</em> when autoplay is active does nothing (except set a new interval if one is supplied). The <em>Stop Auto Play</em> button stops auto play. Here are the two methods for stopping and starting autoplay:</p>
+<pre>
+	carousel.stopAutoPlay();
+	carousel.startAutoPlay(2000);
+	
+	OR
+	
+	carousel.setProperty("autoPlay", 0);
+	carousel.setProperty("autoPlay", 2000);
+</pre>
+
+<!-- Carousel Structure -->
+<div id="dhtml-carousel" class="carousel-component">
+	<div><img id="prev-arrow" class="left-button-image" src="images/left-enabled.gif" alt="Previous Button"/>
+	</div>
+	<div><img id="next-arrow" class="right-button-image" src="images/right-enabled.gif" alt="Next Button"/>
+	</div>
+	<div class="carousel-clip-region">
+		<ul class="carousel-list">
+			<!-- Filled in via the loadInitHandler, loadNextHandler, and loadPrevHandler
+			<li id="item-1">
+			<a href="#">
+				<img src="http://static.flickr.com/74/162582364_7fc3e2d60d_s.jpg"/>
+			</a>Number One</li>
+			-->
+		</ul>
+	</div>
+</div>
+<div>
+<button id="stop-button" style="float:left;margin:10px;">Stop Auto Play</button>
+<button id="start-button" style="float:left;margin:10px;">Start Auto Play (2 seconds)</button>
+<div style="float:left;margin:10px;" id="status"></div>
+</div>
+
+<div style="padding-top:20px;clear:both">View the <a href="source.php?url=carousel_dhtml_load_autoplay.html">source</a>&nbsp;or&nbsp;<a href="index.html">documentation</a></div>
+
+</div>
+</div> 
+
+</body>
+</html>

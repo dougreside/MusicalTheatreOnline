@@ -1,0 +1,7 @@
+<div class="diffFrame">
+	<div></div>
+	<div></div>
+	<div>
+	<a onclick="compare()" class="compareBtn">Compare</a>
+	</div>
+</div>

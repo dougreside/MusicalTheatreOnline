@@ -1,0 +1,12 @@
+.header #title {
+	display:inline;
+}
+
+ul#nav li a {
+	display:inline-block;
+	line-height: 120px;
+	padding:0px 10px;
+	vertical-align:bottom;
+	margin-bottom:-41px;
+}
+

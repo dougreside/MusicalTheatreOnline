@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/mto/!svn/ver/177/lib/OpenLayers/tests/Protocol
+END
+HTTP.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/mto/!svn/ver/177/lib/OpenLayers/tests/Protocol/HTTP.html
+END
+SQL.html
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/mto/!svn/ver/177/lib/OpenLayers/tests/Protocol/SQL.html
+END
+WFS.html
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/mto/!svn/ver/177/lib/OpenLayers/tests/Protocol/WFS.html
+END

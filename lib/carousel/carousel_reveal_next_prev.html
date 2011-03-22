@@ -1,0 +1,327 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+<title>Carousel Component Example - Reveal Next &amp; Previous Items</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	
+	<script type="text/javascript" src="http://yui.yahooapis.com/combo?2.6.0/build/utilities/utilities.js&2.6.0/build/container/container_core-min.js"></script> 
+	<script type="text/javascript" src="scripts/carousel.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?2.6.0/build/reset-fonts-grids/reset-fonts-grids.css&2.6.0/build/base/base-min.css">
+	<link href="css/carousel.css" rel="stylesheet" type="text/css">
+	<link href="css/yui.css" rel="stylesheet" type="text/css">
+<!-- 
+	Inlined styles for my overrides to the carousel for this demo.
+	Normally I would put this in a separate CSS file.
+-->
+<style type="text/css">
+.carousel-component {
+	padding:8px;
+}
+.carousel-component .carousel-list li { 
+	margin:2px;
+	width:79px; /* img width is 75 px from flickr + a.border-left (1) + a.border-right(1) + 
+	               img.border-left (1) + img.border-right (1)*/
+	/*	margin-left: auto;*/ /* for testing IE auto issue */
+}
+
+.carousel-component .carousel-list li a { 
+	display:block;
+	border:1px solid #e2edfa;
+	outline:none;
+	-moz-outline:none; 
+}
+
+.carousel-component .carousel-list li a:hover { 
+	border: 1px solid #87bf4e; 
+}
+
+.carousel-component .carousel-list li img { 
+	border:1px solid #999;
+	display:block; 
+}
+
+.carousel-component .carousel-list li strong { 
+	display:block; 
+}
+									
+
+#prev-arrow { 
+	position:absolute;
+	top:40px;
+	z-index:3;
+	cursor:pointer; 
+	left:5px; 
+}
+
+#next-arrow { 
+	position:absolute;
+	top:40px;
+	z-index:3;
+	cursor:pointer; 
+	right:5px; 
+}
+
+.bright {
+	filter: alpha(opacity=100); -moz-opacity:1.0;
+}
+.dim {
+	filter: alpha(opacity=40); -moz-opacity:0.4;
+}
+</style>
+
+<script type="text/javascript">
+
+/**
+ * Image src URLs
+ **/
+var imageList = [
+				 "http://static.flickr.com/116/268249561_a32393f6ac_s.jpg",
+				 "http://static.flickr.com/97/268249177_d0f53c75ae_s.jpg",
+				 "http://static.flickr.com/91/268249048_67b9ecb504_s.jpg",
+				 "http://static.flickr.com/101/268248936_9cbaffeb08_s.jpg",
+				 "http://static.flickr.com/96/268248678_24c0a48e71_s.jpg",
+				 "http://static.flickr.com/106/268248583_f781f44205_s.jpg",
+				 "http://static.flickr.com/106/268248481_ca3ee38e1e_s.jpg",
+				 "http://static.flickr.com/113/268248145_b12fbb7413_s.jpg",
+				 "http://static.flickr.com/106/268248063_3aa0e9f801_s.jpg",
+				 "http://static.flickr.com/85/268247010_f9e4e0d0a2_s.jpg",
+				 "http://static.flickr.com/92/268246360_cd1dc9269e_s.jpg",
+				 "http://static.flickr.com/114/268246264_150b9f97a5_s.jpg",
+				 "http://static.flickr.com/84/268245733_bdf9efb167_s.jpg",
+				 "http://static.flickr.com/86/268245514_0eac3b5e2d_s.jpg",
+				 "http://static.flickr.com/96/268245042_76622df01e_s.jpg",
+				 "http://static.flickr.com/92/268244677_a45258db84_s.jpg",
+				 "http://static.flickr.com/92/268244474_2f3393ee8c_s.jpg",
+				 "http://static.flickr.com/105/268244323_e5f0fa4103_s.jpg"
+				 ];
+var urlList = [
+				 "http://static.flickr.com/116/268249561_a32393f6ac_b.jpg",
+				 "http://static.flickr.com/97/268249177_d0f53c75ae_b.jpg",
+				 "http://static.flickr.com/91/268249048_67b9ecb504_b.jpg",
+				 "http://static.flickr.com/101/268248936_9cbaffeb08_b.jpg",
+				 "http://static.flickr.com/96/268248678_24c0a48e71_b.jpg",
+				 "http://static.flickr.com/106/268248583_f781f44205_b.jpg",
+				 "http://static.flickr.com/106/268248481_ca3ee38e1e_b.jpg",
+				 "http://static.flickr.com/113/268248145_b12fbb7413_b.jpg",
+				 "http://static.flickr.com/106/268248063_3aa0e9f801_b.jpg",
+				 "http://static.flickr.com/85/268247010_f9e4e0d0a2_b.jpg",
+				 "http://static.flickr.com/92/268246360_cd1dc9269e_b.jpg",
+				 "http://static.flickr.com/114/268246264_150b9f97a5_b.jpg",
+				 "http://static.flickr.com/84/268245733_bdf9efb167_b.jpg",
+				 "http://static.flickr.com/86/268245514_0eac3b5e2d_b.jpg",
+				 "http://static.flickr.com/96/268245042_76622df01e_b.jpg",
+				 "http://static.flickr.com/92/268244677_a45258db84_b.jpg",
+				 "http://static.flickr.com/92/268244474_2f3393ee8c_b.jpg",
+				 "http://static.flickr.com/105/268244323_e5f0fa4103_s.jpg"
+				 ];
+
+var lastRan = -1;
+
+/**
+ * Since carousel.addItem uses an HTML string to create the interface
+ * for each carousel item, this method formats the HTML for an LI.
+ **/
+
+var fmtItem = function(imgUrl, url, title) {
+
+  	var innerHTML = 
+  		'<a href="' + 
+  		url + 
+  		'"><img src="' + 
+  		imgUrl +
+		'" width="' +
+		75 +
+		'" height="' +
+		75+
+		'"/>' + 
+  		title + 
+  		'<\/a>';
+  
+	return innerHTML;
+	
+};
+
+/**
+ * Custom inital load handler. Called when the carousel loads the initial
+ * set of data items. Specified to the carousel as the configuration
+ * parameter: loadInitHandler
+ **/
+var loadInitialItems = function(type, args) {
+
+	var start = args[0];
+	var last = args[1]; 
+	var alreadyCached = args[2]; 
+		
+	load(this, start, last);	
+
+	brightenOrDim(this);
+
+};
+
+/**
+ * Custom load next handler. Called when the carousel loads the next
+ * set of data items. Specified to the carousel as the configuration
+ * parameter: loadNextHandler
+ **/
+var loadNextItems = function(type, args) {	
+
+	var start = args[0];
+	var last = args[1]; 
+	var alreadyCached = args[2];
+	
+	if(!alreadyCached) {
+		load(this, start, last);
+	}
+
+	brightenOrDim(this);
+
+};
+
+/**
+ * Custom load previous handler. Called when the carousel loads the previous
+ * set of data items. Specified to the carousel as the configuration
+ * parameter: loadPrevHandler
+ **/
+var loadPrevItems = function(type, args) {
+	var start = args[0];
+	var last = args[1]; 
+	var alreadyCached = args[2];
+	
+	if(!alreadyCached) {
+		load(this, start, last);
+	}
+	
+	brightenOrDim(this);
+	
+	
+};
+
+var brightenOrDim = function(carousel) {
+	var firstItemRevealed=carousel.getFirstItemRevealed();
+	var lastItemRevealed=carousel.getLastItemRevealed();
+	var firstVisible = carousel.getProperty("firstVisible");
+	var lastVisible = carousel.getLastVisible();
+		
+	var first = (firstItemRevealed == -1) ? firstVisible : firstItemRevealed;
+	var last = (lastItemRevealed == -1) ? lastVisible : lastItemRevealed;
+	
+	for(var i=first; i<=last; i++) {
+		var li = carousel.getItem(i);
+		if(li) {
+			if(i == firstItemRevealed || i==lastItemRevealed) {
+				YAHOO.util.Dom.replaceClass(li, "bright", "dim");
+			} else {
+				YAHOO.util.Dom.replaceClass(li, "dim", "bright");
+			}
+		}
+	}
+	
+};
+
+var load = function(carousel, start, last) {
+	for(var i=start;i<=last;i++) {
+		carousel.addItem(i, fmtItem(imageList[i], urlList[i], "Number " + i), "bright");
+/*
+		// Example of an alternate way to add an item (passing an element instead of html string)
+		var p = document.createElement("P");
+		var t = document.createTextNode("Item"+i);
+		p.appendChild(t);
+		carousel.addItem(i, p );
+*/
+	}
+};
+
+/**
+ * Custom button state handler for enabling/disabling button state. 
+ * Called when the carousel has determined that the previous button
+ * state should be changed.
+ * Specified to the carousel as the configuration
+ * parameter: prevButtonStateHandler
+ **/
+var handlePrevButtonState = function(type, args) {
+
+	var enabling = args[0];
+	var leftImage = args[1];
+	if(enabling) {
+		leftImage.src = "images/left-enabled.gif";	
+	} else {
+		leftImage.src = "images/left-disabled.gif";
+	}
+	
+};
+
+/**
+ * You must create the carousel after the page is loaded since it is
+ * dependent on an HTML element (in this case 'dhtml-carousel'.) See the
+ * HTML code below.
+ **/
+
+var carousel; // for ease of debugging; globals generally not a good idea
+var pageLoad = function() 
+{
+	carousel = new YAHOO.extension.Carousel("dhtml-carousel", 
+		{
+			numVisible:        4,
+			animationSpeed:    0.25,
+			scrollInc:         3,
+			navMargin:         30,
+			revealAmount:      20,
+			size:              14,
+			wrap:              true,
+			prevElement:       "prev-arrow",
+			nextElement:       "next-arrow",
+			loadInitHandler:   loadInitialItems,
+			loadNextHandler:   loadNextItems,
+			loadPrevHandler:   loadPrevItems,
+			prevButtonStateHandler:   handlePrevButtonState
+		}
+	);
+};
+
+YAHOO.util.Event.addListener(window, 'load', pageLoad);
+
+
+</script>
+</head>
+
+<body>
+
+<div id="doc" class="yui-t7">
+   <div id="hd">
+		<h1>Reveal Next &amp; Previous Items - Carousel</h1>
+   </div>
+<div id="bd">
+<p>Sometimes providing a slight reveal for the before &amp; after items makes the carousel easier to understand. Revealing a partial view of the items outside the visible areas invites the user to explore the content.</p>
+<p>Use the <em>revealAmount</em> parameter to specify how many pixels to reveal of the before and after items. Also illustrates setting the opacity of the revealed items to 40%.</p>
+
+<pre style="margin-bottom:10px;">
+	when creating a carousel, use
+		revealAmount: 30;
+	OR when reconfiguring the amount to reveal after the carousel is created, use
+		carousel.setProperty("revealAmount", 30);
+</pre>
+<!-- Carousel Structure -->
+<div id="dhtml-carousel" class="carousel-component">
+	<div><img id="prev-arrow" class="left-button-image" src="images/left-enabled.gif" alt="Previous Button"/>
+	</div>
+	<div><img id="next-arrow" class="right-button-image" src="images/right-enabled.gif" alt="Next Button"/>
+	</div>
+	<div class="carousel-clip-region">
+		<ul class="carousel-list">
+			<!-- Filled in via the loadInitHandler, loadNextHandler, and loadPrevHandler
+			<li id="item-1">
+			<a href="#">
+				<img src="http://static.flickr.com/74/162582364_7fc3e2d60d_s.jpg"/>
+			</a>Number One</li>
+			-->
+		</ul>
+	</div>
+</div>
+<div style="padding-top:20px;clear:both">View the <a href="source.php?url=carousel_reveal_next_prev.html">source</a>&nbsp;or&nbsp;<a href="index.html">documentation</a></div>
+</div>
+</div> 
+
+</body>
+</html>

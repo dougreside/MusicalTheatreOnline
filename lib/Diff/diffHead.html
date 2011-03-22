@@ -1,0 +1,54 @@
+<HTML><HEAD><STYLE type='text/css'>td{
+				vertical-align: top;
+			}.red{background-color: red; padding-left: 1em;}.normal{
+					background-color: yellow;
+					}.diffDiv{
+				width: 600px;
+				height: 500px;
+				overflow: auto;	}</STYLE><SCRIPT language='JavaScript'>function highlight(id){
+				document.getElementById(id).className = 'red';
+			
+				}
+				function show(did){
+						newTop = document.getElementById(did).offsetTop;
+				document.getElementById('witDiv').scrollTop = newTop;
+					}
+				function dehighlight(did){
+					document.getElementById(did).className = 'normal';
+					}
+				function loadXML(fname){
+					var xmlDoc;
+        // code for IE
+        if (window.ActiveXObject) {
+			xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+		}
+		// code for Mozilla, Firefox, Opera, etc.
+		else {
+			if (document.implementation &&
+			document.implementation.createDocument) {
+				xmlDoc = document.implementation.createDocument("", "", null);
+			}
+			else {
+				alert('Your browser cannot handle this script');
+			}
+		}	
+        xmlDoc.async = false;
+		
+        xmlDoc.load(fname);
+		
+		
+		return xmlDoc;
+				}
+				/*	window.onload=function(){
+					obj = loadXML("./DiffHTML/bwayfringe.xml");
+				
+					con = document.getElementById("content");
+					alert(obj.documentElement);
+					con.appendChild(obj.documentElement);
+					}*/
+				</SCRIPT></HEAD><BODY>
+					<div id="content">
+						
+					</div>
+					</body>
+					</HTML>

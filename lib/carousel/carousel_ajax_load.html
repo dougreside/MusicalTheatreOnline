@@ -1,0 +1,351 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+<title>Carousel Component Example - Ajax Load</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<script type="text/javascript" src="http://yui.yahooapis.com/combo?2.6.0/build/utilities/utilities.js&2.6.0/build/container/container_core-min.js"></script> 
+<script type="text/javascript" src="scripts/carousel.js"></script>
+
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?2.6.0/build/reset-fonts-grids/reset-fonts-grids.css&2.6.0/build/base/base-min.css">
+<link href="css/carousel.css" rel="stylesheet" type="text/css">
+<link href="css/yui.css" rel="stylesheet" type="text/css">
+
+<!-- 
+	Inlined styles for my overrides to the carousel for this demo.
+	Normally I would put this in a separate CSS file.
+-->
+<style type="text/css">
+
+#dhtml-carousel {
+	padding:8px;
+	margin:0px;
+	float:left;
+	/* this would fix IE alignment --> padding-right:20px; */
+
+}
+
+.carousel-component .carousel-list li { 
+	margin:4px;
+	width:79px; /* img width is 75 px from flickr + a.border-left (1) + a.border-right(1) + 
+	               img.border-left (1) + img.border-right (1)*/
+	/*height:93px; *//* image + row of text (87) + border-top (1) + border-bottom(1) + margin-bottom(4) */
+	/*	margin-left: auto;*/ /* for testing IE auto issue */
+}
+
+.carousel-component .carousel-list li a { 
+	display:block;
+	border:1px solid #e2edfa;
+	outline:none;
+}
+
+.carousel-component .carousel-list li a:hover { 
+	border: 1px solid #aaaaaa; 
+}
+
+.carousel-component .carousel-list li img { 
+	border:1px solid #999;
+	display:block; 
+}									
+
+#prev-arrow-container { 
+	float:left;
+}
+
+#next-arrow-container { 
+	float:left;
+}
+
+#prev-arrow { 
+	cursor:pointer; 
+	margin-top:50px;
+	margin-right:10px;
+	visibility:hidden;
+}
+
+#next-arrow { 
+	cursor:pointer; 
+	margin-top:50px;
+	margin-left:10px;
+	visibility:hidden;
+}
+pre {
+	margin-bottom:20px;
+}
+</style>
+<script type="text/javascript">
+
+/**
+ * Custom inital load handler. Called when the carousel loads the initial
+ * set of data items. Specified to the carousel as the configuration
+ * parameter: loadInitHandler
+ */
+var loadInitialItems = function(type, args) {
+
+	var start = args[0];
+	var last = args[1]; 
+	// fetch twice the number for caching. images are create once.
+	makeRequest(this, 'getTrips.php', "Amsterdam", start, (last-start+1) * 2);	
+
+	// Illustrates setting the size during the load. Set silent parameter to true
+	this.setProperty("size", 20, true);
+
+};
+
+/**
+ * Custom load next handler. Called when the carousel loads the next
+ * set of data items. Specified to the carousel as the configuration
+ * parameter: loadNextHandler
+ */
+var loadNextItems = function(type, args) {	
+
+	var start = args[0];
+	var last = args[1];
+	var alreadyCached = args[2];
+	
+	if(!alreadyCached) {
+		makeRequest(this, 'getTrips.php', "Amsterdam", start, (last-start+1) * 2);
+	}
+
+};
+
+/**
+ * Custom load previous handler. Called when the carousel loads the previous
+ * set of data items. Specified to the carousel as the configuration
+ * parameter: loadPrevHandler
+ */
+var loadPrevItems = function(type, args) {
+	var start = args[0];
+	var last = args[1]; 
+	var alreadyCached = args[2];
+
+	if(!alreadyCached) {
+		makeRequest(this, 'getTrips.php', "Amsterdam", start, (last-start+1) * 2);
+	}
+};
+
+/**
+ * Custom button state handler for enabling/disabling button state. 
+ * Called when the carousel has determined that the previous button
+ * state should be changed.
+ * Specified to the carousel as the configuration
+ * parameter: prevButtonStateHandler
+ */
+var handlePrevButtonState = function(type, args) {
+
+	var enabling = args[0];
+	var leftImage = args[1];
+	if(enabling) {
+		leftImage.src = "images/left-enabled.gif";	
+	} else {
+		leftImage.src = "images/left-disabled.gif";	
+	}
+};
+
+var handleNextButtonState = function(type, args) {
+	var enabling = args[0];
+	var rightImage = args[1];
+	
+	if(enabling) {
+		rightImage.src = "images/right-enabled.gif";
+	} else {
+		rightImage.src = "images/right-disabled.gif";
+	}
+	
+};
+
+var showButtons = function(type, args) {
+	YAHOO.util.Dom.setStyle("next-arrow", "visibility", "visible");
+	YAHOO.util.Dom.setStyle("prev-arrow", "visibility", "visible");
+};
+
+
+/**
+ * You must create the carousel after the page is loaded since it is
+ * dependent on an HTML element (in this case 'dhtml-carousel'.) See the
+ * HTML code below.
+ */
+var carousel; // for ease of debugging; globals generally not a good idea
+
+var pageLoad = function() 
+{
+	carousel = new YAHOO.extension.Carousel("dhtml-carousel", 
+		{
+			numVisible:        4,
+			animationSpeed:    0.4,
+			scrollInc:         3,
+			loadInitHandler:   loadInitialItems,
+			prevElement:       "prev-arrow",
+			nextElement:       "next-arrow",
+			loadNextHandler:   loadNextItems,
+			loadPrevHandler:   loadPrevItems,
+			prevButtonStateHandler:   handlePrevButtonState,
+			nextButtonStateHandler:   handleNextButtonState
+		}
+	);
+
+};
+
+YAHOO.util.Event.addListener(window, 'load', pageLoad);
+
+/**
+ * Called via the YUI Connection manager (see makeRequest).
+ */
+var handleSuccess = function(callbackResponse)
+{
+	var start = callbackResponse.argument[0];
+	var numResults = callbackResponse.argument[1];
+	var carousel = callbackResponse.argument[2];
+	
+  	if(callbackResponse.responseText !== undefined) {
+		var theTrip = eval( '(' + callbackResponse.responseText + ')' );
+		for(var i=0; i< theTrip.ResultSet.totalResultsReturned; i++) {
+			var result = theTrip.ResultSet.Result[i];
+			carousel.addItem(start+i, fmtTripInnerHTML(result));
+		}
+		showButtons();
+     }
+};
+
+/**
+ * Since carousel.addItem uses an HTML string to create the interface
+ * for each carousel item, this method takes an individual trip plan
+ * result and cobbles together HTML for the innerHTML argument.
+ */
+var fmtTripInnerHTML = function(result) {
+
+  	var tripInnerHTML = 
+  		'<a href="' + 
+  		result.Url + 
+  		'"><img src="' + 
+  		result.Image.Url +
+		'" width="' +
+		75 +
+		'" height="' +
+		75+
+		'"/>' + 
+  		trunc(result.Title, 40, 20) + 
+  		'<\/a>' + 
+  		trunc(result.Summary, 20, 20);
+  
+	return tripInnerHTML;
+	
+};
+
+var handleFailure = function(o)
+{
+     var result = o.status + " " + o.statusText;
+     alert("Transaction failed.  The error is: " + result);
+};
+  
+/**
+ * A utility function for invoking the YUI connection manager (Ajax)
+ * with a URL that matches the Yahoo! developer network Trip Planner
+ * APIs (see: http://developer.yahoo.com/travel/tripservice/V1/tripSearch.html)
+ *
+ * The callback object is the configuration object for the YUI Connection
+ * manager. If this is successful, the 'handleSuccess' function is called.
+ */
+var makeRequest = function(carousel, url, query, start, numResults)
+{
+	var params = '?query=' + query + 
+	                        '&start=' + start + 
+	                        '&results=' + numResults; 
+	
+	var callback =
+	{
+  		success: handleSuccess,
+  		failure: handleFailure,
+  		argument: [start, numResults, carousel]
+	};
+	
+	var sUrl = url + params; 
+	YAHOO.util.Connect.asyncRequest("GET", sUrl, callback, null);
+};
+
+/**
+ * Just a utility function for cleaning up the returned HTML response
+ * and truncating it.
+ */
+var trunc = function(str, maxLen, maxWordLen) 
+{
+	// Strip markup
+    str = str.replace("<b>", "");
+    str = str.replace("<\/b>", "");
+    str = str.replace("<B>", "");
+    str = str.replace("<\/B>", "");
+    
+    // Simple truncation
+	if(str.length > maxLen) {
+		str = str.substring(0,maxLen) + "...";
+	}
+
+	// Truncate for long words
+	var start = 0;
+	var loopCnt = 0;
+	var strSlice = str;
+	
+	do  {
+		var spaceBreak = strSlice.indexOf(' ');
+		var lenOfWord = spaceBreak;
+		if(lenOfWord == -1)
+		{
+			lenOfWord = strSlice.length;
+		}
+
+		if (lenOfWord > maxWordLen) {
+			//debugMsg("Long word found in: " + strSlice);
+			str = str.substring(0, maxWordLen);  // TRUNCATE
+		}
+		start = spaceBreak+1;
+		strSlice = strSlice.substring(start);
+		spaceBreak = strSlice.indexOf(' ');
+	} while(spaceBreak != -1)
+	
+	
+	return str;
+};
+</script>
+
+</head>
+
+<body>
+<div id="doc" class="yui-t7">
+   <div id="hd">
+      <h1>Ajax Load - Carousel</h1>
+   </div>
+<div id="bd">
+<p>The Yahoo! Trip Planner API is called with the query string "Amsterdam" during the initial load and on each subsequent 'next' page. Upon load, the size is set to 20 (to illustrate how to dynamically calculate the size during load.)</p>
+<pre>
+carousel.setProperty("size", 20, true); // third parameter is silent parameter; set to true
+</pre>
+
+
+<!-- Carousel Structure -->
+<div id="prev-arrow-container">
+	<img id="prev-arrow" class="left-button-image" src="images/left-enabled.gif" alt="Previous Button"/>
+</div>
+<div id="dhtml-carousel" class="carousel-component">
+	<div class="carousel-clip-region">
+		<ul class="carousel-list">
+			<!-- Filled in via the loadInitHandler, loadNextHandler, and loadPrevHandler
+			<li id="item-1">
+			<a href="#">
+				<img src="http://static.flickr.com/74/162582364_7fc3e2d60d_s.jpg"/>
+			</a>Number One</li>
+			-->
+		</ul>
+	</div>
+</div>
+
+<div id="next-arrow-container" >
+	<img id="next-arrow" class="right-button-image" src="images/right-enabled.gif" alt="Next Button"/>
+</div>
+
+<div style="padding-top:20px;clear:both">View the <a href="source.php?url=carousel_ajax_load.html">source</a>&nbsp;or&nbsp;<a href="index.html">documentation</a></div>
+
+</div>
+</div> 
+</body>
+</html>

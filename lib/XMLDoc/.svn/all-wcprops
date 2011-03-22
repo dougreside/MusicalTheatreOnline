@@ -1,0 +1,335 @@
+K 25
+svn:wc:ra_dav:version-url
+V 30
+/svn/mto/!svn/ver/2/lib/XMLDoc
+END
+testProc2DB.php
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/mto/!svn/ver/2/lib/XMLDoc/testProc2DB.php
+END
+dbStuff.php
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/mto/!svn/ver/2/lib/XMLDoc/dbStuff.php
+END
+getWords.php
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/mto/!svn/ver/2/lib/XMLDoc/getWords.php
+END
+testGetTags.php
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/mto/!svn/ver/2/lib/XMLDoc/testGetTags.php
+END
+testGetWords.php
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/mto/!svn/ver/2/lib/XMLDoc/testGetWords.php
+END
+disp.php
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/mto/!svn/ver/2/lib/XMLDoc/disp.php
+END
+getOffsets4Node.php
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/mto/!svn/ver/2/lib/XMLDoc/getOffsets4Node.php
+END
+drama.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/mto/!svn/ver/2/lib/XMLDoc/drama.xsl
+END
+compiledGloryDays.xml
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/mto/!svn/ver/2/lib/XMLDoc/compiledGloryDays.xml
+END
+generateID.php
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/mto/!svn/ver/2/lib/XMLDoc/generateID.php
+END
+collate.js
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/mto/!svn/ver/2/lib/XMLDoc/collate.js
+END
+gd1231.xml
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/mto/!svn/ver/2/lib/XMLDoc/gd1231.xml
+END
+Selection.js
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/mto/!svn/ver/2/lib/XMLDoc/Selection.js
+END
+XMLDoc.js
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/mto/!svn/ver/2/lib/XMLDoc/XMLDoc.js
+END
+MakeOffsetIndex.php
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/mto/!svn/ver/2/lib/XMLDoc/MakeOffsetIndex.php
+END
+hamnowstripped.xml
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/mto/!svn/ver/2/lib/XMLDoc/hamnowstripped.xml
+END
+gd1231_c
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/mto/!svn/ver/2/lib/XMLDoc/gd1231_c
+END
+getTextNodes.php
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/mto/!svn/ver/2/lib/XMLDoc/getTextNodes.php
+END
+test.php
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/mto/!svn/ver/2/lib/XMLDoc/test.php
+END
+getSpkrIds.php
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/mto/!svn/ver/2/lib/XMLDoc/getSpkrIds.php
+END
+out.xml
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/mto/!svn/ver/2/lib/XMLDoc/out.xml
+END
+hamnums.xml
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/mto/!svn/ver/2/lib/XMLDoc/hamnums.xml
+END
+c_gd-1-11
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/mto/!svn/ver/2/lib/XMLDoc/c_gd-1-11
+END
+loadText.php
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/mto/!svn/ver/2/lib/XMLDoc/loadText.php
+END
+getXMLSection.php
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/mto/!svn/ver/2/lib/XMLDoc/getXMLSection.php
+END
+drama2.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/mto/!svn/ver/2/lib/XMLDoc/drama2.xsl
+END
+importDiffs.php
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/mto/!svn/ver/2/lib/XMLDoc/importDiffs.php
+END
+drama3.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/mto/!svn/ver/2/lib/XMLDoc/drama3.xsl
+END
+offsetIndex.xml
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/mto/!svn/ver/2/lib/XMLDoc/offsetIndex.xml
+END
+genIDsInsertSrcFiles.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/mto/!svn/ver/2/lib/XMLDoc/genIDsInsertSrcFiles.php
+END
+compileTEI.php
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/mto/!svn/ver/2/lib/XMLDoc/compileTEI.php
+END
+importXML.php
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/mto/!svn/ver/2/lib/XMLDoc/importXML.php
+END
+deleteFileFromDB.php
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/mto/!svn/ver/2/lib/XMLDoc/deleteFileFromDB.php
+END
+test.html
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/mto/!svn/ver/2/lib/XMLDoc/test.html
+END
+gd1231_t
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/mto/!svn/ver/2/lib/XMLDoc/gd1231_t
+END
+glorydiff.xml
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/mto/!svn/ver/2/lib/XMLDoc/glorydiff.xml
+END
+mine.xml
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/mto/!svn/ver/2/lib/XMLDoc/mine.xml
+END
+generateIDbyFile.php
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/mto/!svn/ver/2/lib/XMLDoc/generateIDbyFile.php
+END
+hamnow.xml
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/mto/!svn/ver/2/lib/XMLDoc/hamnow.xml
+END
+hamw.xml
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/mto/!svn/ver/2/lib/XMLDoc/hamw.xml
+END
+TEI2HTML.xsl
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/mto/!svn/ver/2/lib/XMLDoc/TEI2HTML.xsl
+END
+notesForXML.txt
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/mto/!svn/ver/2/lib/XMLDoc/notesForXML.txt
+END
+compileXML.php
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/mto/!svn/ver/2/lib/XMLDoc/compileXML.php
+END
+OffsetArray.js
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/mto/!svn/ver/2/lib/XMLDoc/OffsetArray.js
+END
+testOff.php
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/mto/!svn/ver/2/lib/XMLDoc/testOff.php
+END
+EBPtext.css
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/mto/!svn/ver/2/lib/XMLDoc/EBPtext.css
+END
+dbStuffDoug.php
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/mto/!svn/ver/2/lib/XMLDoc/dbStuffDoug.php
+END
+TransformTEI.php
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/mto/!svn/ver/2/lib/XMLDoc/TransformTEI.php
+END
+findSingleCue.php
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/mto/!svn/ver/2/lib/XMLDoc/findSingleCue.php
+END
+getNode4Offset.php
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/mto/!svn/ver/2/lib/XMLDoc/getNode4Offset.php
+END
+getCharacterNames.php
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/mto/!svn/ver/2/lib/XMLDoc/getCharacterNames.php
+END
+getMilestones.php
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/mto/!svn/ver/2/lib/XMLDoc/getMilestones.php
+END
+synched_speakers_1.xml
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/mto/!svn/ver/2/lib/XMLDoc/synched_speakers_1.xml
+END
+glorydays_1_12_synched.xml
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/mto/!svn/ver/2/lib/XMLDoc/glorydays_1_12_synched.xml
+END
+testCompile.php
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/mto/!svn/ver/2/lib/XMLDoc/testCompile.php
+END

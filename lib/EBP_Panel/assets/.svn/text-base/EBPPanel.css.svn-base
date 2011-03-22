@@ -1,0 +1,33 @@
+div.panel {
+	background: url('./images/bkgd_70black.png');
+	padding: 5px;
+	width:800px;
+	position: absolute;
+}
+.bd {
+	position: relative;
+	
+	overflow: scroll;
+
+}
+.ft {
+	position: relative;
+}
+.hd {
+	position: relative;
+	text-align: right;
+}
+.panelButton{
+	padding-left: 2px;;
+}
+.registration {
+	background-color: #FFF;
+	
+}
+.regsubmit {
+	background-color: #FFF;
+	
+}
+.left padding {
+	background-color: #FFF;
+}

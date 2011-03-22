@@ -1,0 +1,146 @@
+.tabs {
+	margin-top:-53px;
+}
+
+.tabmain {
+	border-top: 1px solid #aeaeae;
+	clear: both;
+	background: #d7d7d7;
+	/*background-image:url('../images/bkgd_toolbar.jpg');
+	padding-top: 30px; 									 CHANGE? */
+}
+
+.tabcontents {
+	padding: 20px 325px 20px 50px;
+	background: #fff;
+	height: 500px;
+	overflow:auto;
+}
+
+/*
+.tabheader {
+	position: relative;
+	width: 100%;
+	height: 3em;
+	width: 45em; /* a width is required for Opera, older Mozilla browsers, and Konqueror browsers */
+	/*padding-left:25px;
+}
+
+.tabheader ul.tabprimary {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	bottom: -1px;
+	width: 45em; /* a width is required for Opera, older Mozilla browsers, and Konqueror browsers */
+/*s}
+
+.tabheader ul.tabprimary li  {
+	display: inline;
+	list-style: none;
+}
+
+/*css that applies to all tabs */
+
+.tabs ul {float:left;list-style-type:none;margin:0px;padding:0px;width:850px;background:#e2f6fd;}
+.tabs ul li {float:left;margin-right:5px;}
+.tabs ul li a {float:left;;text-decoration:none;padding-left:10px;padding-right:10px;line-height:25px;text-align: center;	font-family: "Lucida Grande", Verdana, Arial, sans-serif;	font-size: 85%;	text-decoration: none;	color: #333;}
+
+/*inactive tabs */
+
+.tabs .tabInactive ul li {background:url('images/inactive-tab-start.gif')}
+.tabs .tabInactive ul li a {background:url('images/inactive-tab-end.gif') no-repeat;background-position: 100% 0%;}
+
+/*active tabs--replace the above css */
+.tabs .tabActive ul li {background:url('images/active-tab-start.gif')}
+.tabs .tabActive ul li a {background:url('images/active-tab-end.gif') no-repeat;background-position: 100% 0%;}
+
+
+.tabheader ul.tabprimary a, .tabheader ul.tabprimary span, .tabheader ul.tabprimary a.current {
+	width: 8em;
+	display: block;
+	float: left;
+	
+	margin: 1px 2px 0 0;
+	text-align: center;
+	font-family: "Lucida Grande", Verdana, Arial, sans-serif;
+	font-size: 95%;
+	text-decoration: none;
+	color: #333;
+}
+
+.tabheader ul.tabprimary span,.tabheader ul.tabprimary a.current,.tabheader ul.tabprimary a.current:hover {
+	border-bottom: none;
+	background: #fff;
+	padding-bottom: 2px;
+	margin-top: 0;
+}
+
+.tabheader ul.tabprimary a {
+	background: #d7d7d7;
+	background-image:url('../images/bkgd_toolbar.jpg');
+	background: url('../images/back-tab-left.gif') left top no-repeat;
+	border-bottom: none;
+}
+
+.tabheader ul.tabprimary span {
+	background: url('../images/front-tab-left.gif') left top no-repeat;
+}
+
+.tabheader ul.tabprimary a:hover {
+	margin-top: 0;
+	background: #fff;
+	background: url('../images/front-tab-left.gif') left top no-repeat;
+}
+/*
+.tabheader ul.tabprimary a:hover .inactiveTab {
+	margin-top: 0;
+	background: #fff;
+	background: url('../images/front-tab-right.gif') right top no-repeat;
+}
+*/
+.tabheader ul.tabsecondary {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	bottom: -2.1em;
+	left: 15px;
+	width: 50em; /* a width is required for Opera, older Mozilla browsers, and Konqueror browsers */
+}
+
+.tabheader ul.tabsecondary li a,.tabheader ul.tabsecondary li span, .tabheader ul.tabsecondary .tabssecondaryheader {
+	width: auto;
+	display: block;
+	float: left;
+	padding: 0 10px;
+	margin: 0;
+	text-align: auto;
+	border: none;
+	border-right: 1px dotted #aeaeae;
+	background: none;
+}
+
+.tabheader ul.tabsecondary li a {
+	color: #4c4c4c;
+	text-decoration: underline;
+}
+
+.tabheader ul.tabsecondary li a:hover {
+	color: #3ea7a0;
+	background: transparent;
+	padding: 0 10px;
+	border: none;
+	border-right: 1px dotted #aeaeae;
+}
+/*
+.tabheader ul.tabsecondary li a:active {
+	color: #4c4c4c;
+	background: transparent;
+}
+*/
+.tabheader ul.tabsecondary .tabssecondaryheader {
+	display:inline-block;
+	color:#85435d;
+	font-weight:bold;
+}
+
+.tabheader ul.tabsecondary li:last-child a { border: none; }

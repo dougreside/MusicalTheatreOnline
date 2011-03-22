@@ -1,0 +1,12 @@
+<div class="imageViewerWrapper">
+	<div class="imageViewerContents">
+		<div class="galleria_container"><div class="galleria_wrapper"><img src="./lib/ImageViewer/images/stub.png" class="replaced" style="cursor: pointer;" title="Next image >>"/></div><span class="caption" style=""></span></div>
+				
+         <ul class="imageViewer_unstyled imageViewer galleria">
+         </ul>
+       <p class="caption"></p>
+                
+        <p class="nav"><a href="#">previous</a> | <a href="#">next</a></p>
+        <p class="navPages"></p>
+    </div>
+</div>

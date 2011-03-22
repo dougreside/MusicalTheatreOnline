@@ -1,0 +1,5 @@
+<manifests>
+	<manifest>
+		<show title="Glory Days" file="./data/GloryDays/manifests/manifest.xml"></show>
+	</manifest>
+</manifests>

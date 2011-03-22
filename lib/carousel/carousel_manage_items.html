@@ -1,0 +1,413 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+<title>Carousel Component Example - Manage Items</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+	<script type="text/javascript" src="http://yui.yahooapis.com/combo?2.6.0/build/utilities/utilities.js&2.6.0/build/container/container_core-min.js"></script> 
+	<script type="text/javascript" src="scripts/carousel.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?2.6.0/build/reset-fonts-grids/reset-fonts-grids.css&2.6.0/build/base/base-min.css">
+	<link href="css/carousel.css" rel="stylesheet" type="text/css">
+	<link href="css/yui.css" rel="stylesheet" type="text/css">
+<!-- 
+	Inlined styles for my overrides to the carousel for this demo.
+	Normally I would put this in a separate CSS file.
+-->
+<style type="text/css">
+.carousel-component {
+	padding:8px;
+}
+.carousel-component .carousel-list li { 
+	margin:4px;
+	width:79px; /* img width is 75 px from flickr + a.border-left (1) + a.border-right(1) + 
+	               img.border-left (1) + img.border-right (1)*/
+	/*	margin-left: auto;*/ /* for testing IE auto issue */
+}
+
+.carousel-component .carousel-list li a { 
+	display:block;
+	border:1px solid #e2edfa;
+	outline:none;
+	-moz-outline:none; 
+}
+
+.carousel-component .carousel-list li a:hover { 
+	border: 1px solid #87bf4e; 
+}
+
+.carousel-component .carousel-list li img { 
+	border:1px solid #999;
+	display:block; 
+}
+
+.carousel-component .carousel-list li strong { 
+	display:block; 
+}
+									
+
+#prev-arrow { 
+	position:absolute;
+	top:40px;
+	z-index:3;
+	cursor:pointer; 
+	left:5px; 
+}
+
+#next-arrow { 
+	position:absolute;
+	top:40px;
+	z-index:3;
+	cursor:pointer; 
+	right:5px; 
+}
+
+div.input-line {
+	padding-top:10px;
+}
+
+div.input-line p {
+	float:left;
+	padding:5px 4px 0px 0px;
+	margin:0px;
+}
+div.input-line input {
+	float:left;
+	margin-top:1px;
+	margin-right:8px;
+}
+div.input-line button {
+	float:left;
+}
+</style>
+<script type="text/javascript">
+
+/**
+ * Image src URLs
+ */
+var imageList = [
+				 "images/thumb_1.jpg",
+				 "images/thumb_2.jpg",
+				 "images/thumb_3.jpg",
+				 "images/thumb_4.jpg",
+				 "images/thumb_5.jpg",
+				 "images/thumb_6.jpg",
+				 "images/thumb_7.jpg",
+				 "images/thumb_8.jpg",
+				 "images/thumb_9.jpg",
+				 "images/thumb_10.jpg",
+				 "images/thumb_11.jpg",
+				 "images/thumb_12.jpg",
+				 "images/thumb_13.jpg",
+				 "images/thumb_14.jpg",
+				 "images/thumb_15.jpg",
+				 "images/thumb_16.jpg",
+				 "images/thumb_17.jpg",
+				 "images/thumb_18.jpg"
+				 ];
+/**
+ * The names of the images corresponding to the thumbs.
+ */
+var imageNames = [
+				"Image 1",
+				"Image 2",
+				"Image 3",
+				"Image 4",
+				"Image 5",
+				"Image 6",
+				"Image 7",
+				"Image 8",
+				"Image 9",
+				"Image 10",
+				"Image 11",
+				"Image 12",
+				"Image 13",
+				"Image 14",
+				"Image 15",
+				"Image 16",
+				"Image 17",
+				"Image 18"
+				];
+				
+
+/**
+ * This index list is used during inserts to keep track of which thumb
+ * will be loaded on next operations. This simulates a database lookup
+ */
+var imageIndices = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17];
+
+/**
+ * Custom inital load handler. Called when the carousel loads the initial
+ * set of data items. Specified to the carousel as the configuration
+ * parameter: loadInitHandler
+ */
+var loadInitialItems = function(type, args) {
+
+	var start = args[0];
+	var last = args[1]; 
+
+	load(this, start, last);	
+};
+
+/**
+ * Custom load next handler. Called when the carousel loads the next
+ * set of data items. Specified to the carousel as the configuration
+ * parameter: loadNextHandler
+ */
+var loadNextItems = function(type, args) {	
+
+	var start = args[0];
+	var last = args[1]; 
+	var alreadyCached = args[2];
+	
+	if(!alreadyCached) {
+		load(this, start, last);
+	}
+};
+
+/**
+ * Custom load previous handler. Called when the carousel loads the previous
+ * set of data items. Specified to the carousel as the configuration
+ * parameter: loadPrevHandler
+ */
+var loadPrevItems = function(type, args) {
+	var start = args[0];
+	var last = args[1]; 
+	var alreadyCached = args[2];
+	
+	if(!alreadyCached) {
+		load(this, start, last);
+	}
+};     
+
+/**
+ * Custom button state handler for enabling/disabling button state. 
+ * Called when the carousel has determined that the previous button
+ * state should be changed.
+ * Specified to the carousel as the configuration
+ * parameter: prevButtonStateHandler
+ */
+var handlePrevButtonState = function(type, args) {
+	var enabling = args[0];
+	var leftImage = args[1];
+	if(enabling) {
+		leftImage.src = "images/left-enabled.gif";		
+	} else {
+		leftImage.src = "images/left-disabled.gif";	
+	}
+};
+
+/**
+ * Custom button state handler for enabling/disabling button state. 
+ * Called when the carousel has determined that the next button
+ * state should be changed.
+ * Specified to the carousel as the configuration
+ * parameter: nextButtonStateHandler
+ */
+var handleNextButtonState = function(type, args) {
+	var enabling = args[0];
+	var rightImage = args[1];
+	if(enabling) {
+		rightImage.src = "images/right-enabled.gif";	
+	} else {
+		rightImage.src = "images/right-disabled.gif";
+	}
+};
+
+/**
+ * To simulate out of synch loading, we load these items backwards.
+ * This exercises the ability to load items out of sequence.
+ */
+var load = function(carousel, start, last) {
+	for(var i=last; i>=start; i--) {
+		if(!carousel.isItemLoaded(i)) {
+		//carousel.debugMsg("adding item: " + i);
+			carousel.addItem(i, 
+				fmtItem(imageList[imageIndices[i-1]], "#",
+							//"image" + i)); 
+							prefix + imageNames[imageIndices[i-1]]));
+		}
+	}
+};
+
+var carousel; // for ease of debugging; globals generally not a good idea
+var prefix = "";
+var pageLoad = function() 
+{
+	carousel = new YAHOO.extension.Carousel("dhtml-carousel", 
+		{
+			numVisible:        4,
+			animationSpeed:    0.3,
+			animationMethod:   YAHOO.util.Easing.easeBoth,
+			scrollInc:         3,
+			navMargin:         40,
+			size:              18,
+			loadInitHandler:   loadInitialItems,
+			prevElement:     "prev-arrow",
+			nextElement:     "next-arrow",
+			loadNextHandler:   loadNextItems,
+			loadPrevHandler:   loadPrevItems,
+			prevButtonStateHandler:   handlePrevButtonState,
+			nextButtonStateHandler:   handleNextButtonState
+		}
+	);
+};
+
+YAHOO.util.Event.addListener(window, 'load', pageLoad);
+
+var clearIt = function(e) {
+	imageIndices = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17];
+	carousel.clear();
+};
+var reloadIt = function(e) {
+	prefix+="+";
+	imageIndices = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17];
+	carousel.reload();
+	carousel.setProperty("size",17,true);
+};
+var insert = function(e, before) {
+	if(before) {
+		_insert(before, "insert-before-name", "insert-before-item");
+	} else {
+		_insert(before, "insert-after-name", "insert-after-item");
+	}
+}
+
+/**
+ * Illustrates how to insert before or after
+ */
+var _insert = function(before, nameElem, idxElem) {
+	
+	var itemNameInput = YAHOO.util.Dom.get(nameElem);
+	var newName = itemNameInput.value;
+
+	if(newName === "") {
+		YAHOO.util.Dom.get("status").innerHTML = 
+					'<span style="color:red;">Please enter a name<\/span>'
+		return;
+	}
+
+	var indexInput = YAHOO.util.Dom.get(idxElem);
+	if(indexInput.value === "") {
+		YAHOO.util.Dom.get("status").innerHTML = 
+					'<span style="color:red;">Please enter an index<\/span>'
+		return;
+	}
+	
+	var refIdx = parseInt(indexInput.value, 10);
+	var ranIdx = Math.floor(Math.random()*18)
+	var newImgUrl = imageList[ranIdx];
+
+	if(before) {
+		carousel.insertBefore(refIdx, fmtItem(newImgUrl, "#", newName));
+		updateIndices(refIdx-1, ranIdx);
+	} else {
+		carousel.insertAfter(refIdx, fmtItem(newImgUrl, "#", newName));
+		updateIndices(refIdx, ranIdx);
+	}
+	
+	YAHOO.util.Dom.get("status").innerHTML = "(Item added)";
+};
+
+var updateIndices = function(insertIdx, ranIdx) {
+	
+	for(var i=imageIndices.length; i >= insertIdx; i--) {
+		imageIndices[i] = imageIndices[i-1];
+	}
+	
+	imageIndices[insertIdx] = ranIdx;
+};
+
+var fmtItem = function(imgUrl, url, title) {
+
+  	var innerHTML = 
+  		'<a href="' + 
+  		url + 
+  		'"><img src="' + 
+  		imgUrl +
+		'" width="' +
+		75 +
+		'" height="' +
+		75+
+		'"/>' + 
+  		title + 
+  		'<\/a>';
+  
+	return innerHTML;
+	
+}
+
+YAHOO.util.Event.addListener("insert-after-button", 'click', insert, false);
+YAHOO.util.Event.addListener("insert-before-button", 'click', insert, true);
+YAHOO.util.Event.addListener("clear-button", 'click', clearIt);
+YAHOO.util.Event.addListener("reload-button", 'click', reloadIt);
+
+</script>
+</head>
+
+<body>
+
+<div id="doc" class="yui-t7">
+   <div id="hd">
+		<h1>Manage Items - Carousel</h1>
+   </div>
+<div id="bd">
+<p>Illustrates inserting items, clearing all items and causing a reload of items. </p>
+
+<p>To experiment with inserting items, enter the name of the new item and which item index it will appear before or after. (Note that after insertion, the names that start with 'Image ' will no longer accurately reflect their position in the list.)</p>
+<p>The <em>Clear</em> and <em>Reload</em> buttons illustrate clearing all items from the list as well as reloading a new set of items (in this example we illustrate new items by prefixing a '+' character on each new load.</p>
+<p>The methods illustrated here are:</p>
+<pre>
+	carousel.insertBefore(indexToInsertBefore, innerHTMLToInsert);
+	carousel.insertAfter(indexToInsertAfter, innerHTMLToInsert);
+	carousel.clear();
+	carousel.reload();
+</pre>
+<p>This also illustrates loading items out of sequence. Items are loaded backwards, but the items are shown in the correct order.</p>
+<!-- Carousel Structure -->
+<div id="dhtml-carousel" class="carousel-component">
+	<div><img id="prev-arrow" class="left-button-image" src="images/left-enabled.gif" alt="Previous Button"/></div>
+	<div><img id="next-arrow" class="right-button-image" src="images/right-enabled.gif" alt="Next Button"/></div>
+	<div class="carousel-clip-region">
+		<ul class="carousel-list">
+			<!-- Filled in via the loadInitHandler, loadNextHandler, and loadPrevHandler
+			<li id="item-1">
+			<a href="#"> 
+				<img src="http://static.flickr.com/74/162582364_7fc3e2d60d_s.jpg"/>
+			</a>Number One</li>
+			-->
+		</ul>
+	</div>
+</div>
+<div class="input-line">
+	<p>Insert a new item named</p>
+	<input id="insert-before-name" style="width:60px;" type="text"/>
+	<p>before item #</p>
+	<input id="insert-before-item" style="width:40px;" type="text"/>
+	<button id="insert-before-button">Insert Before</button>
+</div>
+
+<div style="clear:both;" class="input-line">
+	<p>Insert a new item named</p>
+	<input id="insert-after-name" style="width:60px;" type="text"/>
+	<p>after item #</p>
+	<input id="insert-after-item" style="width:40px;" type="text"/>
+	<button id="insert-after-button">Insert After</button>
+</div>
+
+<div style="clear:both;" class="input-line">
+<p>Clear all items ==&gt;</p>
+<button id="clear-button">Clear</button>
+<p>&nbsp;&nbsp;OR reload a new set ==&gt;</p> 
+<button id="reload-button">Reload</button>
+</div>
+<div style="clear:both;margin-top:20px;" id="status"></div>
+
+<div style="padding-top:20px">View the <a href="source.php?url=carousel_manage_items.html">source</a>&nbsp;or&nbsp;<a href="index.html">documentation</a></div>
+
+</div>
+</div> 
+
+</body>
+</html>

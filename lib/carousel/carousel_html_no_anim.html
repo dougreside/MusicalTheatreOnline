@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+<title>Carousel Component Example - No Animation</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	
+	<script type="text/javascript" src="http://yui.yahooapis.com/combo?2.6.0/build/utilities/utilities.js&2.6.0/build/container/container_core-min.js"></script> 
+	<script type="text/javascript" src="scripts/carousel.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?2.6.0/build/reset-fonts-grids/reset-fonts-grids.css&2.6.0/build/base/base-min.css">
+	<link href="css/carousel.css" rel="stylesheet" type="text/css">
+	<link href="css/yui.css" rel="stylesheet" type="text/css">	
+<!-- 
+	Inlined styles for my overrides to the carousel for this demo.
+	Normally I would put this in a separate CSS file.
+-->
+<style type="text/css">
+.carousel-component {
+	padding:8px;
+}
+.carousel-component .carousel-list li { 
+	margin:4px;
+	width:79px; /* img width is 75 px from flickr + a.border-left (1) + a.border-right(1) + 
+	               img.border-left (1) + img.border-right (1)*/
+	/*	margin-left: auto;*/ /* for testing IE auto issue */
+}
+
+.carousel-component .carousel-list li a { 
+	display:block;
+	border:1px solid #e2edfa;
+	outline:none;
+	-moz-outline:none; 
+}
+
+.carousel-component .carousel-list li a:hover { 
+	border: 1px solid #87bf4e; 
+}
+
+.carousel-component .carousel-list li img { 
+	border:1px solid #999;
+	display:block; 
+}
+
+.carousel-component .carousel-list li strong { 
+	display:block; 
+}
+									
+
+#prev-arrow { 
+	position:absolute;
+	top:40px;
+	z-index:3;
+	cursor:pointer; 
+	left:5px; 
+}
+
+#next-arrow { 
+	position:absolute;
+	top:40px;
+	z-index:3;
+	cursor:pointer; 
+	right:5px; 
+}
+</style>
+
+<script type="text/javascript">
+
+/**
+ * Custom button state handler for enabling/disabling button state. 
+ * Called when the carousel has determined that the previous button
+ * state should be changed.
+ * Specified to the carousel as the configuration
+ * parameter: prevButtonStateHandler
+ **/
+var handlePrevButtonState = function(type, args) {
+
+	var enabling = args[0];
+	var leftImage = args[1];
+	if(enabling) {
+		leftImage.src = "images/left-enabled.gif";
+	} else {
+		leftImage.src = "images/left-disabled.gif";
+	}
+	
+};
+
+/**
+ * Custom button state handler for enabling/disabling button state. 
+ * Called when the carousel has determined that the next button
+ * state should be changed.
+ * Specified to the carousel as the configuration
+ * parameter: nextButtonStateHandler
+ **/
+var handleNextButtonState = function(type, args) {
+
+	var enabling = args[0];
+	var rightImage = args[1];
+	if(enabling) {
+		rightImage.src = "images/right-enabled.gif";
+	} else {
+		rightImage.src = "images/right-disabled.gif";
+	}
+	
+};
+
+/**
+ * You must create the carousel after the page is loaded since it is
+ * dependent on an HTML element (in this case 'mycarousel'.) See the
+ * HTML code below.
+ **/
+var carousel; // for ease of debugging; globals generally not a good idea
+
+var pageLoad = function() 
+{
+	carousel = new YAHOO.extension.Carousel("mycarousel", 
+		{
+			numVisible:        6,
+			animationSpeed:    0,
+			scrollInc:         5,
+			navMargin:         40,
+			size:              18,
+			prevElement:     "prev-arrow",
+			nextElement:     "next-arrow",
+			prevButtonStateHandler:   handlePrevButtonState,
+			nextButtonStateHandler:   handleNextButtonState
+		}
+	);
+
+};
+
+YAHOO.util.Event.addListener(window, 'load', pageLoad);
+
+
+</script>
+</head>
+
+<body>
+
+<div id="doc" class="yui-t7">
+   <div id="hd">
+		<h1>No Animation - Carousel</h1>
+   </div>
+<div id="bd">
+<p><em>animationSpeed</em> is set to 0 (zero). Paging is immediate with no animated transitions. The carousel is configured with the following parameter:</p>
+<pre>
+	animationSpeed: 0
+		OR
+	carousel.setProperty("animationSpeed", 0);
+	
+</pre>
+
+<!-- Carousel Structure -->
+<div id="mycarousel" class="carousel-component">
+	<div class="carousel-prev">
+		<img id="prev-arrow" class="left-button-image" 
+			src="images/left-enabled.gif" alt="Previous Button"/>
+	</div>
+	<div class="carousel-next">
+		<img id="next-arrow" class="right-button-image" 
+			src="images/right-enabled.gif" alt="Next Button"/>
+	</div>
+	<div class="carousel-clip-region">
+				<ul class="carousel-list">
+					<li id="mycarousel-item-1">
+		<a href="#"><img width="75" height="75" src="http://static.flickr.com/74/162582364_7fc3e2d60d_s.jpg" alt="item 1"/></a>Number One</li>
+		<li id="mycarousel-item-2"><div><a href="#"><img width="75" height="75" src="http://static.flickr.com/67/162582262_e969394bc3_s.jpg" alt="item 2"/></a>Number Two</div></li>
+		<li id="mycarousel-item-3"><a href="#"><img width="75" height="75" src="http://static.flickr.com/49/162582189_e0571b02e2_s.jpg" alt="item 3"/></a>Number Three</li>
+		<li id="mycarousel-item-4"><a href="#"><img width="75" height="75" src="http://static.flickr.com/53/162581581_de49021696_s.jpg" alt="item 4"/></a>Number Four</li>
+		<li id="mycarousel-item-5"><a href="#"><img width="75" height="75" src="http://static.flickr.com/74/161894590_9a1a9788e1_s.jpg" alt="item 5"/></a>Number Five</li>
+		<li id="mycarousel-item-6"><a href="#"><img width="75" height="75" src="http://static.flickr.com/55/161894230_a4f1baf3d2_s.jpg" alt="item 6"/></a>Number Six</li>
+		<li id="mycarousel-item-7"><a href="#"><img width="75" height="75" src="http://static.flickr.com/52/161894040_04f135f1a2_s.jpg" alt="item 7"/></a>Number Seven</li>
+		<li id="mycarousel-item-8"><a href="#"><img width="75" height="75" src="http://static.flickr.com/54/161893927_c173a1e28c_s.jpg" alt="item 8"/></a>Number Eight</li>
+		<li id="mycarousel-item-9"><a href="#"><img width="75" height="75" src="http://static.flickr.com/72/161893872_6800ebea26_s.jpg" alt="item 9"/></a>Number Nine</li>
+		<li id="mycarousel-item-10"><a href="#"><img width="75" height="75" src="http://static.flickr.com/77/161892664_755fdad7b6_s.jpg" alt="item 10"/></a>Number Ten</li>
+		<li id="mycarousel-item-11"><a href="#"><img width="75" height="75" src="http://static.flickr.com/64/161892344_25ed032a4b_s.jpg" alt="item 11"/></a>Number Eleven</li>
+		<li id="mycarousel-item-12"><a href="#"><img width="75" height="75" src="http://static.flickr.com/51/154250687_c241e9b5a2_s.jpg" alt="item 12"/></a>Number Twelve</li>
+		<li id="mycarousel-item-13"><a href="#"><img width="75" height="75" src="http://static.flickr.com/58/154252383_d59833136c_s.jpg" alt="item 13"/></a>Number Thirteen</li>
+		<li id="mycarousel-item-14"><a href="#"><img width="75" height="75" src="http://static.flickr.com/72/154249854_e478567f11_s.jpg" alt="item 14"/></a>Number Fourteen</li>
+		<li id="mycarousel-item-15"><a href="#"><img width="75" height="75" src="http://static.flickr.com/52/154249682_0e000a8bbd_s.jpg" alt="item 15"/></a>Number Fifteen</li>
+		<li id="mycarousel-item-16"><a href="#"><img width="75" height="75" src="http://static.flickr.com/49/154250868_9ed96d9fdf_s.jpg" alt="item 16"/></a>Number Sixteen</li>
+		<li id="mycarousel-item-17"><a href="#"><img width="75" height="75" src="http://static.flickr.com/52/154250543_633506d4cf_s.jpg" alt="item 17"/></a>Number Seventeen</li>
+		<li id="mycarousel-item-18"><a href="#"><img width="75" height="75" src="http://static.flickr.com/46/161892486_b4f8b93917_s.jpg" alt="item 18"/></a>Number Eighteen</li>
+		</ul>
+		</div>
+</div>
+<div style="padding-top:20px;clear:both">View the <a href="source.php?url=carousel_html_no_anim.html">source</a>&nbsp;or&nbsp;<a href="index.html">documentation</a></div>
+</div>
+</div> 
+
+</body>
+</html>

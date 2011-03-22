@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/mto/!svn/ver/177/lib/OpenLayers/examples/data
+END
+line.json
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/mto/!svn/ver/177/lib/OpenLayers/examples/data/line.json
+END
+roads.json
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/mto/!svn/ver/177/lib/OpenLayers/examples/data/roads.json
+END
+point.json
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/mto/!svn/ver/177/lib/OpenLayers/examples/data/point.json
+END
+poly.json
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/mto/!svn/ver/177/lib/OpenLayers/examples/data/poly.json
+END

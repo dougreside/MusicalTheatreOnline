@@ -1,0 +1,16 @@
+<div class="OrderedImageViewer">
+	<div class="OIV_controls">
+		<span onclick="oiv_back(this)" class="OIV_back"></span>
+		<span class="OIV_number"> </span>
+		<span onclick="oiv_next(this)" class="OIV_next"></span>
+	</div>
+	<div class="OIV_content">
+		
+	</div>
+	
+	<div class="OIV_controls">
+		<span onclick="oiv_back(this)" class="OIV_back"></span>
+		<span class="OIV_number"> </span>
+		<span onclick="oiv_next(this)" class="OIV_next"></span>
+	</div>
+</div>

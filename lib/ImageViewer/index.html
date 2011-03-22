@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Image Viewer Test</title>
+<link rel="shortcut icon" href="images/favicon.ico" />
+<link href="imageViewer.css" rel="stylesheet" type="text/css" media="screen">
+	<script type="text/javascript" src="scripts/jquery.js"></script>
+	<script type="text/javascript" src="scripts/galleria.js"></script>
+	<script type="text/javascript">
+	
+	jQuery(function($) {
+		
+		$('.imageViewer_unstyled').addClass('imageViewer'); // adds new class name to maintain degradability
+		
+		$('ul.imageViewer').galleria({
+			history   : true, // activates the history object for bookmarking, back-button etc.
+			clickNext : true, // helper for making the image clickable
+			onImage   : function(image,caption,thumb) { // let's add some image effects for demonstration purposes
+				
+				// fade in the image & caption
+				if(! ($.browser.mozilla && navigator.appVersion.indexOf("Win")!=-1) ) { // FF/Win fades large images terribly slow
+					image.css('display','none').fadeIn(1000);
+				}
+				caption.css('display','none').fadeIn(1000);
+				
+				// fetch the thumbnail container
+				var _li = thumb.parents('li');
+				
+				// fade out inactive thumbnail
+				_li.siblings().children('img.selected').fadeTo(500,0.3);
+				
+				// fade in active thumbnail
+				thumb.fadeTo('fast',1).addClass('selected');
+				
+				// add a title for the clickable image
+				image.attr('title','Next image >>');
+			},
+			onThumb : function(thumb) { // thumbnail effects goes here
+				
+				// fetch the thumbnail container
+				var _li = thumb.parents('li');
+				
+				// if thumbnail is active, fade all the way.
+				var _fadeTo = _li.is('.active') ? '1' : '0.3';
+				
+				// fade in the thumbnail when finnished loading
+				thumb.css({display:'none',opacity:_fadeTo}).fadeIn(1500);
+				
+				// hover effects
+				thumb.hover(
+					function() { thumb.fadeTo('fast',1); },
+					function() { _li.not('.active').children('img').fadeTo('fast',0.3); } // don't fade out if the parent is active
+				)
+			}
+		});
+	});
+	
+	</script>
+	
+</head>
+<body>
+<div class="imageViewerWrapper">
+	<div class="imageViewerContents">
+         <ul class="imageViewer_unstyled">
+                    <li class="active"><img src="images/img1.jpg" alt="Grass Blades" title="Apple nature desktop images"></li>
+                    <li><img src="images/img2.jpg" alt="Flowing Rock" title="Flowing Rock Caption"></li>
+                    <li><img src="images/img3.jpg" alt="Stones" title="Stones - from Apple images"></li>   
+                    <li><img src="images/img4.jpg" alt="Ladybug" title="Ut rutrum, lectus eu pulvinar elementum, lacus urna vestibulum ipsum"></li>
+                    <li><img src="images/img5.jpg" alt="Flowing Rock" title="Flowing Rock Caption"></li>
+                    <li><img src="images/img6.jpg" alt="Stones" title="Stones - from Apple images"></li>
+                    <li><img src="images/img7.jpg" alt="Grass Blades" title="Apple nature desktop images"></li>
+                    <li><img src="images/img8.jpg" alt="Ladybug" title="Ut rutrum, lectus eu pulvinar elementum, lacus urna vestibulum ipsum"></li>
+                    <li><img src="images/img9.jpg" alt="Ladybug" title="Ut rutrum, lectus eu pulvinar elementum, lacus urna vestibulum ipsum"></li>
+                    <li><img src="images/img10.jpg" alt="Grass Blades" title="Apple nature desktop images"></li>
+                    <li><img src="images/img11.jpg" alt="Ladybug" title="Ut rutrum, lectus eu pulvinar elementum, lacus urna vestibulum ipsum"></li>
+                    <li><img src="images/img12.jpg" alt="Ladybug" title="Ut rutrum, lectus eu pulvinar elementum, lacus urna vestibulum ipsum"></li>
+                    <li><img src="images/img13.jpg" alt="Grass Blades" title="Apple nature desktop images"></li>
+                    <li><img src="images/img14.jpg" alt="Ladybug" title="Ut rutrum, lectus eu pulvinar elementum, lacus urna vestibulum ipsum"></li>
+                    <li><img src="images/img15.jpg" alt="Ladybug" title="Ut rutrum, lectus eu pulvinar elementum, lacus urna vestibulum ipsum"></li>
+                </ul>
+       <p class="caption"></p>
+                
+        <p class="nav"><a href="#" onclick="$.galleria.prev(); return false;">previous</a> | <a href="#" onclick="$.galleria.next(); return false;">next</a></p>
+        <p class="navPages">Page  <a href="#">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">next</a></p>
+    </div>
+</div>
+
+</body>
+</html>
+
+</body>
+</html>

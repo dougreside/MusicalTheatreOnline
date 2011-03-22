@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 32
+/svn/mto/!svn/ver/147/lib/Search
+END
+readdirUtils.php
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/mto/!svn/ver/91/lib/Search/readdirUtils.php
+END
+getIndexFields.php
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/mto/!svn/ver/139/lib/Search/getIndexFields.php
+END
+buildindex-spFullText.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/mto/!svn/ver/147/lib/Search/buildindex-spFullText.php
+END
+buildNewIndex.php
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/mto/!svn/ver/147/lib/Search/buildNewIndex.php
+END
+customTokenizer.php
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/mto/!svn/ver/97/lib/Search/customTokenizer.php
+END
+searchMetaData.php
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/mto/!svn/ver/139/lib/Search/searchMetaData.php
+END
+buildIndex.php
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/mto/!svn/ver/111/lib/Search/buildIndex.php
+END
+SearchNotes
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/mto/!svn/ver/112/lib/Search/SearchNotes
+END

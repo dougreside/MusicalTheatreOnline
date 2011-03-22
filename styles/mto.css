@@ -1,0 +1,368 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* -- Yahoo CSS Reset ------------------------------------------------- */
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+	margin:0;
+	padding:0;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset,img { 
+	border:0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+	font-style:normal;
+	font-weight:normal;
+}
+ol,ul {
+	list-style:none;
+}
+caption,th {
+	text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+q:before,q:after {
+	content:'';
+}
+abbr,acronym { border:0;
+}
+
+/* -- Music Theatre Online CSS ------------------------------------------------- */
+/* ----general styles ----- */
+body {
+	background:url('../images/bkgd_page.gif') #535353;
+	font-family: "Lucida Grande", Verdana, Arial, sans-serif;
+	font-size: 11px;
+	color: #4a4a4a;
+}
+
+.container {
+	width: 800px;
+	margin: 0 auto;
+	border-left: 5px solid #333;
+	border-right: 5px solid #333;
+	position: relative;
+}
+
+.header {
+	height: 99px;
+	background: url('../images/bkgd_header.gif') repeat-x top left;
+	text-align: right;	
+}
+h1 {
+	font-size:25px;
+	color:#FFF;
+	margin-bottom:8px;
+	font-weight:normal;
+}
+h2 {
+	color: #3ea7a0;
+	font-size:18px;
+	text-align:left;
+	letter-spacing:normal;
+}
+a {
+	color: #10988f;
+	text-decoration:none;
+	cursor:pointer;
+}
+a:hover {
+	text-decoration:underline;	
+	outline:none;
+}
+strong {
+	font-weight:bold;
+}
+
+/* ----branding ----- */
+
+#logo {
+	display: block;
+	width: 286px;
+	height: 125px;
+	position: absolute;
+	left: -5px;
+	top: 0;
+	background: url('../images/mto-logo.jpg') no-repeat top left;
+	z-index: 2;
+}
+
+#logo_page {
+display: block;
+	display: block;
+	width: 274px;
+	height: 125px;
+	position: absolute;
+	left: -6px;
+	top: 0;
+	background: url('../images/mto-logo_page.jpg') no-repeat top left;
+	z-index: 2;
+}
+
+#title {
+	display: block;
+	width: 260px;
+	height: 79px;
+	margin-left: 267px;
+	background: url('../images/mto-tagline.jpg') no-repeat top left;
+	float: left;		
+	_margin-left:136px; 	/* IE 6 and 7 */
+}
+#title.page {
+	_margin-left:132px;
+}
+/* ----navigation ----- */
+#nav {
+	width: 230px;
+	float: right;
+}
+#nav li {
+	float: left;
+}
+#nav li a {
+	display: block;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 12px;
+	height: 79px;
+	padding: 0 1em;
+	text-align:center;
+	#padding:0;				/* IE 6 and 7 */
+	_margin-bottom:-41px;	/* IE 6 and 7 */
+	_margin-top:-10px;		/* IE 6 and 7 */
+	line-height: 130px;
+	text-decoration: none;
+	outline:none;
+}
+#nav li a:hover {
+	background: #707070;
+}
+
+#nav li.current {
+	background: #9c4e6d;	
+}
+#nav li.home, #nav li.home a {
+	#width:62px;			/* IE 6 and 7 */
+}
+#nav li.about, #nav li.about a {
+	#width:68px;			/* IE 6 and 7 */
+}
+#nav li.contact, #nav li.contact a {
+	#width:87px;			/* IE 6 and 7 */
+}
+
+/* ----main content ----- */
+.main {
+	background: #bfebfb;
+	width:800px;
+}
+em{
+	font-style: italic;
+}
+/* ----search ----- */
+.main .search {
+	padding: 40px 0px 0px 90px;
+}
+.search img {
+	margin-left:-37px;	
+	margin-right:5px;
+}
+.searchbox {
+     border-style: hidden;
+     border-width: 0px;
+     color: #3ea7a0;
+     padding:12px 2px 0px 7px;
+     font-size:12pt;
+	 height:24px;
+	 width:331px;
+     background: url('../images/searchbox.gif') #fff;
+	 background-repeat:no-repeat;
+	 vertical-align:top;
+}
+.submitbutton {
+	vertical-align:top;	
+	margin-left:-4px;
+}
+.spotlight-area .search p {
+	margin-top:5px;
+	margin-left:50px;
+	width:250px;
+	color:#e2f6fd;
+	font-size:13px;
+	line-height:22px;
+}
+.spotlight-area .search a {
+	color:#3c63a4;
+	text-decoration:none;	
+}
+/* ----spotlight area ----- */
+.spotlight-area {
+	height: 260px;
+	background: url('../images/bkgd_main.jpg') no-repeat top left;
+	padding:30px 20px 0px 100px;
+}
+.spotlight-area ul {
+	margin-left:10px;	
+}
+.spotlight-area ul li {
+	color:#fff;
+	font-size:12px;
+	background:url('../images/bullet.gif') no-repeat 0% 2px;
+	line-height:19px;
+	margin-left:-10px;
+	padding-left:25px;
+}
+.spotlight-area .spotlight-area ul li a {
+	color:#73d0ca;
+}
+
+/* ----spotlight-project ----- */
+.spotlightProject {
+	float:left;
+	width:425px;
+}
+.spotlightProject a {
+	margin-left:100px;
+	margin-top:15px;
+}
+img.spotlightLogo {
+	height:140px;
+}
+img.spotlightLogo:hover {
+	outline:2px #ffffff  solid;
+}
+.spotlightInfo {
+	float:right;
+	width:200px;
+	margin-top:20px;
+}
+.spotlightInfo h2{
+	color:#73d0ca;
+}
+.spotlightInfo p {
+	color:#fff;
+	padding:10px 0 5px 0;
+}
+/* ----featured projects area ----- */
+.featured {
+	height:250px;
+	margin: 10px 40px 0px 40px;
+}
+.featured h2 {
+	margin-bottom:20px;
+}
+.featured ul {
+	display:block;
+}
+.featured ul li {
+	float:left;
+	margin-right:20px;
+}
+.featured ul li a {
+	margin-bottom:8px;
+	display:block;
+}
+.featured ul li p a {
+	margin-bottom:2px;
+}
+.featured ul li img {
+	padding:2px;
+	height:100px;
+	display:inline;
+	
+}
+.featured ul li img:hover {
+	padding:0px;
+	border:2px #ffffff solid;
+}
+.featured ul li p {
+	width:100px;
+	line-height:15px;
+}
+
+/* page styles */
+.page_title {
+	border-top: 1px solid #97a9cc;
+	height: 67px;
+	background: url('../images/bkgd_content_full_top.gif') no-repeat top left;
+}
+
+.page_title h2 {
+	margin-top: 40px;
+	margin-left: 220px;
+	height: 24px;
+	margin-right: 20px;
+	margin-bottom:20px;
+	#margin-bottom:0px;
+}
+.content_page {
+	background: #bfeafb;
+	background: url('../images/bkgd_content_page.gif') repeat-y top left;
+}
+.content_page_btm {
+	background: #bfeafb url('../images/bkgd_content_full_btm.gif') no-repeat top left;
+	height: 15px;
+	padding-bottom: 20px;
+}
+.page_body {
+	background: url('../images/bkgd_page_body.gif') no-repeat top left;
+	margin-left: 197px;
+	margin-right: 25px;
+	padding: 10px 0;
+	padding-left: 20px;
+	min-height:250px;
+	#height:250px;
+}
+.page_body p {
+	margin-left: 100px;
+	line-height: 1.4em;
+	margin-bottom: 1em;
+	color: #777;
+	font-size: 12px;
+}
+.page_body object {
+	margin-left:100px;
+}
+.links{
+	margin-left: 100px;
+}
+.links a {
+	font-size: 14px;
+	color: #a15070;
+	padding-right: 40px;
+	text-decoration: none;
+	background: url('../images/notes.gif') no-repeat bottom left;
+	padding-left: 20px;
+}
+.links a:hover {
+	text-decoration: underline;
+}
+/* ----footer ----- */
+.footer {
+	background: #bfebfb url('../images/line_horiz.gif') no-repeat 40px 0;
+	padding: 0 40px;
+	height: 50px;
+	line-height: 50px;
+	border-bottom: 5px solid #333;
+}
+.copyright {
+	float: left;
+}
+.contact {
+	float: right;
+}
+.contact a, .copyright a {
+	color: #666;
+	text-decoration:none;
+}
+
+.contact a:hover, .copyright a:hover {
+	text-decoration:underline;
+}

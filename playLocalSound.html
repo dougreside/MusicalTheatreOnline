@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<style type="text/css">
+			#remote{
+				position: absolute;
+				top:0px;left:0px;
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+	
+		<script language="javascript">
+			function init(){
+				uri = window.location.href;
+				uri=uri.substring(0, uri.lastIndexOf("/"));
+				uri = uri + "/data/GloryDays/audio/fringe1.mp3";
+				qt = '<object id="qt_event_source" width="1px" height="1px" codebase="http://www.apple.com/qtactivex/qtplugin.cab#version=7,2,1,0" classid="clsid:CB927D12-4FF7-4a9e-A169-56E4B8A75598">  </object><object id="audioObject" width="100px" height="100px" autostart="false" style="" type="video/quicktime" codebase="http://www.apple.com/qtactivex/qtplugin.cab#version=7,2,1,0" classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B"><param value="'+uri+'" name="src"/><param value="true" name="postdomevents"/><param value="true" name="AUTOPLAY"/><embed id="audioObject" width="100px" height="100px" postdomevents="true" name="audioObject" autostart="true" src="'+uri+'"/></object>	</body>';
+				document.getElementById("loc").innerHTML=qt;
+			}
+			function go(){
+				window.frames.myframe.doug();
+			}			
+		</script>
+	</head>
+	<body onload="init()">
+		<div id="loc"></div>
+		<span onclick="go()">go</span>	
+		<iframe width="500" height="500" id="myframe" name="myframe" src="http://localhost:8888/mto/interface.php"/>
+</html>

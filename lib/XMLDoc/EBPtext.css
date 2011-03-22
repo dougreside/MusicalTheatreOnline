@@ -1,0 +1,34 @@
+.speaker
+{
+	font-weight: bold;
+}
+.lg{
+	padding-bottom:1ex;
+}
+.p{
+	padding-bottom:1ex;
+}
+
+.inner_stage{
+	font-style: italic;
+	display: inline;
+}
+
+.outer_stage{
+	font-style: italic;
+	display: block;
+	padding-bottom:1ex;
+}
+.red{
+	background-color: red;
+}
+.blue{
+	background-color: blue;
+	display: block;
+}
+
+td{
+	padding-right: 1em;
+	border: none;
+	
+}

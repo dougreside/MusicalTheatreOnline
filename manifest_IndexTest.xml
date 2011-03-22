@@ -1,0 +1,137 @@
+<?xml version="1.0"?> 
+<manifest>
+<xsl id="xsl">drama.xsl</xsl>
+<show>
+<title>
+Glory Days
+</title>
+<book>
+James Gardiner
+</book>
+<lyrics>
+Nick Blaemire
+</lyrics>
+<music>
+Nick Blaemire
+</music>
+<artifacts>
+<item xml:id="bway">
+	<media>text</media>
+	<label>Broadway</label>
+	<filename>./XML/bway.xml</filename>
+</item>
+<item xml:id="sig">
+	<media>text</media>
+	<label>Signature</label>
+	<filename>./XML/signature.xml</filename>
+</item>
+<item xml:id="fringe">
+	<media>text</media>
+	<label>DC Fringe</label>
+	<filename>./XML/fringe.xml</filename>
+</item>
+<item xml:id="joespub">
+	<media>text</media>
+	<label>Joe&apos;s Pub</label>
+	<filename>./XML/Joes_Pub.xml</filename>
+</item>
+<item xml:id="gd12_18_07">
+	<media>text</media>
+	<label>Rehearsal 12/18/2007</label>
+	<filename>./XML/glorydays_12_18_07.xml</filename>
+</item>
+<item xml:id="gd12_19_07">
+	<media>text</media>
+	<label>Rehearsal 12/19/2007</label>
+	<filename>./XML/glorydays_12_19_07.xml</filename>
+</item>
+<item xml:id="gd12_20_07">
+	<media>text</media>
+	<label>Rehearsal 12/20/2007</label>
+	<filename>./XML/glorydays_12_20_07.xml</filename>
+</item>
+<item xml:id="gd12_21_07">
+	<media>text</media>
+	<label>Rehearsal 12/21/2007</label>
+	<filename>./XML/glorydays_12_21_07.xml</filename>
+</item>
+<item xml:id="gd12_27_07">
+	<media>text</media>
+	<label>Rehearsal 12/27/2007</label>
+	<filename>./XML/glorydays_12_27_07.xml</filename>
+</item>
+<item xml:id="gd12_29_07">
+	<media>text</media>
+	<label>Rehearsal 12/29/2007</label>
+	<filename>./XML/glorydays_12_29_07.xml</filename>
+</item>
+<item xml:id="gd12_30_07">
+	<media>text</media>
+	<label>Rehearsal 12/30/2007</label>
+	<filename>./XML/glorydays_12_30_07.xml</filename>
+</item>
+<item xml:id="gd12_31_07">
+	<media>text</media>
+	<label>Rehearsal 12/31/2007</label>
+	<filename>./XML/glorydays_12_31_07.xml</filename>
+</item>
+<item xml:id="gd01_02_08">
+	<media>text</media>
+	<label>Rehearsal 1/2/2008</label>
+	<filename>./XML/glorydays_1_02_08.xml</filename>
+</item>
+<item xml:id="gd01_03_08">
+	<media>text</media>
+	<label>Rehearsal 1/3/2008</label>
+	<filename>./XML/glorydays_1_03_08.xml</filename>
+</item>
+<item xml:id="gd01_07_08">
+	<media>text</media>
+	<label>Rehearsal 1/7/2008</label>
+	<filename>./XML/glorydays_1_07_08.xml</filename>
+</item>
+<item xml:id="gd01_11_08">
+	<media>text</media>
+	<label>Rehearsal 1/11/2008</label>
+	<filename>./XML/glorydays_1_11_08.xml</filename>
+</item>
+<item xml:id="gd01_12_08">
+	<media>text</media>
+	<label>Rehearsal 1/12/2008</label>
+	<filename>./XML/glorydays_1_12_08.xml</filename>
+</item>
+<item xml:id="fringe1">
+	<media>audio</media>
+	<label>DC Fringe Track 1</label>
+	<filename>./audio/fringe1.mp3</filename>
+</item>
+<item xml:id="fringe2">
+	<media>audio</media>
+	<label>DC Fringe Track 2</label>
+	<filename>./audio/fringe2.mp3</filename>
+</item>
+</artifacts>
+</show>
+<show>
+<title>
+The Black Crook
+</title>
+<book>
+Charles M. Barras
+</book>
+<lyrics>
+Theodore Kennick
+</lyrics>
+<music>
+Giuseppe Operti
+George Bickwell
+</music>
+<artifacts>
+<item xml:id="black_crook_image001">
+	<media>image</media>
+	<label>Finale 1870 revival</label>
+	<filename>./XML/bc001.png</filename>
+</item>
+</artifacts>
+</show>
+</manifest>

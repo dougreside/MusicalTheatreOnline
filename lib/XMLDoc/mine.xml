@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="http://localhost:8888/EBP/lib/XMLDoc/drama2.xsl"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"><text><body><div1 type='act' n='1'><div2 type='scene' n='1'><pb ed="Bod1611" n="009" xml:id="ham-1611-22277-bod-009a"/><fw type="runningheader"><hi rend="italic">
+							The 
+							Tragedy 
+							of 
+						</hi>
+						Hamlet 
+					</fw><sp who="Mar"><speaker rend="italic">
+							Mar. 
+						</speaker><l>
+							Holla, 
+							<name type="character" key="Bar" rend="italic">
+								Barnardo 
+							</name>
+							. 
+						</l></sp><sp who="Bar"><speaker rend="italic">
+
+							Bar. 
+						</speaker><l>
+							Say 
+							what 
+							is 
+							<name type="character" key="Hor">
+								H 
+								<hi rend="italic">
+									oratio 
+								</hi></name>
+							there? 
+						</l></sp><sp who="Hor"><speaker rend="italic">
+							Hora. 
+						</speaker><l>
+
+							A 
+							peece 
+							of 
+							him. 
+						</l></sp><sp who="Bar"><speaker rend="italic">
+							Bar. 
+						</speaker><l>
+							Welcome 
+							<name type="character" key="Hor">
+								H 
+								<hi rend="italic">
+									oratio 
+								</hi></name>
+							, 
+							welcome 
+							good 
+							<name type="character" key="Mar" rend="italic">
+
+								Marcellus 
+							</name>
+							, 
+						</l></sp><sp who="Hor"><speaker rend="italic">
+							Hora. 
+						</speaker><l>
+							What 
+							ha's 
+							this 
+							thing 
+							appeard 
+							againe 
+							to 
+							night? 
+						</l></sp><sp who="Bar"><speaker rend="italic">
+							Bar. 
+						</speaker><l>
+							I 
+							haue 
+							&#x17F;eene 
+							nothing. 
+						</l></sp><sp who="Mar"><speaker rend="italic">
+
+							Mar. 
+						</speaker><l><name type="character" key="Hor">
+								H 
+								<hi rend="italic">
+									oratio 
+								</hi></name>
+							&#x17F;ayes 
+							tis 
+							but 
+							a 
+							fanta&#x17F;ie, 
+						</l><l>
+							And 
+							will 
+							not 
+							let 
+							beleefe 
+							take 
+							hold 
+							of 
+							him, 
+						</l><l>
+							Touching 
+							this 
+							dreaded 
+							&#x17F;ight 
+							twice 
+							&#x17F;eene 
+							of 
+							vs, 
+						</l><l>
+
+							Therefore 
+							I 
+							haue 
+							intreated 
+							him 
+							along, 
+						</l><l>
+							With 
+							vs 
+							to 
+							watch 
+							the 
+							minuts 
+							of 
+							this 
+							night, 
+						</l><l>
+							That 
+							if 
+							againe 
+							this 
+							apparition 
+							come, 
+						</l><l>
+							Hee 
+							may 
+							'approue 
+							our 
+							eyes 
+							and 
+							&#x17F;peake 
+							to 
+							it. 
+						</l></sp><sp who="Hor"><speaker rend="italic">
+							Hora. 
+						</speaker><l>
+							Tu&#x17F;h, 
+							tu&#x17F;h, 
+							twill 
+							not 
+							appeare. 
+						</l></sp><sp who="Bar"><speaker rend="italic">
+
+							Bar. 
+						</speaker><l>
+							Sit 
+							downe 
+							awhile, 
+						</l><l>
+							And 
+							let 
+							vs 
+							once 
+							againe 
+							a&#x17F;&#x17F;aile 
+							your 
+							eares, 
+						</l><l>
+							Tht 
+							are 
+							&#x17F;o 
+							fortified 
+							again&#x17F;t 
+							our 
+							&#x17F;tory, 
+						</l><l>
+							What 
+							wee 
+							haue 
+							two 
+							nights 
+							&#x17F;eene. 
+						</l></sp><sp who="Hor"><speaker rend="italic">
+
+							Hora. 
+						</speaker><l>
+							Well 
+							&#x17F;it 
+							wee 
+							downe, 
+						</l><l>
+							And 
+							let 
+							vs 
+							heare 
+							<name type="character" key="Bar" rend="italic">
+								Barnardo 
+							</name>
+							&#x17F;peake 
+							of 
+							this. 
+						</l></sp><sp who="Bar"><speaker rend="italic">
+							Bar. 
+						</speaker><l>
+
+							La&#x17F;t 
+							night 
+							of 
+							all, 
+						</l><l>
+							When 
+							yond 
+							&#x17F;ame 
+							&#x17F;tarre 
+							thats 
+							we&#x17F;tward 
+							from 
+							the 
+							pole; 
+						</l><l>
+							Had 
+							made 
+							his 
+							cour&#x17F;e 
+							t'illume 
+							that 
+							part 
+							of 
+							heauen 
+						</l><l>
+							Where 
+							now 
+							it 
+							burnes, 
+							<name type="character" key="Mar" rend="italic">
+
+								Marcellus 
+							</name>
+							and 
+							my 
+							&#x17F;elfe 
+						</l><l>
+							The 
+							Bell 
+							then 
+							beating 
+							one. 
+						</l></sp><stage rend="italic, centred" type="entrance">
+						Enter 
+						<name type="character" key="Gho">
+							Gho&#x17F;t 
+						</name>
+
+						. 
+					</stage><sp who="Mar"><speaker rend="italic">
+							Mar. 
+						</speaker><l>
+							Peace, 
+							breake 
+							thee 
+							off 
+							looke 
+							where 
+							it 
+							comes 
+							a|gaine, 
+						</l></sp><sp who="Bar"><speaker rend="italic">
+							Bar. 
+						</speaker><l>
+							In 
+							the 
+							&#x17F;ame 
+							figure 
+							like 
+							the 
+							King 
+							thats 
+							dead 
+						</l></sp><sp who="Mar"><speaker rend="italic">
+							Mar. 
+						</speaker><l>
+
+							Thou 
+							art 
+							a 
+							Scholler 
+							&#x17F;peake 
+							to 
+							it 
+							<name type="character" key="Hor">
+								H 
+								<hi rend="italic">
+									oratio 
+								</hi></name>
+							. 
+						</l></sp><sp who="Hor"><speaker rend="italic">
+							Hora. 
+						</speaker><l>
+							Mo&#x17F;t 
+							like, 
+							it 
+							horrowes 
+							me 
+							with 
+							feare 
+							&amp; 
+							wonder. 
+						</l></sp><sp who="Bar"><speaker rend="italic">
+
+							Bar. 
+						</speaker><l>
+							It 
+							would 
+							be 
+							&#x17F;poke 
+							to. 
+						</l></sp><sp who="Mar"><speaker rend="italic">
+							Mar. 
+						</speaker><l>
+							Speake 
+							to 
+							it 
+							<name type="character" key="Hor">
+								H 
+								<hi rend="italic">
+									oratio 
+								</hi></name>
+
+							. 
+						</l></sp><sp who="Hor"><speaker rend="italic">
+							Hora. 
+						</speaker><l>
+							What 
+							art 
+							thou 
+							that 
+							v&#x17F;urp&#x17F;t 
+							this 
+							time 
+							of 
+							night 
+						</l><l>
+							Together 
+							with 
+							that 
+							faire 
+							and 
+							warlike 
+							forme, 
+						</l><l>
+							In 
+							which 
+							the 
+							Maie&#x17F;ty 
+							of 
+							buried 
+							<name type="place" key="Den">
+
+								Denmarke 
+							</name></l><l>
+							Did 
+							&#x17F;ometimes 
+							march: 
+							by 
+							heauen 
+							I 
+							charge 
+							the 
+							&#x17F;peake. 
+						</l></sp><sp who="Mar"><speaker rend="italic">
+							Mar. 
+						</speaker><l>
+							It 
+							is 
+							offended. 
+						</l></sp><sp who="Bar"><speaker rend="italic">
+							Bar. 
+						</speaker><l>
+
+							See 
+							it 
+							&#x17F;taukes 
+							away. 
+						</l></sp><fw type="catchword" rend="italic">
+						.Hora 
+					</fw></div2></div1></body></text></TEI>
