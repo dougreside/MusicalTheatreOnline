@@ -1,0 +1,683 @@
+<images>
+    <artifacts>
+    	
+        <item xml:id="gdImg1">
+            <label>
+            	Program for Tokyo production
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/4945_769833001388_5705233_44347608_6039071_n.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg2">
+            <label>
+            	Tokyo company 1
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/4945_769833006378_5705233_44347609_6556329_n.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg3">
+            <label>
+            	Tokyo company 2
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/4945_769833016358_5705233_44347611_3144047_n.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg4">
+            <label>
+            	Tokyo rehearsal
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/4945_769833021348_5705233_44347612_4141027_n.jpg
+            </filename>
+            
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg5">
+            <label>
+            	Programs on chairs in Tokyo
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/4945_769833091208_5705233_44347623_6622338_n.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg6">
+            <label>
+            	Creative team in Tokyo
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/4945_769833101188_5705233_44347625_4581429_n.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg7">
+            <label>
+            	Glory Days Souvenirs in Tokyo
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/4945_769833106178_5705233_44347626_7281826_n.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg8">
+            <label>
+            	The audience arrives in Tokyo
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/4945_769833121148_5705233_44347628_3737197_n.jpg
+            </filename>
+            
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg9">
+            <label>
+            	Backstage in Tokyo
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/4945_769833126138_5705233_44347629_2049228_n.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg10">
+            <label>
+            	The soundboard at the recording session
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/5536_777460974868_5705233_44760499_2225877_n.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg11">
+            <label>
+            	Recording Glory Days 1 
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/5536_777460984848_5705233_44760501_4739963_n.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg12">
+            <label>
+            	Recording Glory Days 2
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/5536_777460994828_5705233_44760503_4225164_n.jpg
+            </filename>
+            
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg13">
+            <label>
+            	Recording Glory Days 3
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/5536_777461004808_5705233_44760505_7937334_n.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg14">
+            <label>
+            	Recording Glory Days 4
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/5536_777461019778_5705233_44760508_3825535_n.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg15">
+            <label>
+            	Recording Glory Days 5
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/5536_777461069678_5705233_44760517_2897389_n.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg16">
+            <label>
+            	Recording Glory Days 6
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/5536_777461079658_5705233_44760519_869669_n.jpg
+            </filename>
+            
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg17">
+            <label>
+            	Recording Glory Days 7
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/5536_777461089638_5705233_44760521_3626728_n.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg18">
+            <label>
+            	Recording Glory Days 8
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/5536_777461094628_5705233_44760522_2275477_n.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg19">
+            <label>
+            	Recording Glory Days 9
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/5536_777461104608_5705233_44760523_426540_n.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg20">
+            <label>
+            	Recording Glory Days 10
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/5536_777461114588_5705233_44760525_2976403_n.jpg
+            </filename>
+            
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg21">
+            <label>
+            	Recording Glory Days 11
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/5536_777461139538_5705233_44760529_3434889_n.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg22">
+            <label>
+            	Recording Glory Days 12
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/5536_777461154508_5705233_44760531_5207687_n.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg23">
+            <label>
+            	Recording Glory Days 13
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/5536_777461174468_5705233_44760534_1020580_n.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg24">
+            <label>
+            	Recording Glory Days 14
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/5536_777461184448_5705233_44760536_4074913_n.jpg
+            </filename>
+            
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg25">
+            <label>
+            	Recording Glory Days 15
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/5536_777461194428_5705233_44760538_8341204_n.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg26">
+            <label>
+            	Recording Glory Days 16
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/5536_777461199418_5705233_44760539_747097_n.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg27">
+            <label>
+            	Recording Glory Days 17
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/5536_777461204408_5705233_44760540_7595481_n.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg28">
+            <label>
+            	Recording Glory Days 18
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/5536_777461214388_5705233_44760541_3202661_n.jpg
+            </filename>
+            
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg29">
+            <label>
+            	Recording Glory Days 19
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/5536_777461224368_5705233_44760543_7465967_n.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg30">
+            <label>
+            	Recording Glory Days 20
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/5536_777461249318_5705233_44760547_3124523_n.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg31">
+            <label>
+            	Prop table
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/DSCN3870.JPG.jpeg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg32">
+            <label>
+            	Rehearsal 1
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/DSCN3880.JPG.jpeg
+            </filename>
+            
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg33">
+            <label>
+            	Light
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/DSCN3881.JPG.jpeg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg34">
+            <label>
+            	Cast with Seth Rudesky
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/n1226400140_30063627_3532.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg35">
+            <label>
+            	Curtain call
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/n2201596_42411932_6308.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg36">
+            <label>
+            	Revising the script
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/n2223461_36004708_1538.jpg
+            </filename>
+            
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg37">
+            <label>
+            	Marquee
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/n29500541_31097543_2416.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg38">
+            <label>
+            	The cast at the Signature Theatre Lobby
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/n4803818_31780988_2224.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg39">
+            <label>
+        		The cast at Signature
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/n501388855_349141_2960.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg40">
+            <label>
+                	Broadway credits poster
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/n510140993_573194_2427.jpg
+            </filename>
+            
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg41">
+            <label>
+			Broadway poster
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/n510140993_573195_2931.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg42">
+            <label>
+				 Joe&apos;s Pub Rehearsal
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/n5705233_31768367_5742.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg43">
+            <label>
+            	Joe&apos;s Pub Poster (&#169; Robbie Rozelle)
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/n5705233_31768384_1875.jpg
+            </filename>
+            <Description>
+            	Joe&apos;s Pub Poster (&#169; Robbie Rozelle)
+            </Description>
+        </item>
+        <item xml:id="gdImg44">
+            <label>
+            	Joe&apos;s Pub Reading
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/n5705233_31768371_7694.jpg
+            </filename>
+            
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg45">
+            <label>
+            	            	  	The Signature Garage
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/n5705233_31768374_1537.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg46">
+            <label>
+            	Black box rehearsal
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/n5705233_31768377_2720.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg47">
+            <label>
+            	Glory Days Tokyo Poster
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/n5705233_31768384_1875.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg48">
+            <label>
+            	       	Joe&apos;s Pub cast
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/n5705233_31768420_8842.jpg
+            </filename>
+            
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg49">
+            <label>
+            	Broadway company
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/n5705233_37142866_8268.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg50">
+            <label>
+            		James and Nick in NYC
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/n5705233_38334057_5302.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg51">
+            <label>
+            	Glory Days Tokyo Poster
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/n5705233_42841521_5923462.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg52">
+            <label>
+            	Glory Days Tokyo Poster 2
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/n5705233_42841522_1497152.jpg
+            </filename>
+            
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg53">
+            <label>
+            	Outside of the Circle in the Square Theatre
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/n644818072_431188_1850.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg54">
+            <label>
+            	Proshot of full cast (photo by Scott Suchman)
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/n763832519_306508_7516.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg55">
+            <label>
+            	Proshot of Steven Booth as Will (photo by Scott Suchman)</label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/n763832519_306509_7875.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg56">
+            <label>
+            	  	Proshot of Adam Halpin as Skip (photo by Scott Suchman)
+          
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/n763832519_306510_8242.jpg
+            </filename>
+            
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg57">
+            <label>
+            	Proshot of Adam Halpin and Steve Booth (Skip and Will) (photo by Scott Suchman)
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/n763832519_306511_8597.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg58">
+            <label>
+            	Proshot of Andrew C. Call as Andy (photo by Scott Suchman)
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/n763832519_306512_8951.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg59">
+            <label>
+            	Proshot of Steve Booth and Andrew C. Call (Will and Andy) (photo by Scott Suchman)
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/n763832519_306513_9842.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg60">
+            <label>
+            	Proshot of Will and Andy dancing (photo by Scott Suchman)
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/n763832519_306514_185.jpg
+            </filename>
+            
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg61">
+            <label>
+            	Proshot of Jesse Johnson (Jack) singing &quot;The Open Road&quot; (photo by Scott Suchman)
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/n763832519_306515_518.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg62">
+            <label>
+            	Proshot of the full cast in performance (photo by Scott Suchman)
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/n763832519_306516_937.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg63">
+            <label>
+            	Will in the finale (photo by Scott Suchman)
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/n763832519_306517_1285.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg64">
+            <label>
+            	Publicity shot of guys jumping (photo by Scott Suchman)
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/n763832519_306518_1638.jpg
+            </filename>
+            
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg65">
+            <label>
+            	Full company picture (photo by Scott Suchman)
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/n777649242_375265_5395.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+        <item xml:id="gdImg66">
+            <label>
+            	Black Box rehearsal 
+            </label>
+            <filename>
+                /data/GloryDays/GloryDaysPics/PH2008011001448.jpg
+            </filename>
+            <Description>
+            </Description>
+        </item>
+
+    </artifacts>
+</images>

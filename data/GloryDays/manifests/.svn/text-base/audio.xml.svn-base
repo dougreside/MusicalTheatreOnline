@@ -1,0 +1,925 @@
+<audio>
+    <recording>
+        <name>
+            Fringe Festival
+        </name>
+        <artifacts>
+            
+            <item xml:id="gdfringeaud1">
+                <time>
+                    6:37
+                </time>
+                <label>
+                    Fringe: My Three Best Friends
+                </label>
+                <filename>
+                    /data/GloryDays/audio/fringe1.mp3
+                </filename>
+                <title>
+                    My Three Best Friends
+                </title>
+                <composer>
+                    Nick Blaemire
+                </composer>
+                <lyricist>
+                    Nick Blaemire
+                </lyricist>
+                <performers>
+                    <performer>
+                        Steven Booth
+                    </performer>
+                </performers>
+            </item>
+            <item xml:id="gdfringeaud2">
+                <time>
+                    3:59
+                </time>
+                <label>
+                    Fringe: We&apos;ve Got Girls
+                </label>
+                <filename>
+                    /data/GloryDays/audio/fringe2.mp3
+                </filename>
+                <title>
+                    We&apos;ve Got Girls
+                </title>
+                <composer>
+                    Nick Blaemire
+                </composer>
+                <lyricist>
+                    Nick Blaemire
+                </lyricist>
+                <performers>
+                    <performer>
+                        Steven Booth
+                    </performer>
+                    <performer>
+                        Charlie Brady
+                    </performer>
+                </performers>
+            </item>
+            
+            <item xml:id="gdfringeaud3">
+                <time>
+                    5:19
+                </time>
+                <label>
+                    Fringe: Right Here
+                </label>
+                <filename>
+                    /data/GloryDays/audio/fringe3.mp3
+                </filename>
+                <title>
+                    Right Here
+                </title>
+                <composer>
+                    Nick Blaemire
+                </composer>
+                <lyricist>
+                    Nick Blaemire
+                </lyricist>
+                <performers>
+                    <performer>
+                        Steven Booth
+                    </performer>
+                    <performer>
+                        Adam Halpin
+                    </performer>
+                    <performer>
+                        Charlie Brady
+                    </performer>
+                    <performer>
+                        Jesse JP Johnson
+                    </performer>
+                </performers>
+            </item>
+            <item xml:id="gdfringeaud4">
+                <time>
+                    3:23
+                </time>
+                <label>
+                    Fringe: The Open Road
+                </label>
+                <filename>
+                    /data/GloryDays/audio/fringe4.mp3
+                </filename>
+                <title>
+                    The Open Road
+                </title>
+                <composer>
+                    Nick Blaemire
+                </composer>
+                <lyricist>
+                    Nick Blaemire
+                </lyricist>
+                <performers>
+                    <performer>
+                        Jesse JP Johnson
+                    </performer>
+                </performers>
+            </item>
+            <item xml:id="gdfringeaud5">
+                <time>
+                    2:58
+                </time>
+                <label>
+                    Fringe: Things are Different
+                </label>
+                <filename>
+                    /data/GloryDays/audio/fringe5.mp3
+                </filename>
+                <title>
+                    Things are Different
+                </title>
+                <composer>
+                    Nick Blaemire
+                </composer>
+                <lyricist>
+                    Nick Blaemire
+                </lyricist>
+                <performers>
+                    <performer>
+                        Steven Booth
+                    </performer>
+                    <performer>
+                        Adam Halpin
+                    </performer>
+                    <performer>
+                        Charlie Brady
+                    </performer>
+                    <performer>
+                        Jesse JP Johnson
+                    </performer>
+                </performers>
+            </item>
+            <item xml:id="gdfringeaud6">
+                <time>
+                    6:27
+                </time>
+                <label>
+                    Fringe: Generation Apathy
+                </label>
+                <filename>
+                    /data/GloryDays/audio/fringe6.mp3
+                </filename>
+                <title>
+                    Generation Apathy
+                </title>
+                <composer>
+                    Nick Blaemire
+                </composer>
+                <lyricist>
+                    Nick Blaemire
+                </lyricist>
+                <performers>
+                    <performer>
+                        Adam Halpin
+                    </performer>
+                </performers>
+            </item>
+            <item xml:id="gdfringeaud7">
+                <time>
+                    4:24
+                </time>
+                <label>
+                    Fringe: Good Old Glory Type Days
+                </label>
+                <filename>
+                    /data/GloryDays/audio/fringe7.mp3
+                </filename>
+                <title>
+                    Good Old Glory Type Days
+                </title>
+                <composer>
+                    Nick Blaemire
+                </composer>
+                <lyricist>
+                    Nick Blaemire
+                </lyricist>
+                <performers>
+                    <performer>
+                        Steven Booth
+                    </performer>
+                    <performer>
+                        Adam Halpin
+                    </performer>
+                    <performer>
+                        Charlie Brady
+                    </performer>
+                    <performer>
+                        Jesse JP Johnson
+                    </performer>
+                </performers>
+            </item>
+            <item xml:id="gdfringeaud8">
+                <time>
+                    15:19
+                </time>
+                <label>
+                    Fringe: The Thing About Andy
+                </label>
+                <filename>
+                    /data/GloryDays/audio/fringe8.mp3
+                </filename>
+                <title>
+                    The Thing About Andy
+                </title>
+                <composer>
+                    Nick Blaemire
+                </composer>
+                <lyricist>
+                    Nick Blaemire
+                </lyricist>
+                <performers>
+                    <performer>
+                        Steven Booth
+                    </performer>
+                    <performer>
+                        Adam Halpin
+                    </performer>
+                    <performer>
+                        Jesse JP Johnson
+                    </performer>
+                </performers>
+            </item>
+            <item xml:id="gdfringeaud9">
+                <time>
+                    5:01
+                </time>
+                <label>
+                    Fringe: My Next Story
+                </label>
+                <filename>
+                    /data/GloryDays/audio/fringe9.mp3
+                </filename>
+                <title>
+                    My Next Story
+                </title>
+                <composer>
+                    Nick Blaemire
+                </composer>
+                <lyricist>
+                    Nick Blaemire
+                </lyricist>
+                <performers>
+                    <performer>
+                        Steven Booth
+                    </performer>
+                </performers>
+            </item>
+        </artifacts>
+    </recording>
+    <recording>
+        <name>
+            Demo
+        </name>
+        <artifacts>
+            
+            <item xml:id="gddemo1">
+                <time>
+                    4:03
+                </time>
+                <label>
+                    Demo: My Three Best Friends
+                </label>
+                <filename>
+                    /data/GloryDays/audio/demo1.mp3
+                </filename>
+                <title>
+                    My Three Best Friends
+                </title>
+                <composer>
+                    Nick Blaemire
+                </composer>
+                <lyricist>
+                    Nick Blaemire
+                </lyricist>
+                <performers>
+                    <performer>
+                        Nick Blaemire
+                    </performer>
+                </performers>
+            </item>
+            <item xml:id="gddemo2">
+                <time>
+                    3:09
+                </time>
+                <label>
+                    Demo: My Three Best Friends
+                </label>
+                <filename>
+                    /data/GloryDays/audio/demo2.mp3
+                </filename>
+                <title>
+                    My Three Best Friends
+                </title>
+                <composer>
+                    Nick Blaemire
+                </composer>
+                <lyricist>
+                    Nick Blaemire
+                </lyricist>
+                <performers>
+                    <performer>
+                        Nick Blaemire
+                    </performer>
+                </performers>
+            </item>
+            <item xml:id="gddemo3">
+                <time>
+                    3:53
+                </time>
+                <label>
+                    Demo: My Three Best Friends
+                </label>
+                <filename>
+                    /data/GloryDays/audio/demo3.mp3
+                </filename>
+                <title>
+                    My Three Best Friends
+                </title>
+                <composer>
+                    Nick Blaemire
+                </composer>
+                <lyricist>
+                    Nick Blaemire
+                </lyricist>
+                <performers>
+                    <performer>
+                        Nick Blaemire
+                    </performer>
+                </performers>
+            </item>
+            <item xml:id="gddemo4">
+                <time>
+                    3:59
+                </time>
+                <label>
+                    Demo: My Three Best Friends
+                </label>
+                <filename>
+                    /data/GloryDays/audio/demo4.mp3
+                </filename>
+                <title>
+                    My Three Best Friends
+                </title>
+                <composer>
+                    Nick Blaemire
+                </composer>
+                <lyricist>
+                    Nick Blaemire
+                </lyricist>
+                <performers>
+                    <performer>
+                        Nick Blaemire
+                    </performer>
+                </performers>
+            </item>
+            <item xml:id="gddemo5">
+                <time>
+                    4:08
+                </time>
+                <label>
+                    Demo: My Three Best Friends
+                </label>
+                <filename>
+                    /data/GloryDays/audio/demo5.mp3
+                </filename>
+                <title>
+                    My Three Best Friends
+                </title>
+                <composer>
+                    Nick Blaemire
+                </composer>
+                <lyricist>
+                    Nick Blaemire
+                </lyricist>
+                <performers>
+                    <performer>
+                        Nick Blaemire
+                    </performer>
+                </performers>
+            </item>
+            <item xml:id="gddemo6">
+                <time>
+                    3:52
+                </time>
+                <label>
+                    Demo: My Three Best Friends
+                </label>
+                <filename>
+                    /data/GloryDays/audio/demo6.mp3
+                </filename>
+                <title>
+                    My Three Best Friends
+                </title>
+                <composer>
+                    Nick Blaemire
+                </composer>
+                <lyricist>
+                    Nick Blaemire
+                </lyricist>
+                <performers>
+                    <performer>
+                        Nick Blaemire
+                    </performer>
+                </performers>
+            </item>
+            <item xml:id="gddemo7">
+                <time>
+                    3:07
+                </time>
+                <label>
+                    Demo: My Three Best Friends
+                </label>
+                <filename>
+                    /data/GloryDays/audio/demo7.mp3
+                </filename>
+                <title>
+                    My Three Best Friends
+                </title>
+                <composer>
+                    Nick Blaemire
+                </composer>
+                <lyricist>
+                    Nick Blaemire
+                </lyricist>
+                <performers>
+                    <performer>
+                        Nick Blaemire
+                    </performer>
+                </performers>
+            </item>
+            <item xml:id="gddemo8">
+                <time>
+                    4:30
+                </time>
+                <label>
+                    Demo: My Three Best Friends
+                </label>
+                <filename>
+                    /data/GloryDays/audio/demo8.mp3
+                </filename>
+                <title>
+                    My Three Best Friends
+                </title>
+                <composer>
+                    Nick Blaemire
+                </composer>
+                <lyricist>
+                    Nick Blaemire
+                </lyricist>
+                <performers>
+                    <performer>
+                        Nick Blaemire
+                    </performer>
+                </performers>
+            </item>
+            <item xml:id="gddemo9">
+                <time>
+                    6:08
+                </time>
+                <label>
+                    Demo: My Three Best Friends
+                </label>
+                <filename>
+                    /data/GloryDays/audio/demo9.mp3
+                </filename>
+                <title>
+                    My Three Best Friends
+                </title>
+                <composer>
+                    Nick Blaemire
+                </composer>
+                <lyricist>
+                    Nick Blaemire
+                </lyricist>
+                <performers>
+                    <performer>
+                        Nick Blaemire
+                    </performer>
+                </performers>
+            </item>
+            <item xml:id="gddemo10">
+                <time>
+                    2:21
+                </time>
+                <label>
+                    Demo: My Three Best Friends
+                </label>
+                <filename>
+                    /data/GloryDays/audio/demo10.mp3
+                </filename>
+                <title>
+                    My Three Best Friends
+                </title>
+                <composer>
+                    Nick Blaemire
+                </composer>
+                <lyricist>
+                    Nick Blaemire
+                </lyricist>
+                <performers>
+                    <performer>
+                        Nick Blaemire
+                    </performer>
+                </performers>
+            </item>
+            <item xml:id="gddemo11">
+                <time>
+                    4:38
+                </time>
+                <label>
+                    Demo: My Three Best Friends
+                </label>
+                <filename>
+                    /data/GloryDays/audio/demo11.mp3
+                </filename>
+                <title>
+                    My Three Best Friends
+                </title>
+                <composer>
+                    Nick Blaemire
+                </composer>
+                <lyricist>
+                    Nick Blaemire
+                </lyricist>
+                <performers>
+                    <performer>
+                        Nick Blaemire
+                    </performer>
+                </performers>
+            </item>
+            <item xml:id="gddemo12">
+                <time>
+                    4:06
+                </time>
+                <label>
+                    Demo: My Three Best Friends
+                </label>
+                <filename>
+                    /data/GloryDays/audio/demo12.mp3
+                </filename>
+                <title>
+                    My Three Best Friends
+                </title>
+                <composer>
+                    Nick Blaemire
+                </composer>
+                <lyricist>
+                    Nick Blaemire
+                </lyricist>
+                <performers>
+                    <performer>
+                        Nick Blaemire
+                    </performer>
+                </performers>
+            </item>
+            <item xml:id="gddemo13">
+                <time>
+                    3:25
+                </time>
+                <label>
+                    Demo: My Three Best Friends
+                </label>
+                <filename>
+                    /data/GloryDays/audio/demo13.mp3
+                </filename>
+                <title>
+                    My Three Best Friends
+                </title>
+                <composer>
+                    Nick Blaemire
+                </composer>
+                <lyricist>
+                    Nick Blaemire
+                </lyricist>
+                <performers>
+                    <performer>
+                        Nick Blaemire
+                    </performer>
+                </performers>
+            </item>
+            <item xml:id="gddemo14">
+                <time>
+                    3:43
+                </time>
+                <label>
+                    Demo: My Three Best Friends
+                </label>
+                <filename>
+                    /data/GloryDays/audio/demo14.mp3
+                </filename>
+                <title>
+                    My Three Best Friends
+                </title>
+                <composer>
+                    Nick Blaemire
+                </composer>
+                <lyricist>
+                    Nick Blaemire
+                </lyricist>
+                <performers>
+                    <performer>
+                        Nick Blaemire
+                    </performer>
+                </performers>
+            </item>
+            
+        </artifacts>
+    </recording>
+    <recording>
+        <name>
+            Joe&apos;s Pub
+        </name>
+		<date>August 14, 2006</date>
+        <artifacts>
+            
+            <item xml:id="gdjoespub1">
+                <time>
+                    5:21
+                </time>
+                <label>
+                    Joe&apos;s Pub: Turn Around
+                </label>
+                <filename>
+                    /data/GloryDays/audio/pub1.mp3
+                </filename>
+                <title>
+                    Turn Around
+                </title>
+                <composer>
+                    Nick Blaemire
+                </composer>
+                <lyricist>
+                    Nick Blaemire
+                </lyricist>
+                <performers>
+                    <performer>
+                        Nick Blaemire
+                    </performer>
+                </performers>
+            </item>
+               <item xml:id="gdjoespub2">
+                <time>
+                    3:26
+                </time>
+                <label>
+                    Joe&apos;s Pub: We&apos;ve Got Girls
+                </label>
+                <filename>
+                    /data/GloryDays/audio/pub2.mp3
+                </filename>
+                <title>
+                    We&apos;ve Got Girls
+                </title>
+                <composer>
+                    Nick Blaemire
+                </composer>
+                <lyricist>
+                    Nick Blaemire
+                </lyricist>
+                <performers>
+                    <performer>
+                        Nick Blaemire
+                    </performer>
+					<performer>
+                        Ryan Watkinson
+                    </performer>
+                </performers>
+            </item>
+			    <item xml:id="gdjoespub3">
+                <time>
+                    4:08
+                </time>
+                <label>
+                    Joe&apos;s Pub: Ass Backwards
+                </label>
+                <filename>
+                    /data/GloryDays/audio/pub3.mp3
+                </filename>
+                <title>
+                    Ass Backwards
+                </title>
+                <composer>
+                    Nick Blaemire
+                </composer>
+                <lyricist>
+                    Nick Blaemire
+                </lyricist>
+                <performers>
+                    <performer>
+                        Nick Blaemire
+                    </performer>
+					  <performer>
+                        Ryan Watkinson
+                    </performer>
+					  <performer>
+                       Danny Binstock
+                    </performer>
+					  <performer>
+                        Jason Michael Snow
+                    </performer>
+                </performers>
+            </item>
+			    <item xml:id="gdjoespub4">
+                <time>
+                    3:11
+                </time>
+                <label>
+                    Joe&apos;s Pub: Open Road
+                </label>
+                <filename>
+                    /data/GloryDays/audio/pub4.mp3
+                </filename>
+                <title>
+                    Open Road
+                </title>
+                <composer>
+                    Nick Blaemire
+                </composer>
+                <lyricist>
+                    Nick Blaemire
+                </lyricist>
+                <performers>
+                    <performer>
+                        Jason Michael Snow
+                    </performer>
+                </performers>
+            </item>
+			    <item xml:id="gdjoespub5">
+                <time>
+                    2:55
+                </time>
+                <label>
+                    Joe&apos;s Pub: Things are Different
+                </label>
+                <filename>
+                    /data/GloryDays/audio/pub5.mp3
+                </filename>
+                <title>
+                    Things are Different
+                </title>
+                <composer>
+                    Nick Blaemire
+                </composer>
+                <lyricist>
+                    Nick Blaemire
+                </lyricist>
+                <performers>
+                         <performer>
+                        Nick Blaemire
+                    </performer>
+					  <performer>
+                        Ryan Watkinson
+                    </performer>
+					
+                </performers>
+            </item>
+			    <item xml:id="gdjoespub6">
+                <time>
+                    3:01
+                </time>
+                <label>
+                    Joe&apos;s Pub: The Thing About Andy
+                </label>
+                <filename>
+                    /data/GloryDays/audio/pub6.mp3
+                </filename>
+                <title>
+                    The Thing About Andy
+                </title>
+                <composer>
+                    Nick Blaemire
+                </composer>
+                <lyricist>
+                    Nick Blaemire
+                </lyricist>
+                <performers>
+                    <performer>
+                        Jason Michael Snow
+                    </performer>
+					  <performer>
+                       Danny Binstock
+                    </performer>
+                </performers>
+            </item>
+			    <item xml:id="gdjoespub7">
+                <time>
+                    3:22
+                </time>
+                <label>
+                    Joe&apos;s Pub: Good Old Glory Type Days
+                </label>
+                <filename>
+                    /data/GloryDays/audio/pub7.mp3
+                </filename>
+                <title>
+                    Good Old Glory Type Days
+                </title>
+                <composer>
+                    Nick Blaemire
+                </composer>
+                <lyricist>
+                    Nick Blaemire
+                </lyricist>
+                <performers>
+                        <performer>
+                        Nick Blaemire
+                    </performer>
+					  <performer>
+                        Ryan Watkinson
+                    </performer>
+					  <performer>
+                       Danny Binstock
+                    </performer>
+					  <performer>
+                        Jason Michael Snow
+                    </performer>
+                </performers>
+            </item>
+			    <item xml:id="gdjoespub8">
+                <time>
+                    1:57
+                </time>
+                <label>
+                    Joe&apos;s Pub: Other Human Beings
+                </label>
+                <filename>
+                    /data/GloryDays/audio/pub8.mp3
+                </filename>
+                <title>
+                    Other Human Beings
+                </title>
+                <composer>
+                    Nick Blaemire
+                </composer>
+                <lyricist>
+                    Nick Blaemire
+                </lyricist>
+                <performers>
+					  <performer>
+                        Jason Michael Snow
+                    </performer>
+                </performers>
+            </item>
+			    <item xml:id="gdjoespub9">
+                <time>
+                    5:21
+                </time>
+                <label>
+                    Joe&apos;s Pub: The Thing About Andy (Reprise)
+                </label>
+                <filename>
+                    /data/GloryDays/audio/pub9.mp3
+                </filename>
+                <title>
+                    The Thing About Andy (Reprise)
+                </title>
+                <composer>
+                    Nick Blaemire
+                </composer>
+                <lyricist>
+                    Nick Blaemire
+                </lyricist>
+                <performers>
+                      
+					  <performer>
+                        Ryan Watkinson
+                    </performer>
+					  <performer>
+                       Danny Binstock
+                    </performer>
+					  
+                </performers>
+            </item>
+			<item xml:id="gdjoespub10">
+                <time>
+                    6:09
+                </time>
+                <label>
+                    Joe&apos;s Pub: Finale
+                </label>
+                <filename>
+                    /data/GloryDays/audio/pub10.mp3
+                </filename>
+                <title>
+                    Finale
+                </title>
+                <composer>
+                    Nick Blaemire
+                </composer>
+                <lyricist>
+                    Nick Blaemire
+                </lyricist>
+                <performers>
+                    <performer>
+                        Nick Blaemire
+                    </performer>
+                </performers>
+            </item>
+    
+            
+        </artifacts>
+    </recording>
+</audio>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?> 
+<manifest>
+<show>
+<title>
+Glory Days
+</title>
+<book>
+James Gardiner
+</book>
+<lyrics>
+Nick Blaemire
+</lyrics>
+<music>
+Nick Blaemire
+</music>
+</show>
+<path>./data/GloryDays/manifests/</path>
+<manifests>
+	<audio>audio.xml</audio>
+	<video>video.xml</video>
+	<images>images.xml</images>
+	<texts>libretti.xml</texts>
+	<other>other.xml</other>
+</manifests>	
+</manifest>

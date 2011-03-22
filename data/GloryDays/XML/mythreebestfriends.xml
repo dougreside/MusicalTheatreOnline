@@ -1,0 +1,467 @@
+<timeline id="ts_fringe" origin="ts_fringe-s0" unit="ns">
+<when id="ts_fringe-s0" absolute="0000"/>
+<when id="ts_fringe-s75" absolute="1.3003174603174603"/>
+<when id="ts_fringe-s95" absolute="7"/>
+<when id="ts_fringe-s100" absolute="9.623854875283447"/>
+<when id="ts_fringe-s105" absolute="12.13469387755102"/>
+<when id="ts_fringe-s110" absolute="14.36843537414966"/>
+<when id="ts_fringe-s115" absolute="16.388571428571428"/>
+<when id="ts_fringe-s124" absolute="20.498503401360544"/>
+<when id="ts_fringe-s129" absolute="23.493877551020407"/>
+<when id="ts_fringe-s134" absolute="25.560453514739226"/>
+<when id="ts_fringe-s139" absolute="27.85922902494331"/>
+<when id="ts_fringe-s144" absolute="31.952018140589566"/>
+<when id="ts_fringe-s153" absolute="34.25387755102041"/>
+<when id="ts_fringe-s158" absolute="36.50775510204081"/>
+<when id="ts_fringe-s163" absolute="39"/>
+<when id="ts_fringe-s168" absolute="41.06657596371882"/>
+<when id="ts_fringe-s173" absolute="43.73687074829932"/>
+<when id="ts_fringe-s178" absolute="46.26784580498866"/>
+<when id="ts_fringe-s183" absolute="48.205895691609975"/>
+<when id="ts_fringe-s188" absolute="49.94739229024943"/>
+<when id="ts_fringe-s202" absolute="52.809614512471654"/>
+<when id="ts_fringe-s207" absolute="55.16"/>
+<when id="ts_fringe-e207" absolute="60.640907029478456"/>
+<when id="ts_fringe-s209" absolute="63.914920634920634"/>
+<when id="ts_fringe-s212" absolute="57.74149659863945"/>
+<when id="ts_fringe-s228" absolute="70.23065759637188"/>
+<when id="ts_fringe-s233" absolute="74.24925170068026"/>
+<when id="ts_fringe-s238" absolute="78.13315192743764"/>
+<when id="ts_fringe-s243" absolute="80.0433560090703"/>
+<when id="ts_fringe-s248" absolute="83.97061224489796"/>
+<when id="ts_fringe-s257" absolute="87.10993197278911"/>
+<when id="ts_fringe-s262" absolute="89.46131519274375"/>
+<when id="ts_fringe-s267" absolute="92"/>
+<when id="ts_fringe-s272" absolute="94.06657596371882"/>
+<when id="ts_fringe-s277" absolute="96.24925170068026"/>
+<when id="ts_fringe-s282" absolute="98.43192743764172"/>
+<when id="ts_fringe-s287" absolute="100.82358276643991"/>
+<when id="ts_fringe-s292" absolute="102.98303854875283"/>
+<when id="ts_fringe-s297" absolute="105.21215419501134"/>
+<when id="ts_fringe-s302" absolute="107.41804988662132"/>
+<when id="ts_fringe-s307" absolute="110.90104308390022"/>
+<when id="ts_fringe-s323" absolute="120.79274376417234"/>
+<when id="ts_fringe-s328" absolute="122.69351473922903"/>
+<when id="ts_fringe-s333" absolute="129.19510204081632"/>
+<when id="ts_fringe-s338" absolute="131.27709750566893"/>
+<when id="ts_fringe-s345" absolute="138.0356462585034"/>
+<when id="ts_fringe-s350" absolute="139.61460317460316"/>
+<when id="ts_fringe-s355" absolute="142.18113378684808"/>
+<when id="ts_fringe-s362" absolute="149.10068027210883"/>
+<when id="ts_fringe-s367" absolute="150.32353741496598"/>
+<when id="ts_fringe-s372" absolute="153.0402721088435"/>
+<when id="ts_fringe-s377" absolute="154.94430839002266"/>
+<when id="ts_fringe-s386" absolute="157.5449433106576"/>
+<when id="ts_fringe-s391" absolute="159.18267573696144"/>
+<when id="ts_fringe-s396" absolute="161.6439909297052"/>
+<when id="ts_fringe-s401" absolute="169.97995464852607"/>
+<when id="ts_fringe-s406" absolute="177.59609977324263"/>
+<when id="ts_fringe-s411" absolute="186.04816326530613"/>
+<when id="ts_fringe-s416" absolute="191.38702947845806"/>
+</timeline>
+<linkGrp id="ts_fringe-linkgroup">
+<link targets="fringe_74 ts_fringe-s75" />
+<link targets="fringe_93 ts_fringe-s95" />
+<link targets="fringe_98 ts_fringe-s100" />
+<link targets="fringe_103 ts_fringe-s105" />
+<link targets="fringe_108 ts_fringe-s110" />
+<link targets="fringe_113 ts_fringe-s115" />
+<link targets="fringe_122 ts_fringe-s124" />
+<link targets="fringe_127 ts_fringe-s129" />
+<link targets="fringe_132 ts_fringe-s134" />
+<link targets="fringe_137 ts_fringe-s139" />
+<link targets="fringe_142 ts_fringe-s144" />
+<link targets="fringe_151 ts_fringe-s153" />
+<link targets="fringe_156 ts_fringe-s158" />
+<link targets="fringe_161 ts_fringe-s163" />
+<link targets="fringe_166 ts_fringe-s168" />
+<link targets="fringe_171 ts_fringe-s173" />
+<link targets="fringe_176 ts_fringe-s178" />
+<link targets="fringe_181 ts_fringe-s183" />
+<link targets="fringe_186 ts_fringe-s188" />
+<link targets="fringe_200 ts_fringe-s202" />
+<link targets="fringe_205 ts_fringe-s207" />
+<link targets="fringe_205 ts_fringe-e207" />
+<link targets="fringe_208 ts_fringe-s209" />
+<link targets="fringe_210 ts_fringe-s212" />
+<link targets="fringe_226 ts_fringe-s228" />
+<link targets="fringe_231 ts_fringe-s233" />
+<link targets="fringe_236 ts_fringe-s238" />
+<link targets="fringe_241 ts_fringe-s243" />
+<link targets="fringe_246 ts_fringe-s248" />
+<link targets="fringe_255 ts_fringe-s257" />
+<link targets="fringe_260 ts_fringe-s262" />
+<link targets="fringe_265 ts_fringe-s267" />
+<link targets="fringe_270 ts_fringe-s272" />
+<link targets="fringe_275 ts_fringe-s277" />
+<link targets="fringe_280 ts_fringe-s282" />
+<link targets="fringe_285 ts_fringe-s287" />
+<link targets="fringe_290 ts_fringe-s292" />
+<link targets="fringe_295 ts_fringe-s297" />
+<link targets="fringe_300 ts_fringe-s302" />
+<link targets="fringe_305 ts_fringe-s307" />
+<link targets="fringe_321 ts_fringe-s323" />
+<link targets="fringe_326 ts_fringe-s328" />
+<link targets="fringe_331 ts_fringe-s333" />
+<link targets="fringe_336 ts_fringe-s338" />
+<link targets="fringe_343 ts_fringe-s345" />
+<link targets="fringe_348 ts_fringe-s350" />
+<link targets="fringe_353 ts_fringe-s355" />
+<link targets="fringe_360 ts_fringe-s362" />
+<link targets="fringe_365 ts_fringe-s367" />
+<link targets="fringe_370 ts_fringe-s372" />
+<link targets="fringe_375 ts_fringe-s377" />
+<link targets="fringe_384 ts_fringe-s386" />
+<link targets="fringe_389 ts_fringe-s391" />
+<link targets="fringe_394 ts_fringe-s396" />
+<link targets="fringe_399 ts_fringe-s401" />
+<link targets="fringe_404 ts_fringe-s406" />
+<link targets="fringe_409 ts_fringe-s411" />
+<link targets="fringe_414 ts_fringe-s416" />
+</linkGrp>
+
+
+<lb xml:id="fringe_2">
+</lb>
+<stage type='songtitle' xml:id="fringe_4">MY THREE BEST FRIENDS
+</stage>
+<lb xml:id="fringe_7">
+</lb>
+<sp who='Will' xml:id="fringe_9">
+<speaker xml:id="fringe_10">WILL
+</speaker>
+<lb xml:id="fringe_13">
+</lb>
+<lg xml:id="fringe_15">
+<l xml:id="fringe_16">LOOK AT THIS FIELD
+</l>
+<lb xml:id="fringe_19">
+</lb>
+<l xml:id="fringe_21">LOOK AT THIS PERFECT FIELD
+</l>
+<lb xml:id="fringe_24">
+</lb>
+<l xml:id="fringe_26">THE POSSIBILITIES ARE ENDLESS HERE
+</l>
+<lb xml:id="fringe_29">
+</lb>
+<l xml:id="fringe_31">JUST WHITE LINES
+</l>
+<lb xml:id="fringe_34">
+</lb>
+<l xml:id="fringe_36">NO BOUNDARIES TO HOLD US HERE
+</l>
+<lb xml:id="fringe_39">
+</lb>
+<l xml:id="fringe_41">EXCEPT FOR TIME
+</l>
+<lb xml:id="fringe_44">
+</lb>
+<l xml:id="fringe_46">AND SO MUCH HISTORY
+</l>
+<lb xml:id="fringe_49">
+</lb>
+<l xml:id="fringe_51">REMEMBER WHAT HAS HAPPENED HERE
+</l>
+<lb xml:id="fringe_54">
+</lb>
+<l xml:id="fringe_56">ALL THE STORIES
+</l>
+<lb xml:id="fringe_59">
+</lb>
+<l xml:id="fringe_61">GAMES THAT HAVE BEEN WON
+</l>
+<lb xml:id="fringe_64">
+</lb>
+<l xml:id="fringe_66">AND FRIENDS HAVING FUN
+</l>
+<lb xml:id="fringe_69">
+</lb>
+<l xml:id="fringe_71">COMING BACK FOR ONE PERFECT NIGHT
+</l>
+<lb xml:id="fringe_74">
+</lb>
+<l xml:id="fringe_76">RIGHT HERE
+</l>
+</lg>
+</sp>
+<lb xml:id="fringe_81">
+</lb>
+<lb xml:id="fringe_83">
+</lb>
+<stage xml:id="fringe_85">(WILL sets down his backpack on the player's bench. He opens his notebook and begins to read)
+</stage>
+<lb xml:id="fringe_88">
+</lb>
+<lb xml:id="fringe_90">
+</lb>
+<lg xml:id="fringe_92">
+<l xml:id="fringe_93">HERE IS THE STORY OF FOUR BEST FRIENDS
+</l>
+<lb xml:id="fringe_96">
+</lb>
+<l xml:id="fringe_98">WHEN WE'RE IN ONE PLACE THE NIGHT NEVER ENDS
+</l>
+<lb xml:id="fringe_101">
+</lb>
+<l xml:id="fringe_103">WE TALK ABOUT THINGS THAT MATTER, AND THEN
+</l>
+<lb xml:id="fringe_106">
+</lb>
+<l xml:id="fringe_108">IN THE SAME BREATH ACT LIKE WE'RE TEN
+</l>
+<lb xml:id="fringe_111">
+</lb>
+<l xml:id="fringe_113">AND THEN DO IT ALL OVER AGAIN
+</l>
+</lg>
+<lb xml:id="fringe_117">
+</lb>
+<lb xml:id="fringe_119">
+</lb>
+<lg xml:id="fringe_121">
+<l xml:id="fringe_122">WE'RE FROM - JUST IMAGINE THIS KIND OF TOWN
+</l>
+<lb xml:id="fringe_125">
+</lb>
+<l xml:id="fringe_127">WHERE THE POPULAR CLIQUE KEEPS YOU DOWN
+</l>
+<lb xml:id="fringe_130">
+</lb>
+<l xml:id="fringe_132">IF YOU CAN'T PUT ON PADS AND MAKE CAVEMAN SOUNDS
+</l>
+<lb xml:id="fringe_135">
+</lb>
+<l xml:id="fringe_137">AS YOU KNOCK SMALLER KIDS THAN YOU TO THE GROUND
+</l>
+<lb xml:id="fringe_140">
+</lb>
+<l xml:id="fringe_142">DOESN'T THAT SOUND FUN TO BE AROUND?
+</l>
+</lg>
+<lb xml:id="fringe_146">
+</lb>
+<lb xml:id="fringe_148">
+</lb>
+<lg xml:id="fringe_150">
+<l xml:id="fringe_151">WE WERE NEVER BIG ENOUGH OR FAST ENOUGH
+</l>
+<lb xml:id="fringe_154">
+</lb>
+<l xml:id="fringe_156">TO KEEP UP WITH ALL OF THEM
+</l>
+<lb xml:id="fringe_159">
+</lb>
+<l xml:id="fringe_161">BUT WE WERE ALWAYS SMART ENOUGH AND QUICK ENOUGH
+</l>
+<lb xml:id="fringe_164">
+</lb>
+<l xml:id="fringe_166">TO KNOW WE'D BE BETTER IN THE END
+</l>
+<lb xml:id="fringe_169">
+</lb>
+<l xml:id="fringe_171">THAN THE SENIORS FROM THE FOOTBALL TEAM
+</l>
+<lb xml:id="fringe_174">
+</lb>
+<l xml:id="fringe_176">WHO WOULDN'T LET US PLAY
+</l>
+<lb xml:id="fringe_179">
+</lb>
+<l xml:id="fringe_181">WE COULDN'T CATCH OR RUN AS FAST
+</l>
+<lb xml:id="fringe_184">
+</lb>
+<l xml:id="fringe_186">SO THEY TOLD US WE WERE GAY
+</l>
+</lg>
+<lb xml:id="fringe_190">
+</lb>
+<lb xml:id="fringe_192">
+</lb>
+<ab xml:id="fringe_194">2
+</ab>
+<pb xml:id="fringe_197">
+</pb>
+<lg xml:id="fringe_199">
+<l xml:id="fringe_200">THEY TRIED TO MAKE US TO WORSHIP THEM
+</l>
+<lb xml:id="fringe_203">
+</lb>
+<l xml:id="fringe_205">BUT WE LIKED THINGS OUR WAY
+</l>
+<lb xml:id="fringe_208">
+</lb>
+<l xml:id="fringe_210">JUST ME AND MY THREE BEST FRIENDS
+</l>
+</lg>
+<lb xml:id="fringe_214">
+</lb>
+<lb xml:id="fringe_216">
+</lb>
+<stage xml:id="fringe_218">(WILL begins flipping through the pages of the notebook)
+</stage>
+<lb xml:id="fringe_221">
+</lb>
+<lb xml:id="fringe_223">
+</lb>
+<lg xml:id="fringe_225">
+<l xml:id="fringe_226">SKIP IS THE CYNIC AND JACK'S THE VOICE OF REASON
+</l>
+<lb xml:id="fringe_229">
+</lb>
+<l xml:id="fringe_231">AND ANDY'S THE REASON THAT SKIP IS A CYNIC
+</l>
+<lb xml:id="fringe_234">
+</lb>
+<l xml:id="fringe_236">WE'RE BICKERING BROTHERS, IT'S SICK
+</l>
+<lb xml:id="fringe_239">
+</lb>
+<l xml:id="fringe_241">IT'S LIKE IF OIL AND WATER COULD MIX
+</l>
+<lb xml:id="fringe_244">
+</lb>
+<l xml:id="fringe_246">THERE'S SOMETHING ABOUT US THAT JUST CLICKS
+</l>
+</lg>
+<lb xml:id="fringe_250">
+</lb>
+<lb xml:id="fringe_252">
+</lb>
+<lg xml:id="fringe_254">
+<l xml:id="fringe_255">CUZ I AM THE GLUE THAT HOLDS US TOGETHER
+</l>
+<lb xml:id="fringe_258">
+</lb>
+<l xml:id="fringe_260">OBSERVER, INVENTOR, AND SOLE DOCUMENTOR
+</l>
+<lb xml:id="fringe_263">
+</lb>
+<l xml:id="fringe_265">CONSTANTLY WATCHING, THE CONSTANT INCENTIVE
+</l>
+<lb xml:id="fringe_268">
+</lb>
+<l xml:id="fringe_270">TO KEEP MOVING FORWARD, AND ALWAYS REMEMBER
+</l>
+<lb xml:id="fringe_273">
+</lb>
+<l xml:id="fringe_275">WHERE WE STARTED FROM, AND HOW FAR WE'VE COME
+</l>
+<lb xml:id="fringe_278">
+</lb>
+<l xml:id="fringe_280">SINCE THE DAYS WHEN WE HAD NO ONE
+</l>
+<lb xml:id="fringe_283">
+</lb>
+<l xml:id="fringe_285">BUT WHEN WE FORMED THIS PERFECT UNION
+</l>
+<lb xml:id="fringe_288">
+</lb>
+<l xml:id="fringe_290">A NEW ERA HAD BEGUN
+</l>
+<lb xml:id="fringe_293">
+</lb>
+<l xml:id="fringe_295">WE GET THIS LIFE SO DIFFERENTLY
+</l>
+<lb xml:id="fringe_298">
+</lb>
+<l xml:id="fringe_300">THEN ANYONE OUR AGE CHOOSES TO SEE
+</l>
+<lb xml:id="fringe_303">
+</lb>
+<l xml:id="fringe_305">ME AND MY THREE BEST FRIENDS
+</l>
+</lg>
+<lb xml:id="fringe_309">
+</lb>
+<lb xml:id="fringe_311">
+</lb>
+<stage xml:id="fringe_313">(WILL begins to write)
+</stage>
+<lb xml:id="fringe_316">
+</lb>
+<lb xml:id="fringe_318">
+</lb>
+<lg xml:id="fringe_320">
+<l xml:id="fringe_321">YOUR BEST FRIENDS OPEN UP YOUR MIND
+</l>
+<lb xml:id="fringe_324">
+</lb>
+<l xml:id="fringe_326">TO PARTS OF YOU YOU COULDN'T FIND
+</l>
+<lb xml:id="fringe_329">
+</lb>
+<l xml:id="fringe_331">THEY SAVED MY LIFE FRESHMAN YEAR
+</l>
+<lb xml:id="fringe_334">
+</lb>
+<l xml:id="fringe_336">AND I THANK THEM EVERY DAY RIGHT HERE
+</l>
+<lb xml:id="fringe_339">
+</lb>
+<lb xml:id="fringe_341">
+</lb>
+<l xml:id="fringe_343">WE'VE BEEN AWAY FOR WAY TOO LONG
+</l>
+<lb xml:id="fringe_346">
+</lb>
+<l xml:id="fringe_348">AND ALL THAT TIME ALONE FELT WRONG
+</l>
+<lb xml:id="fringe_351">
+</lb>
+<l xml:id="fringe_353">CAUSE WE BELONG RIGHT HERE
+</l>
+<lb xml:id="fringe_356">
+</lb>
+<lb xml:id="fringe_358">
+</lb>
+<l xml:id="fringe_360">BUT WE'RE COMING BACK TONIGHT
+</l>
+<lb xml:id="fringe_363">
+</lb>
+<l xml:id="fringe_365">TO REMEMBER WHAT WE WERE LIKE
+</l>
+<lb xml:id="fringe_368">
+</lb>
+<l xml:id="fringe_370">AND PICK UP RIGHT WHERE WE LET GO
+</l>
+<lb xml:id="fringe_373">
+</lb>
+<l xml:id="fringe_375">ALMOST A YEAR AGO
+</l>
+</lg>
+<lb xml:id="fringe_379">
+</lb>
+<lb xml:id="fringe_381">
+</lb>
+<lg xml:id="fringe_383">
+<l xml:id="fringe_384">I KNOW THIS STORY SO WELL
+</l>
+<lb xml:id="fringe_387">
+</lb>
+<l xml:id="fringe_389">AND IT IS MINE TO TELL
+</l>
+<lb xml:id="fringe_392">
+</lb>
+<l xml:id="fringe_394">BECAUSE IT IS HAPPENING...TO ME
+</l>
+<lb xml:id="fringe_397">
+</lb>
+<l xml:id="fringe_399">YEA ME AND MY THREE
+</l>
+<lb xml:id="fringe_402">
+</lb>
+<l xml:id="fringe_404">ME AND MY THREE
+</l>
+<lb xml:id="fringe_407">
+</lb>
+<l xml:id="fringe_409">ME AND MY THREE
+</l>
+<lb xml:id="fringe_412">
+</lb>
+<l xml:id="fringe_414">BEST FRIENDS
+</l>
+</lg>
+<lb xml:id="fringe_418">
+</lb>
