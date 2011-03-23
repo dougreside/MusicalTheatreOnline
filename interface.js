@@ -137,6 +137,7 @@ xmlhttp.send(null);
 }
 
 function playAudio(id){
+	id = id.substring(0,id.length-1);
     if (!annoToggle) {
     
         workspace.playAudioTrack(id);
@@ -172,7 +173,7 @@ function deleteNote(noteId){
 	var delNoteObj = annoMgr.pageAnnos[workspace.curTab][num];
 	//var delPos = parseInt(delNoteObj[1])+1;
 	var delPos=-1;
-	//alert(annoMgr.pageAnnos[workspace.curTab]);
+
 	for (var i=0;i<kids.length;i++){
 		if (kids[i].id == noteId) {
 			delPos = i;
@@ -183,7 +184,7 @@ function deleteNote(noteId){
 				var noteid = kids.item(i).id;
 				
 				var thisnum = parseInt(noteid.substring(noteid.indexOf("_")+1));
-				//alert(kids.item(i).className+" "+noteid+"/"+thisnum);
+			
 				var otherNote = annoMgr.pageAnnos[workspace.curTab][thisnum];
 				if (( (delPos)>=0) && (thisnum>num)) {
 					otherNote[1] = parseInt(otherNote[1]) - 2;
